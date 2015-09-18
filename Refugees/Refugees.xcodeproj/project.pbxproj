@@ -14,6 +14,7 @@
 		C5E23FFF1BACABAF000BA16B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E23FFD1BACABAF000BA16B /* Main.storyboard */; };
 		C5E240011BACABAF000BA16B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5E240001BACABAF000BA16B /* Assets.xcassets */; };
 		C5E240041BACABAF000BA16B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E240021BACABAF000BA16B /* LaunchScreen.storyboard */; };
+		C5E2400D1BACB38A000BA16B /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E2400C1BACB38A000BA16B /* DataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		C5E240001BACABAF000BA16B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5E240031BACABAF000BA16B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5E240051BACABAF000BA16B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5E2400B1BACB38A000BA16B /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		C5E2400C1BACB38A000BA16B /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				C5E23FF81BACABAF000BA16B /* FirstViewController.m */,
 				C5E23FFA1BACABAF000BA16B /* SecondViewController.h */,
 				C5E23FFB1BACABAF000BA16B /* SecondViewController.m */,
+				C5E2400B1BACB38A000BA16B /* DataManager.h */,
+				C5E2400C1BACB38A000BA16B /* DataManager.m */,
 				C5E23FFD1BACABAF000BA16B /* Main.storyboard */,
 				C5E240001BACABAF000BA16B /* Assets.xcassets */,
 				C5E240021BACABAF000BA16B /* LaunchScreen.storyboard */,
@@ -155,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5E23FFC1BACABAF000BA16B /* SecondViewController.m in Sources */,
+				C5E2400D1BACB38A000BA16B /* DataManager.m in Sources */,
 				C5E23FF61BACABAF000BA16B /* AppDelegate.m in Sources */,
 				C5E23FF91BACABAF000BA16B /* FirstViewController.m in Sources */,
 				C5E23FF31BACABAF000BA16B /* main.m in Sources */,
