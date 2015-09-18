@@ -23,14 +23,17 @@
 
 - (IBAction)refugeeTapped:(id)sender {
     [DataManager sharedManager].type = FGTypeRefugee;
+    [self performSegueWithIdentifier:@"showSecond" sender:nil];
 }
 
 - (IBAction)helperTapped:(id)sender {
     [DataManager sharedManager].type = FGTypeHelper;
+     [self performSegueWithIdentifier:@"showSecond" sender:nil];
 }
 
 - (IBAction)justInterestedTapped:(id)sender {
     [DataManager sharedManager].type = FGTypeDude;
+     [self performSegueWithIdentifier:@"showSecond" sender:nil];
 }
 
 - (void)didReceiveMemoryWarning {
