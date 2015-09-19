@@ -96,12 +96,13 @@
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     NSString *segue = _items[indexPath.section][indexPath.row][@"queue"];
     NSLog(@"Should perform segue: %@", segue);
     
     [self performSegueWithIdentifier:segue sender:nil];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
