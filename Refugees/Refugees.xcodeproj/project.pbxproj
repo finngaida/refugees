@@ -7,13 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< Updated upstream
 		477A0CF56D82DE40E44E047C /* libPods-Refugees.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8E839EB4A253E002EC2FA5 /* libPods-Refugees.a */; };
 		C5306E9F1BAD513F006EF081 /* EmergencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5306E9E1BAD513F006EF081 /* EmergencyViewController.m */; };
-=======
 		4F6B66331BAD4BC100F106A1 /* MVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6B66321BAD4BC100F106A1 /* MVC.m */; settings = {ASSET_TAGS = (); }; };
 		4F6B66351BAD4C3700F106A1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F6B66341BAD4C3700F106A1 /* MapKit.framework */; };
->>>>>>> Stashed changes
 		C5E23FF31BACABAF000BA16B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E23FF21BACABAF000BA16B /* main.m */; };
 		C5E23FF61BACABAF000BA16B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E23FF51BACABAF000BA16B /* AppDelegate.m */; };
 		C5E23FF91BACABAF000BA16B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E23FF81BACABAF000BA16B /* FirstViewController.m */; };
@@ -32,15 +29,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-<<<<<<< Updated upstream
 		5167FB05AD76B6979119BF98 /* Pods-Refugees.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Refugees.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Refugees/Pods-Refugees.debug.xcconfig"; sourceTree = "<group>"; };
 		C5306E9D1BAD513F006EF081 /* EmergencyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencyViewController.h; sourceTree = "<group>"; };
 		C5306E9E1BAD513F006EF081 /* EmergencyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencyViewController.m; sourceTree = "<group>"; };
-=======
 		4F6B66311BAD4BC100F106A1 /* MVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVC.h; sourceTree = "<group>"; };
 		4F6B66321BAD4BC100F106A1 /* MVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVC.m; sourceTree = "<group>"; };
 		4F6B66341BAD4C3700F106A1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
->>>>>>> Stashed changes
 		C5E23FEE1BACABAF000BA16B /* Refugees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Refugees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E23FF21BACABAF000BA16B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C5E23FF41BACABAF000BA16B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -77,12 +71,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< Updated upstream
 				C5EF20661BAD424000C61523 /* CoreLocation.framework in Frameworks */,
 				477A0CF56D82DE40E44E047C /* libPods-Refugees.a in Frameworks */,
-=======
 				4F6B66351BAD4C3700F106A1 /* MapKit.framework in Frameworks */,
->>>>>>> Stashed changes
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
