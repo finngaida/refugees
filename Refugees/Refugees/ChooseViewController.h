@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChooseViewController : UIViewController 
+@interface ChooseViewController : UIViewController {
+    
+    IBOutlet UIButton *Refugee;
+    IBOutlet UIButton *Supporter;
+    IBOutlet UIButton *Unknown;
+    
+}
 
 @end

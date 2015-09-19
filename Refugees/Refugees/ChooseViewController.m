@@ -7,7 +7,7 @@
 //
 
 #import "ChooseViewController.h"
-
+#import <QuartzCore/QuartzCore.h>
 @interface ChooseViewController ()
 
 @end
@@ -16,6 +16,21 @@ BOOL hamburger;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    CALayer *btnLayer = [Refugee layer];
+    [btnLayer setMasksToBounds:YES];
+    [btnLayer setCornerRadius:10.0];
+    
+    CALayer *btnLayer2 = [Supporter layer];
+    [btnLayer2 setMasksToBounds:YES];
+    [btnLayer2 setCornerRadius:10.0];
+    
+    CALayer *btnLayer3 = [Unknown layer];
+    [btnLayer3 setMasksToBounds:YES];
+    [btnLayer3 setCornerRadius:10.0];
+    
+    
+
     // Do any additional setup after loading the view.
 }
 
@@ -32,6 +47,27 @@ BOOL hamburger;
         hamburger = YES;
     }
         [self performSegueWithIdentifier:@"showSecond" sender:nil];
+    
+   // [self releaseBtn:self];
+}
+
+-(IBAction)touchDown:(id)sender {
+    UIButton *Btn = (UIButton*)sender;
+    
+    [UIView animateWithDuration:0.3 delay:0 usingSpringWithDamping:0.3 initialSpringVelocity:13 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        Btn.transform = CGAffineTransformMakeScale(0.8, 0.8);
+    }completion:nil];
+    
+
+}
+
+-(IBAction)releaseBtn:(id)sender {
+    UIButton *Btn = (UIButton*)sender;
+
+    [UIView animateWithDuration:0.3 delay:0.2 usingSpringWithDamping:0.3 initialSpringVelocity:13 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        Btn.transform = CGAffineTransformMakeScale(1, 1);
+        
+    }completion:nil];
 }
 
 /*
