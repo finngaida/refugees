@@ -44,7 +44,8 @@
     
     // show VC
     PayPalPaymentViewController *vc = [[PayPalPaymentViewController alloc] initWithPayment:cash configuration:_config delegate:self];
-    [self presentViewController:vc animated:YES completion:nil];
+    if (vc != nil)
+        [self presentViewController:vc animated:YES completion:nil];
 }
 
 #pragma mark PayPal Delegate
@@ -54,7 +55,7 @@
     [self verifyCompletedPayment:completedPayment];
     
     // Dismiss the PayPalPaymentViewController.
-    [paymentViewController dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)verifyCompletedPayment:(PayPalPayment *)completedPayment {

@@ -6,10 +6,11 @@
 //  Copyright © 2015 Finn Gaida. All rights reserved.
 //
 
+#import <CoreLocation/CoreLocation.h>
 #import "EmergencyViewController.h"
 
 @interface EmergencyViewController ()
-
+@property (nonatomic) CLLocationManager *manager;
 @end
 
 @implementation EmergencyViewController
@@ -17,6 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    _manager = [CLLocationManager new];
+    
+    if ([CLLocationManager authorizationStatus] != kCLAuthorizationStatusAuthorizedWhenInUse) {
+        [self performSegueWithIdentifier:@"showAccess" sender:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

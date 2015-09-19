@@ -95,7 +95,7 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSString *segue = _items[indexPath.section][indexPath.row][@"queue"];
     NSLog(@"Should perform segue: %@", segue);

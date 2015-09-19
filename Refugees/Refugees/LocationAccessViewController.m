@@ -19,6 +19,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     _manager = [CLLocationManager new];
+    _manager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+    _manager.delegate = self;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,8 +31,15 @@
 
 - (IBAction)allow:(id)sender {
 
-    [[CLLocationManager new] requestWhenInUseAuthorization];
+    NSLog(@"This: %@", _manager);
+    [_manager startUpdatingLocation];
 
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
+    
+    NSLog(@"Found location: %@", locations[0]);
+    
 }
 
 - (IBAction)hide:(id)sender {
