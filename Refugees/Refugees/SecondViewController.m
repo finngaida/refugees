@@ -20,12 +20,36 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationItem.backBarButtonItem.title = @"Back";
 
-    _refugeesItems = @[@[@{@"title":@"Donate", @"subtitle":@"And help local refugees and helpers clear the situation"}, @{@"title":@"Find locations", @"subtitle":@"Close by locations that have agreed to house refugees"}, @{@"title":@"Learn", @"subtitle":@"Find out little known or missing information in the debate"}], @[@{@"title":@"Some title", @"subtitle":@"Some substitle"}, @{@"title":@"Some other title", @"subtitle":@"Some other substitle"}]];
+    _refugeesItems = @[
+                       @[
+                           @{@"title":@"Announce yourself", @"subtitle":@"Tell helpers your time of arrival, so they can prepare better", @"queue":@"showAnnounce"},
+                           @{@"title":@"Find locations", @"subtitle":@"Close by locations that have agreed to house refugees", @"queue":@"showLocations"},
+                           @{@"title":@"Learn", @"subtitle":@"Find out little known or missing information in the debate", @"queue":@"showInfos"}],
+                       @[
+                           @{@"title":@"Some title", @"subtitle":@"Some substitle"},
+                           @{@"title":@"Some other title", @"subtitle":@"Some other substitle"}]];
     
-    _helpersItems = @[@[@{@"title":@"Donate", @"subtitle":@"And help local refugees and helpers clear the situation"}, @{@"title":@"Find locations", @"subtitle":@"Close by locations that have agreed to house refugees"}, @{@"title":@"Learn", @"subtitle":@"Find out little known or missing information in the debate"}], @[@{@"title":@"Some title", @"subtitle":@"Some substitle"}, @{@"title":@"Some other title", @"subtitle":@"Some other substitle"}]];
+    _helpersItems =  @[
+                       @[
+                           @{@"title":@"See arrivals", @"subtitle":@"Look at arrival times submitted by refugees", @"queue":@"showArrivals"},
+                           @{@"title":@"Donate", @"subtitle":@"And help local refugees and helpers clear the situation", @"queue":@"showDonate"},
+                           @{@"title":@"Find locations", @"subtitle":@"Close by locations that have agreed to house refugees", @"queue":@"showLocations"},
+                           @{@"title":@"Learn", @"subtitle":@"Find out little known or missing information in the debate", @"queue":@"showLocations"}],
+                       @[
+                           @{@"title":@"Some title", @"subtitle":@"Some substitle"},
+                           @{@"title":@"Some other title", @"subtitle":@"Some other substitle"}]];
     
-    _dudesItems = @[@[@{@"title":@"Donate", @"subtitle":@"And help local refugees and helpers clear the situation"}, @{@"title":@"Find locations", @"subtitle":@"Close by locations that have agreed to house refugees"}, @{@"title":@"Learn", @"subtitle":@"Find out little known or missing information in the debate"}], @[@{@"title":@"Some title", @"subtitle":@"Some substitle"}, @{@"title":@"Some other title", @"subtitle":@"Some other substitle"}]];
+    _dudesItems =    @[
+                       @[
+                           @{@"title":@"Donate", @"subtitle":@"And help local refugees and helpers clear the situation", @"queue":@"showDonate"},
+                           @{@"title":@"Find locations", @"subtitle":@"Close by locations that have agreed to house refugees", @"queue":@"showLocations"},
+                           @{@"title":@"Learn", @"subtitle":@"Find out little known or missing information in the debate", @"queue":@"showInfos"}],
+                       @[
+                           @{@"title":@"Some title", @"subtitle":@"Some substitle"},
+                           @{@"title":@"Some other title", @"subtitle":@"Some other substitle"}]];
     
     switch ([DataManager sharedManager].type) {
         case FGTypeRefugee: _items = _refugeesItems;break;
@@ -50,14 +74,31 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"id"];
     
-    cell.textLabel.text = _items[indexPath.section][indexPath.row][@"title"];
-    cell.detailTextLabel.text = _items[indexPath.section][indexPath.row][@"subtitle"];
+    UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(15, 10, 60, 60)];
+    img.layer.masksToBounds = YES;
+    img.layer.cornerRadius = img.frame.size.width/2;
+    img.backgroundColor = [UIColor darkGrayColor];
+    [cell.contentView addSubview:img];
+    
+    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(85, 5, cell.frame.size.width-70, 30)];
+    title.text = _items[indexPath.section][indexPath.row][@"title"];
+    title.font = [UIFont fontWithName:@"HelveticaNeue" size:20];
+    [cell.contentView addSubview:title];
+    
+    UILabel *subtitle = [[UILabel alloc] initWithFrame:CGRectMake(85, 25, cell.frame.size.width-70, 50)];
+    subtitle.text = _items[indexPath.section][indexPath.row][@"subtitle"];
+    subtitle.font = [UIFont fontWithName:@"HelveticaNeue" size:15];
+    subtitle.textColor = [UIColor colorWithWhite:0.5 alpha:1.0];
+    subtitle.numberOfLines = 0;
+    [cell.contentView addSubview:subtitle];
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    [self performSegueWithIdentifier:_items[indexPath.section][indexPath.row][@"queue"] sender:nil];
 }
 
 - (void)didReceiveMemoryWarning {

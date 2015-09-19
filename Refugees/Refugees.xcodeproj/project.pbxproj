@@ -16,6 +16,12 @@
 		C5E240041BACABAF000BA16B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E240021BACABAF000BA16B /* LaunchScreen.storyboard */; };
 		C5E2400D1BACB38A000BA16B /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E2400C1BACB38A000BA16B /* DataManager.m */; };
 		C5E240101BACC7A2000BA16B /* DonateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E2400F1BACC7A2000BA16B /* DonateViewController.m */; };
+		C5EF20581BAD3F9200C61523 /* AnnounceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EF20571BAD3F9200C61523 /* AnnounceViewController.m */; };
+		C5EF205B1BAD3FA700C61523 /* ArrivalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EF205A1BAD3FA700C61523 /* ArrivalsViewController.m */; };
+		C5EF205E1BAD3FAD00C61523 /* LocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EF205D1BAD3FAD00C61523 /* LocationsViewController.m */; };
+		C5EF20611BAD3FB300C61523 /* InfosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EF20601BAD3FB300C61523 /* InfosViewController.m */; };
+		C5EF20641BAD421300C61523 /* LocationAccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EF20631BAD421300C61523 /* LocationAccessViewController.m */; };
+		C5EF20661BAD424000C61523 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EF20651BAD424000C61523 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +41,17 @@
 		C5E2400C1BACB38A000BA16B /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		C5E2400E1BACC7A2000BA16B /* DonateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonateViewController.h; sourceTree = "<group>"; };
 		C5E2400F1BACC7A2000BA16B /* DonateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonateViewController.m; sourceTree = "<group>"; };
+		C5EF20561BAD3F9200C61523 /* AnnounceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnounceViewController.h; sourceTree = "<group>"; };
+		C5EF20571BAD3F9200C61523 /* AnnounceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnounceViewController.m; sourceTree = "<group>"; };
+		C5EF20591BAD3FA700C61523 /* ArrivalsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrivalsViewController.h; sourceTree = "<group>"; };
+		C5EF205A1BAD3FA700C61523 /* ArrivalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrivalsViewController.m; sourceTree = "<group>"; };
+		C5EF205C1BAD3FAD00C61523 /* LocationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationsViewController.h; sourceTree = "<group>"; };
+		C5EF205D1BAD3FAD00C61523 /* LocationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationsViewController.m; sourceTree = "<group>"; };
+		C5EF205F1BAD3FB300C61523 /* InfosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfosViewController.h; sourceTree = "<group>"; };
+		C5EF20601BAD3FB300C61523 /* InfosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfosViewController.m; sourceTree = "<group>"; };
+		C5EF20621BAD421300C61523 /* LocationAccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationAccessViewController.h; sourceTree = "<group>"; };
+		C5EF20631BAD421300C61523 /* LocationAccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationAccessViewController.m; sourceTree = "<group>"; };
+		C5EF20651BAD424000C61523 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5EF20661BAD424000C61523 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +69,7 @@
 		C5E23FE51BACABAF000BA16B = {
 			isa = PBXGroup;
 			children = (
+				C5EF20651BAD424000C61523 /* CoreLocation.framework */,
 				C5E23FF01BACABAF000BA16B /* Refugees */,
 				C5E23FEF1BACABAF000BA16B /* Products */,
 			);
@@ -75,6 +94,16 @@
 				C5E23FFB1BACABAF000BA16B /* SecondViewController.m */,
 				C5E2400E1BACC7A2000BA16B /* DonateViewController.h */,
 				C5E2400F1BACC7A2000BA16B /* DonateViewController.m */,
+				C5EF20561BAD3F9200C61523 /* AnnounceViewController.h */,
+				C5EF20571BAD3F9200C61523 /* AnnounceViewController.m */,
+				C5EF20591BAD3FA700C61523 /* ArrivalsViewController.h */,
+				C5EF205A1BAD3FA700C61523 /* ArrivalsViewController.m */,
+				C5EF205C1BAD3FAD00C61523 /* LocationsViewController.h */,
+				C5EF205D1BAD3FAD00C61523 /* LocationsViewController.m */,
+				C5EF205F1BAD3FB300C61523 /* InfosViewController.h */,
+				C5EF20601BAD3FB300C61523 /* InfosViewController.m */,
+				C5EF20621BAD421300C61523 /* LocationAccessViewController.h */,
+				C5EF20631BAD421300C61523 /* LocationAccessViewController.m */,
 				C5E2400B1BACB38A000BA16B /* DataManager.h */,
 				C5E2400C1BACB38A000BA16B /* DataManager.m */,
 				C5E23FFD1BACABAF000BA16B /* Main.storyboard */,
@@ -165,10 +194,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5E23FFC1BACABAF000BA16B /* SecondViewController.m in Sources */,
+				C5EF20641BAD421300C61523 /* LocationAccessViewController.m in Sources */,
 				C5E240101BACC7A2000BA16B /* DonateViewController.m in Sources */,
+				C5EF20611BAD3FB300C61523 /* InfosViewController.m in Sources */,
+				C5EF205E1BAD3FAD00C61523 /* LocationsViewController.m in Sources */,
 				C5E2400D1BACB38A000BA16B /* DataManager.m in Sources */,
 				C5E23FF61BACABAF000BA16B /* AppDelegate.m in Sources */,
 				C5E23FF91BACABAF000BA16B /* FirstViewController.m in Sources */,
+				C5EF20581BAD3F9200C61523 /* AnnounceViewController.m in Sources */,
+				C5EF205B1BAD3FA700C61523 /* ArrivalsViewController.m in Sources */,
 				C5E23FF31BACABAF000BA16B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +350,7 @@
 				C5E2400A1BACABAF000BA16B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

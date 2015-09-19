@@ -132,6 +132,11 @@
                     <navigationItem key="navigationItem" title="Welcome!" id="vZA-YF-3LF"/>
                     <connections>
                         <segue destination="W3x-jp-8MA" kind="show" identifier="showDonation" id="0tP-Ww-JBY"/>
+                        <segue destination="KU8-66-5dq" kind="show" identifier="showArrivals" id="kcd-el-kU9"/>
+                        <segue destination="cL3-4B-1gd" kind="show" identifier="showLocations" id="r4f-5C-L9i"/>
+                        <segue destination="sO6-uZ-1Gn" kind="show" identifier="showInfos" id="Avn-LM-gO0"/>
+                        <segue destination="Uhd-8O-NO6" kind="show" identifier="showAnnounce" id="MSP-hA-tXn"/>
+                        <segue destination="bRR-xT-ZBP" kind="show" id="adU-9t-VR0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2J8-jf-3z4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -187,7 +192,160 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cme-Im-kS5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="600" y="-584"/>
+            <point key="canvasLocation" x="1216" y="-1856"/>
+        </scene>
+        <!--Refugees arrivals-->
+        <scene sceneID="yX8-jo-77r">
+            <objects>
+                <viewController id="KU8-66-5dq" customClass="ArrivalsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XAJ-Td-bog"/>
+                        <viewControllerLayoutGuide type="bottom" id="PFS-fF-9dV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R8G-3z-Rve">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Refugees arrivals" id="B5y-8v-d9c"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WWU-bg-tIu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1216" y="-1161"/>
+        </scene>
+        <!--Allow location access-->
+        <scene sceneID="O40-Ke-9Nm">
+            <objects>
+                <viewController id="BsA-rP-YxJ" customClass="LocationAccessViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bdv-aw-qgP"/>
+                        <viewControllerLayoutGuide type="bottom" id="rv8-gM-FKY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gg8-6d-GqR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refugees Welcome needs to access your location to show close by refugee locations and post your current location to the helpers" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTz-gQ-1Fy">
+                                <rect key="frame" x="20" y="72" width="560" height="104"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jw9-IF-hC3">
+                                <rect key="frame" x="200" y="220" width="200" height="115"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <state key="normal" title="Allow"/>
+                                <connections>
+                                    <action selector="allow:" destination="BsA-rP-YxJ" eventType="touchUpInside" id="n2h-j8-nZk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HTz-gQ-1Fy" firstAttribute="trailing" secondItem="Gg8-6d-GqR" secondAttribute="trailingMargin" id="RSR-pu-Jgr"/>
+                            <constraint firstItem="rv8-gM-FKY" firstAttribute="top" secondItem="HTz-gQ-1Fy" secondAttribute="bottom" constant="424" id="YxP-QF-opX"/>
+                            <constraint firstItem="HTz-gQ-1Fy" firstAttribute="leading" secondItem="Gg8-6d-GqR" secondAttribute="leadingMargin" id="cGU-qj-onX"/>
+                            <constraint firstItem="HTz-gQ-1Fy" firstAttribute="top" secondItem="bdv-aw-qgP" secondAttribute="bottom" constant="8" symbolic="YES" id="fGe-9u-OQ8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Allow location access" id="r8O-nM-2MC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fwK-Ka-5HZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2724" y="-1161"/>
+        </scene>
+        <!--Close locations-->
+        <scene sceneID="Tze-3q-4xM">
+            <objects>
+                <viewController id="cL3-4B-1gd" customClass="LocationsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="idI-bu-WQL"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Vu-KS-G87"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f3J-aI-aZe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Close locations" id="d9a-oY-L0r"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tKC-Y1-Ck5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1216" y="-429"/>
+        </scene>
+        <!--Infos + Stats-->
+        <scene sceneID="a0U-dT-5yY">
+            <objects>
+                <viewController id="sO6-uZ-1Gn" customClass="InfosViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FXl-Et-YDq"/>
+                        <viewControllerLayoutGuide type="bottom" id="dAJ-s8-bkd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K1O-Nv-lB3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Infos + Stats" id="ucM-Qa-dO8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cdi-Bl-6Eh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1216" y="279"/>
+        </scene>
+        <!--Annouce yourself!-->
+        <scene sceneID="2Kw-Bl-8Qv">
+            <objects>
+                <viewController id="Uhd-8O-NO6" customClass="AnnounceViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="35E-cD-3Yq"/>
+                        <viewControllerLayoutGuide type="bottom" id="C2b-9F-eOu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Jc-h1-AGw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Annouce yourself!" id="wJW-BI-Nh1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LPD-I9-uGX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1216" y="1025"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2nq-dO-IwI">
+            <objects>
+                <viewController id="bRR-xT-ZBP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pqN-gZ-kHo"/>
+                        <viewControllerLayoutGuide type="bottom" id="pHu-Gu-yUG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rb1-tx-d41">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hs9-j3-AkW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1216" y="1745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wM3-Ep-z6l">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tag-48-7Ql" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LiC-mt-jO1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BsA-rP-YxJ" kind="relationship" relationship="rootViewController" id="Har-wg-cPw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ooj-vS-jTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1912" y="-1161"/>
         </scene>
     </scenes>
 </document>
