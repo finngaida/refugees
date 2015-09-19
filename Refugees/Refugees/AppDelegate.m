@@ -20,6 +20,15 @@
     // Override point for customization after application launch.
     [PayPalMobile initializeWithClientIdsForEnvironments:@{PayPalEnvironmentProduction:@"", PayPalEnvironmentSandbox:@"ARiWxWX_ex015kUIP0DSUxQY_Jt6ieUgIi1ZM_hxPqnUJXuNXD9AMwq9AFxmNdBKs2URsJ4x0ObVYmBD"}];
     
+    [Parse enableLocalDatastore];
+    
+    // Initialize Parse.
+    [Parse setApplicationId:@"dwE0G4hvZTyj7QdrEm9SMCH2FHY52kLEuyX1KrwD"
+                  clientKey:@"iDVlIpPUg8EiVLja6ud8QswVhBNzrpcF7A2uSTRO"];
+    
+    // [Optional] Track statistics around application opens.
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
     return YES;
 }
 

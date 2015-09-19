@@ -144,6 +144,20 @@
     [mapOverlay addTarget:self action:@selector(openMap) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:mapOverlay];
     
+    cautionView = [[UIView alloc]init];
+    cautionView.frame = CGRectMake(78, 135-140, 219, 120);
+    cautionView.backgroundColor = [UIColor clearColor];
+    cautionView.alpha = 0;
+    [self.view insertSubview:cautionView belowSubview:topOverlay];
+    
+    caution = [[UIImageView alloc]init];
+    caution.frame = CGRectMake(0, 0, 219, 120);
+    caution.image = [UIImage imageNamed:@"caution"];
+    caution.contentMode = UIViewContentModeScaleAspectFit;
+    [cautionView addSubview:caution];
+    
+    [self checkForAlert];
+    [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(checkForAlert) userInfo:nil repeats:YES];
 
     
 }
@@ -172,6 +186,9 @@ BOOL annotationsSet;
         fbBtn.transform = CGAffineTransformMakeTranslation(0, +self.view.bounds.size.height/2);
         twtBtn.transform = CGAffineTransformMakeTranslation(0, +self.view.bounds.size.height/2);
         midOverlay.transform = CGAffineTransformMakeTranslation(0, +self.view.bounds.size.height/2);
+        
+        cautionView.transform = CGAffineTransformMakeTranslation(0, -self.view.bounds.size.height/2);
+
         
         if (!hamburger) {
             guideBtn.transform = CGAffineTransformMakeTranslation(0, +self.view.bounds.size.height/2);
@@ -272,6 +289,8 @@ BOOL annotationsSet;
         twtBtn.transform = CGAffineTransformMakeTranslation(0, 0);
         midOverlay.transform = CGAffineTransformMakeTranslation(0, 0);
         
+        cautionView.transform = CGAffineTransformMakeTranslation(0, 0);
+        
         if (!hamburger) {
             guideBtn.transform = CGAffineTransformMakeTranslation(0, 0);
             gameBtn.transform = CGAffineTransformMakeTranslation(0, 0);
@@ -294,8 +313,28 @@ BOOL annotationsSet;
     [UIView animateWithDuration:0.3 animations:^{
         heartImg.alpha = 0;
         heartImg_high.alpha = 1;
+        topOverlay.layer.shadowColor = [UIColor redColor].CGColor;
+        botOverlay.layer.shadowColor = [UIColor redColor].CGColor;
+
     }completion:^(BOOL finished){
-        [self animateHeart];
+    }];
+    
+    alertTimer = [NSTimer scheduledTimerWithTimeInterval:0.8 target:self selector:@selector(animateHeart) userInfo:nil repeats:YES];
+
+}
+
+-(void)alertDisappeard {
+    
+    [alertTimer invalidate];
+    alertTimer = nil;
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        heartImg.alpha = 1;
+        heartImg_high.alpha = 0;
+        topOverlay.layer.shadowColor = [UIColor blackColor].CGColor;
+        botOverlay.layer.shadowColor = [UIColor blackColor].CGColor;
+        
+    }completion:^(BOOL finished){
     }];
 
 }
@@ -304,12 +343,30 @@ BOOL annotationsSet;
 
     [UIView animateWithDuration:0.2 delay:0.0 usingSpringWithDamping:0.3 initialSpringVelocity:16 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         heartImg_high.transform = CGAffineTransformMakeScale(1.2, 1.2);
+        heartImg_high.alpha = 1;
+        
+        CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"shadowOpacity"];
+        anim.fromValue = [NSNumber numberWithFloat:0.3];
+        anim.toValue = [NSNumber numberWithFloat:0.8];
+        [topOverlay.layer addAnimation:anim forKey:@"shadowOpacity"];
+        [botOverlay.layer addAnimation:anim forKey:@"shadowOpacity"];
+
     }completion:nil];
     [UIView animateWithDuration:0.3 delay:0.5 usingSpringWithDamping:0.8 initialSpringVelocity:12 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         heartImg_high.transform = CGAffineTransformMakeScale(1, 1);
+        heartImg_high.alpha = 0.5;
+        
+        CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"shadowOpacity"];
+        anim.fromValue = [NSNumber numberWithFloat:0.8];
+        anim.toValue = [NSNumber numberWithFloat:0.3];
+        [topOverlay.layer addAnimation:anim forKey:@"shadowOpacity"];
+        [botOverlay.layer addAnimation:anim forKey:@"shadowOpacity"];
+
     }completion:^(BOOL finished){
-        [self animateHeart];
     }];
+    
+    
+    
 }
 
 -(IBAction)openSocial:(id)sender {
@@ -353,7 +410,6 @@ BOOL annotationsSet;
         senderBtn.transform = CGAffineTransformMakeScale(1, 1);
     }completion:NULL];
     
-    [self alertAppeard];
 
 }
 
@@ -412,6 +468,47 @@ BOOL annotationsSet;
     [locationBtn setImage:[UIImage imageNamed:@"mapLocateBtn"] forState:UIControlStateNormal];
     locationBtn.frame = CGRectMake(self.view.bounds.size.width -70, self.view.bounds.size.height -155, 57.5, 57.5);
     [self.view addSubview:locationBtn];
+}
+BOOL alertIsVisible;
+-(void)checkForAlert {
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"mainClass"];
+    [query getObjectInBackgroundWithId:@"aXpNBp34vP"
+                                 block:^(PFObject *objects, NSError *error) {
+                                     if (!error) {
+                                         NSString *string = [objects objectForKey:@"alertMsg"];
+                                         
+                                         if ([string isEqualToString:@""]) {
+                                             NSLog(@"String Emptry - No Alert");
+                                             [UIView animateWithDuration:1 animations:^{
+                                                 cautionView.frame = CGRectMake(78, 135-140, 219, 120);
+                                                 cautionView.alpha = 0;
+                                             }completion:NULL];
+                                             [self alertDisappeard];
+                                             alertIsVisible = NO;
+                                             
+                                         }else {
+                                             if (!alertIsVisible) {
+                                                 [UIView animateWithDuration:1 animations:^{
+                                                     cautionView.frame = CGRectMake(78, 135, 219, 120);
+                                                     cautionView.alpha = 1;
+                                                 }completion:NULL];
+                                                 [self alertAppeard];
+
+                                             }
+                                             NSLog(@"String has content - Display string");
+                                            alertIsVisible = YES;
+
+
+                                         }
+
+                                         
+                                         
+                                     } else {
+                                         
+                                     }
+                                 }];
+
 }
 
 

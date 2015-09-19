@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "ChooseViewController.h"
+#import <Parse/Parse.h>
 
 @interface MVC : UIViewController <MKMapViewDelegate,CLLocationManagerDelegate,MKAnnotation> {
     
@@ -40,6 +41,11 @@
     UIView *coverView;
     UIView *coverView2;
     UIActivityIndicatorView *activityIndicator;
+
+    UIView *cautionView;
+    UIImageView *caution;
+    
+    NSTimer *alertTimer;
 
 }
 extern BOOL hamburger;
