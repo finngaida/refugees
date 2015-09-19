@@ -29,8 +29,8 @@
                            @{@"title":@"Find locations", @"subtitle":@"Close by locations that have agreed to house refugees", @"queue":@"showLocations"},
                            @{@"title":@"Learn", @"subtitle":@"Find out little known or missing information in the debate", @"queue":@"showInfos"}],
                        @[
-                           @{@"title":@"Some title", @"subtitle":@"Some substitle"},
-                           @{@"title":@"Some other title", @"subtitle":@"Some other substitle"}]];
+                           @{@"title":@"Emergeny", @"subtitle":@"Call police/ambulance or find close by shelters", @"queue":@"showEmergency"},
+                           @{@"title":@"Some other title", @"subtitle":@"Some other substitle", @"queue":@"showTest"}]];
     
     _helpersItems =  @[
                        @[
@@ -39,8 +39,8 @@
                            @{@"title":@"Find locations", @"subtitle":@"Close by locations that have agreed to house refugees", @"queue":@"showLocations"},
                            @{@"title":@"Learn", @"subtitle":@"Find out little known or missing information in the debate", @"queue":@"showLocations"}],
                        @[
-                           @{@"title":@"Some title", @"subtitle":@"Some substitle"},
-                           @{@"title":@"Some other title", @"subtitle":@"Some other substitle"}]];
+                           @{@"title":@"Some title", @"subtitle":@"Some substitle", @"queue":@"showTest"},
+                           @{@"title":@"Some other title", @"subtitle":@"Some other substitle", @"queue":@"showTest"}]];
     
     _dudesItems =    @[
                        @[
@@ -48,8 +48,8 @@
                            @{@"title":@"Find locations", @"subtitle":@"Close by locations that have agreed to house refugees", @"queue":@"showLocations"},
                            @{@"title":@"Learn", @"subtitle":@"Find out little known or missing information in the debate", @"queue":@"showInfos"}],
                        @[
-                           @{@"title":@"Some title", @"subtitle":@"Some substitle"},
-                           @{@"title":@"Some other title", @"subtitle":@"Some other substitle"}]];
+                           @{@"title":@"Some title", @"subtitle":@"Some substitle", @"queue":@"showTest"},
+                           @{@"title":@"Some other title", @"subtitle":@"Some other substitle", @"queue":@"showTest"}]];
     
     switch ([DataManager sharedManager].type) {
         case FGTypeRefugee: _items = _refugeesItems;break;
@@ -98,7 +98,10 @@
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    [self performSegueWithIdentifier:_items[indexPath.section][indexPath.row][@"queue"] sender:nil];
+    NSString *segue = _items[indexPath.section][indexPath.row][@"queue"];
+    NSLog(@"Should perform segue: %@", segue);
+    
+    [self performSegueWithIdentifier:segue sender:nil];
 }
 
 - (void)didReceiveMemoryWarning {

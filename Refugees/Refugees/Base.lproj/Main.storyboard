@@ -131,12 +131,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Welcome!" id="vZA-YF-3LF"/>
                     <connections>
-                        <segue destination="W3x-jp-8MA" kind="show" identifier="showDonation" id="0tP-Ww-JBY"/>
+                        <segue destination="W3x-jp-8MA" kind="show" identifier="showDonate" id="0tP-Ww-JBY"/>
                         <segue destination="KU8-66-5dq" kind="show" identifier="showArrivals" id="kcd-el-kU9"/>
                         <segue destination="cL3-4B-1gd" kind="show" identifier="showLocations" id="r4f-5C-L9i"/>
                         <segue destination="sO6-uZ-1Gn" kind="show" identifier="showInfos" id="Avn-LM-gO0"/>
                         <segue destination="Uhd-8O-NO6" kind="show" identifier="showAnnounce" id="MSP-hA-tXn"/>
-                        <segue destination="bRR-xT-ZBP" kind="show" id="adU-9t-VR0"/>
+                        <segue destination="bRR-xT-ZBP" kind="show" identifier="showEmergency" id="adU-9t-VR0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2J8-jf-3z4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -208,6 +208,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Refugees arrivals" id="B5y-8v-d9c"/>
+                    <connections>
+                        <segue destination="tag-48-7Ql" kind="presentation" identifier="showAccess" modalTransitionStyle="coverVertical" id="Vx1-Zp-ZzD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WWU-bg-tIu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -248,7 +251,13 @@
                             <constraint firstItem="HTz-gQ-1Fy" firstAttribute="top" secondItem="bdv-aw-qgP" secondAttribute="bottom" constant="8" symbolic="YES" id="fGe-9u-OQ8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Allow location access" id="r8O-nM-2MC"/>
+                    <navigationItem key="navigationItem" title="Allow location access" id="r8O-nM-2MC">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="xaR-Xv-Pcv">
+                            <connections>
+                                <action selector="hide:" destination="BsA-rP-YxJ" id="w8Z-sc-6y6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fwK-Ka-5HZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -311,10 +320,10 @@
             </objects>
             <point key="canvasLocation" x="1216" y="1025"/>
         </scene>
-        <!--View Controller-->
+        <!--Emergency-->
         <scene sceneID="2nq-dO-IwI">
             <objects>
-                <viewController id="bRR-xT-ZBP" sceneMemberID="viewController">
+                <viewController id="bRR-xT-ZBP" customClass="EmergencyViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pqN-gZ-kHo"/>
                         <viewControllerLayoutGuide type="bottom" id="pHu-Gu-yUG"/>
@@ -324,6 +333,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Emergency" id="WhW-YG-y4C"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hs9-j3-AkW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

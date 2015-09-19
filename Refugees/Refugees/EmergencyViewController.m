@@ -1,39 +1,27 @@
 //
-//  LocationAccessViewController.m
+//  EmergencyViewController.m
 //  Refugees
 //
 //  Created by Finn Gaida on 19.09.15.
 //  Copyright © 2015 Finn Gaida. All rights reserved.
 //
 
-#import <CoreLocation/CoreLocation.h>
-#import "LocationAccessViewController.h"
+#import "EmergencyViewController.h"
 
-@interface LocationAccessViewController ()
-@property (nonatomic) CLLocationManager *manager;
+@interface EmergencyViewController ()
+
 @end
 
-@implementation LocationAccessViewController
+@implementation EmergencyViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _manager = [CLLocationManager new];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)allow:(id)sender {
-
-    [[CLLocationManager new] requestWhenInUseAuthorization];
-
-}
-
-- (IBAction)hide:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*

@@ -6,6 +6,7 @@
 //  Copyright © 2015 Finn Gaida. All rights reserved.
 //
 
+#import "PayPalMobile.h"
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
@@ -17,6 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [PayPalMobile initializeWithClientIdsForEnvironments:@{PayPalEnvironmentProduction:@"", PayPalEnvironmentSandbox:@"ARiWxWX_ex015kUIP0DSUxQY_Jt6ieUgIi1ZM_hxPqnUJXuNXD9AMwq9AFxmNdBKs2URsJ4x0ObVYmBD"}];
+    
     return YES;
 }
 

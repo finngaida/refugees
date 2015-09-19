@@ -6,17 +6,24 @@
 //  Copyright © 2015 Finn Gaida. All rights reserved.
 //
 
+#import <CoreLocation/CoreLocation.h>
 #import "LocationsViewController.h"
 
 @interface LocationsViewController ()
-
+@property (nonatomic) CLLocationManager *manager;
 @end
 
 @implementation LocationsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    _manager = [CLLocationManager new];
+    
+    if ([CLLocationManager authorizationStatus] != kCLAuthorizationStatusAuthorizedWhenInUse) {
+        [self performSegueWithIdentifier:@"showAccess" sender:nil];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {

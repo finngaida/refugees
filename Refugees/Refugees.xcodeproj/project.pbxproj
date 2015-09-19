@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		477A0CF56D82DE40E44E047C /* libPods-Refugees.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8E839EB4A253E002EC2FA5 /* libPods-Refugees.a */; };
+		C5306E9F1BAD513F006EF081 /* EmergencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5306E9E1BAD513F006EF081 /* EmergencyViewController.m */; };
 		C5E23FF31BACABAF000BA16B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E23FF21BACABAF000BA16B /* main.m */; };
 		C5E23FF61BACABAF000BA16B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E23FF51BACABAF000BA16B /* AppDelegate.m */; };
 		C5E23FF91BACABAF000BA16B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E23FF81BACABAF000BA16B /* FirstViewController.m */; };
@@ -25,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5167FB05AD76B6979119BF98 /* Pods-Refugees.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Refugees.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Refugees/Pods-Refugees.debug.xcconfig"; sourceTree = "<group>"; };
+		C5306E9D1BAD513F006EF081 /* EmergencyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencyViewController.h; sourceTree = "<group>"; };
+		C5306E9E1BAD513F006EF081 /* EmergencyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencyViewController.m; sourceTree = "<group>"; };
 		C5E23FEE1BACABAF000BA16B /* Refugees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Refugees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E23FF21BACABAF000BA16B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C5E23FF41BACABAF000BA16B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -52,6 +57,8 @@
 		C5EF20621BAD421300C61523 /* LocationAccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationAccessViewController.h; sourceTree = "<group>"; };
 		C5EF20631BAD421300C61523 /* LocationAccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationAccessViewController.m; sourceTree = "<group>"; };
 		C5EF20651BAD424000C61523 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CA8E839EB4A253E002EC2FA5 /* libPods-Refugees.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Refugees.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6EC0B8CBFB7C081D4BCBC36 /* Pods-Refugees.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Refugees.release.xcconfig"; path = "Pods/Target Support Files/Pods-Refugees/Pods-Refugees.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,18 +67,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5EF20661BAD424000C61523 /* CoreLocation.framework in Frameworks */,
+				477A0CF56D82DE40E44E047C /* libPods-Refugees.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44F22397C02C64D666935E6D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA8E839EB4A253E002EC2FA5 /* libPods-Refugees.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC2F36412D27A4EE457AF9E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5167FB05AD76B6979119BF98 /* Pods-Refugees.debug.xcconfig */,
+				F6EC0B8CBFB7C081D4BCBC36 /* Pods-Refugees.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C5E23FE51BACABAF000BA16B = {
 			isa = PBXGroup;
 			children = (
-				C5EF20651BAD424000C61523 /* CoreLocation.framework */,
 				C5E23FF01BACABAF000BA16B /* Refugees */,
 				C5E23FEF1BACABAF000BA16B /* Products */,
+				BC2F36412D27A4EE457AF9E6 /* Pods */,
+				44F22397C02C64D666935E6D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +128,8 @@
 				C5EF205D1BAD3FAD00C61523 /* LocationsViewController.m */,
 				C5EF205F1BAD3FB300C61523 /* InfosViewController.h */,
 				C5EF20601BAD3FB300C61523 /* InfosViewController.m */,
+				C5306E9D1BAD513F006EF081 /* EmergencyViewController.h */,
+				C5306E9E1BAD513F006EF081 /* EmergencyViewController.m */,
 				C5EF20621BAD421300C61523 /* LocationAccessViewController.h */,
 				C5EF20631BAD421300C61523 /* LocationAccessViewController.m */,
 				C5E2400B1BACB38A000BA16B /* DataManager.h */,
@@ -118,6 +146,7 @@
 		C5E23FF11BACABAF000BA16B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C5EF20651BAD424000C61523 /* CoreLocation.framework */,
 				C5E23FF21BACABAF000BA16B /* main.m */,
 			);
 			name = "Supporting Files";
@@ -130,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5E240081BACABAF000BA16B /* Build configuration list for PBXNativeTarget "Refugees" */;
 			buildPhases = (
+				0EF29F912EFF3A1EAACE8923 /* Check Pods Manifest.lock */,
 				C5E23FEA1BACABAF000BA16B /* Sources */,
 				C5E23FEB1BACABAF000BA16B /* Frameworks */,
 				C5E23FEC1BACABAF000BA16B /* Resources */,
+				DE3C95C2AAE62B0F88FECB5C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,6 +219,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0EF29F912EFF3A1EAACE8923 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DE3C95C2AAE62B0F88FECB5C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Refugees/Pods-Refugees-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C5E23FEA1BACABAF000BA16B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -203,6 +267,7 @@
 				C5E23FF91BACABAF000BA16B /* FirstViewController.m in Sources */,
 				C5EF20581BAD3F9200C61523 /* AnnounceViewController.m in Sources */,
 				C5EF205B1BAD3FA700C61523 /* ArrivalsViewController.m in Sources */,
+				C5306E9F1BAD513F006EF081 /* EmergencyViewController.m in Sources */,
 				C5E23FF31BACABAF000BA16B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,9 +376,11 @@
 		};
 		C5E240091BACABAF000BA16B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5167FB05AD76B6979119BF98 /* Pods-Refugees.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Refugees/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.finngaida.Refugees;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -322,9 +389,11 @@
 		};
 		C5E2400A1BACABAF000BA16B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6EC0B8CBFB7C081D4BCBC36 /* Pods-Refugees.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Refugees/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.finngaida.Refugees;
 				PRODUCT_NAME = "$(TARGET_NAME)";

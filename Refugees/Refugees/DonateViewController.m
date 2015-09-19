@@ -10,7 +10,7 @@
 
 @interface DonateViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *donationField;
-
+@property (nonatomic) PayPalConfiguration *config;
 @end
 
 @implementation DonateViewController
@@ -18,6 +18,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _config = [PayPalConfiguration new];
+    _config.acceptCreditCards = YES;
+    _config.merchantName = @"Refugees welcome";
+    _config.payPalShippingAddressOption = PayPalShippingAddressOptionNone;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [PayPalMobile preconnectWithEnvironment:PayPalEnvironmentNoNetwork];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,6 +36,38 @@
 - (IBAction)donate:(id)sender {
     // do magic here
     float value = [_donationField.text floatValue];
+    PayPalPayment *cash = [PayPalPayment new];
+    cash.amount = [[NSDecimalNumber alloc] initWithFloat:value];
+    cash.currencyCode = @"EUR";
+    cash.shortDescription = @"Donate to the helpers to support their voluntary work";
+    cash.intent = PayPalPaymentIntentOrder;
+    
+    // show VC
+    PayPalPaymentViewController *vc = [[PayPalPaymentViewController alloc] initWithPayment:cash configuration:_config delegate:self];
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
+#pragma mark PayPal Delegate
+- (void)payPalPaymentViewController:(PayPalPaymentViewController *)paymentViewController
+                 didCompletePayment:(PayPalPayment *)completedPayment {
+    // Payment was processed successfully; send to server for verification and fulfillment.
+    [self verifyCompletedPayment:completedPayment];
+    
+    // Dismiss the PayPalPaymentViewController.
+    [paymentViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)verifyCompletedPayment:(PayPalPayment *)completedPayment {
+    // Send the entire confirmation dictionary
+    NSData *confirmation = [NSJSONSerialization dataWithJSONObject:completedPayment.confirmation options:0 error:nil];
+    
+    // TODO: Show success screen
+    
+}
+
+- (void)payPalPaymentDidCancel:(PayPalPaymentViewController *)paymentViewController {
+    // The payment was canceled; dismiss the PayPalPaymentViewController.
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*
