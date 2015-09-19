@@ -40,6 +40,9 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
     
     NSLog(@"Found location: %@", locations[0]);
+    [self dismissViewControllerAnimated:YES completion:^{
+        // send loc to master
+    }];
     
 }
 

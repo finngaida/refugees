@@ -167,18 +167,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95c-Zx-Te7">
-                                <rect key="frame" x="188" y="459" width="224" height="121"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="200,00€" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8DV-bj-MDb">
+                                <rect key="frame" x="263.5" y="119" width="73" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="121" id="kp9-Rq-31G"/>
-                                    <constraint firstAttribute="width" constant="224" id="vfM-f4-y1f"/>
+                                    <constraint firstAttribute="height" constant="30" id="04m-9W-DMg"/>
+                                    <constraint firstAttribute="width" constant="73" id="tkj-9o-qMy"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <state key="normal" title="Donate"/>
-                                <connections>
-                                    <action selector="donate:" destination="W3x-jp-8MA" eventType="touchUpInside" id="dpn-uf-hRy"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfr-Lr-SC1">
                                 <rect key="frame" x="344.5" y="123" width="11" height="21"/>
                                 <constraints>
@@ -189,28 +186,31 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="200,00€" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8DV-bj-MDb">
-                                <rect key="frame" x="263.5" y="119" width="73" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95c-Zx-Te7">
+                                <rect key="frame" x="188" y="157" width="224" height="121"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="04m-9W-DMg"/>
-                                    <constraint firstAttribute="width" constant="73" id="tkj-9o-qMy"/>
+                                    <constraint firstAttribute="height" constant="121" id="Fya-7b-U4v"/>
+                                    <constraint firstAttribute="width" constant="224" id="hHY-ht-O8h"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <state key="normal" title="Donate"/>
+                                <connections>
+                                    <action selector="donate:" destination="W3x-jp-8MA" eventType="touchUpInside" id="dpn-uf-hRy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="95c-Zx-Te7" firstAttribute="centerX" secondItem="pWD-Xa-OXB" secondAttribute="centerX" id="0zd-eW-MCp"/>
                             <constraint firstItem="M62-PT-yVK" firstAttribute="top" secondItem="z6d-l5-8Wo" secondAttribute="bottom" constant="26" id="LQO-bN-sIk"/>
-                            <constraint firstItem="Cqk-lN-y1f" firstAttribute="top" secondItem="95c-Zx-Te7" secondAttribute="bottom" constant="20" id="LWM-ZP-EZZ"/>
                             <constraint firstItem="8DV-bj-MDb" firstAttribute="centerX" secondItem="M62-PT-yVK" secondAttribute="centerX" id="S4n-ST-Jmc"/>
                             <constraint firstItem="M62-PT-yVK" firstAttribute="top" secondItem="z6d-l5-8Wo" secondAttribute="bottom" constant="26" id="TXM-sP-skH"/>
                             <constraint firstItem="Nfr-Lr-SC1" firstAttribute="top" secondItem="M62-PT-yVK" secondAttribute="bottom" constant="12" id="fRY-vr-r9E"/>
                             <constraint firstItem="8DV-bj-MDb" firstAttribute="top" secondItem="M62-PT-yVK" secondAttribute="bottom" constant="8" id="h18-uL-CVd"/>
                             <constraint firstItem="M62-PT-yVK" firstAttribute="centerX" secondItem="pWD-Xa-OXB" secondAttribute="centerX" id="leW-eH-g0M"/>
+                            <constraint firstItem="95c-Zx-Te7" firstAttribute="centerX" secondItem="pWD-Xa-OXB" secondAttribute="centerX" id="m0j-aj-pH9"/>
                             <constraint firstItem="Nfr-Lr-SC1" firstAttribute="centerX" secondItem="pWD-Xa-OXB" secondAttribute="centerX" constant="50" id="wDc-2i-DpY"/>
                             <constraint firstItem="Nfr-Lr-SC1" firstAttribute="leading" secondItem="8DV-bj-MDb" secondAttribute="trailing" constant="8" id="wz9-Nh-7yJ"/>
+                            <constraint firstItem="95c-Zx-Te7" firstAttribute="top" secondItem="8DV-bj-MDb" secondAttribute="bottom" constant="8" id="xVa-E6-rc6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Dontate" id="ROv-Xh-G22"/>

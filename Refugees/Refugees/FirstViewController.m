@@ -19,6 +19,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    if ([DataManager sharedManager].type) {
+        [self show:[DataManager sharedManager].type];
+    }
+    
+}
+
+- (void)show:(FGType)type {
+    
+    switch (type) {
+        case FGTypeRefugee: {
+            
+        } break;
+        case FGTypeHelper: {
+            
+        } break;
+        case FGTypeDude: {
+            
+        } break;
+
+    }
+    
 }
 
 - (IBAction)refugeeTapped:(id)sender {

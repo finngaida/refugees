@@ -19,7 +19,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     _config = [PayPalConfiguration new];
-    _config.acceptCreditCards = YES;
     _config.merchantName = @"Refugees welcome";
     _config.payPalShippingAddressOption = PayPalShippingAddressOptionNone;
 }
@@ -39,8 +38,8 @@
     PayPalPayment *cash = [PayPalPayment new];
     cash.amount = [[NSDecimalNumber alloc] initWithFloat:value];
     cash.currencyCode = @"EUR";
-    cash.shortDescription = @"Donate to the helpers to support their voluntary work";
-    cash.intent = PayPalPaymentIntentOrder;
+    cash.shortDescription = @"Donate to support helpers' voluntary work";
+    cash.intent = PayPalPaymentIntentAuthorize;
     
     // show VC
     PayPalPaymentViewController *vc = [[PayPalPaymentViewController alloc] initWithPayment:cash configuration:_config delegate:self];

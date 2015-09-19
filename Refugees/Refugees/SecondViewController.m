@@ -29,27 +29,20 @@
                            @{@"title":@"Find locations", @"subtitle":@"Close by locations that have agreed to house refugees", @"queue":@"showLocations"},
                            @{@"title":@"Learn", @"subtitle":@"Find out little known or missing information in the debate", @"queue":@"showInfos"}],
                        @[
-                           @{@"title":@"Emergeny", @"subtitle":@"Call police/ambulance or find close by shelters", @"queue":@"showEmergency"},
-                           @{@"title":@"Some other title", @"subtitle":@"Some other substitle", @"queue":@"showTest"}]];
+                           @{@"title":@"Emergeny", @"subtitle":@"Call police/ambulance or find close by shelters", @"queue":@"showEmergency"}]];
     
     _helpersItems =  @[
                        @[
                            @{@"title":@"See arrivals", @"subtitle":@"Look at arrival times submitted by refugees", @"queue":@"showArrivals"},
                            @{@"title":@"Donate", @"subtitle":@"And help local refugees and helpers clear the situation", @"queue":@"showDonate"},
                            @{@"title":@"Find locations", @"subtitle":@"Close by locations that have agreed to house refugees", @"queue":@"showLocations"},
-                           @{@"title":@"Learn", @"subtitle":@"Find out little known or missing information in the debate", @"queue":@"showLocations"}],
-                       @[
-                           @{@"title":@"Some title", @"subtitle":@"Some substitle", @"queue":@"showTest"},
-                           @{@"title":@"Some other title", @"subtitle":@"Some other substitle", @"queue":@"showTest"}]];
+                           @{@"title":@"Learn", @"subtitle":@"Find out little known or missing information in the debate", @"queue":@"showLocations"}]];
     
     _dudesItems =    @[
                        @[
                            @{@"title":@"Donate", @"subtitle":@"And help local refugees and helpers clear the situation", @"queue":@"showDonate"},
                            @{@"title":@"Find locations", @"subtitle":@"Close by locations that have agreed to house refugees", @"queue":@"showLocations"},
-                           @{@"title":@"Learn", @"subtitle":@"Find out little known or missing information in the debate", @"queue":@"showInfos"}],
-                       @[
-                           @{@"title":@"Some title", @"subtitle":@"Some substitle", @"queue":@"showTest"},
-                           @{@"title":@"Some other title", @"subtitle":@"Some other substitle", @"queue":@"showTest"}]];
+                           @{@"title":@"Learn", @"subtitle":@"Find out little known or missing information in the debate", @"queue":@"showInfos"}]];
     
     switch ([DataManager sharedManager].type) {
         case FGTypeRefugee: _items = _refugeesItems;break;
