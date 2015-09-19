@@ -32,6 +32,7 @@
 - (IBAction)allow:(id)sender {
 
     NSLog(@"This: %@", _manager);
+    [_manager requestWhenInUseAuthorization];
     [_manager startUpdatingLocation];
 
 }
