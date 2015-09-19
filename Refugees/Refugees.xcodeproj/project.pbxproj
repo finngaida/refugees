@@ -8,9 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		477A0CF56D82DE40E44E047C /* libPods-Refugees.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8E839EB4A253E002EC2FA5 /* libPods-Refugees.a */; };
-		C5306E9F1BAD513F006EF081 /* EmergencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5306E9E1BAD513F006EF081 /* EmergencyViewController.m */; };
 		4F6B66331BAD4BC100F106A1 /* MVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6B66321BAD4BC100F106A1 /* MVC.m */; settings = {ASSET_TAGS = (); }; };
 		4F6B66351BAD4C3700F106A1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F6B66341BAD4C3700F106A1 /* MapKit.framework */; };
+		4F6DC46E1BAD9F7B00931D85 /* ChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6DC46D1BAD9F7B00931D85 /* ChooseViewController.m */; settings = {ASSET_TAGS = (); }; };
+		4F6DC4701BADBAD900931D85 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F6DC46F1BADBAD900931D85 /* QuartzCore.framework */; };
+		4F6DC4721BADE65400931D85 /* Locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F6DC4711BADE65300931D85 /* Locations.json */; settings = {ASSET_TAGS = (); }; };
+		4F6DC4761BADEB6A00931D85 /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6DC4741BADEB6A00931D85 /* MyAnnotation.m */; settings = {ASSET_TAGS = (); }; };
+		C5306E9F1BAD513F006EF081 /* EmergencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5306E9E1BAD513F006EF081 /* EmergencyViewController.m */; };
 		C5E23FF31BACABAF000BA16B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E23FF21BACABAF000BA16B /* main.m */; };
 		C5E23FF61BACABAF000BA16B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E23FF51BACABAF000BA16B /* AppDelegate.m */; };
 		C5E23FF91BACABAF000BA16B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E23FF81BACABAF000BA16B /* FirstViewController.m */; };
@@ -29,12 +33,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5167FB05AD76B6979119BF98 /* Pods-Refugees.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Refugees.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Refugees/Pods-Refugees.debug.xcconfig"; sourceTree = "<group>"; };
-		C5306E9D1BAD513F006EF081 /* EmergencyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencyViewController.h; sourceTree = "<group>"; };
-		C5306E9E1BAD513F006EF081 /* EmergencyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencyViewController.m; sourceTree = "<group>"; };
 		4F6B66311BAD4BC100F106A1 /* MVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVC.h; sourceTree = "<group>"; };
 		4F6B66321BAD4BC100F106A1 /* MVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVC.m; sourceTree = "<group>"; };
 		4F6B66341BAD4C3700F106A1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4F6DC46C1BAD9F7B00931D85 /* ChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseViewController.h; sourceTree = "<group>"; };
+		4F6DC46D1BAD9F7B00931D85 /* ChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseViewController.m; sourceTree = "<group>"; };
+		4F6DC46F1BADBAD900931D85 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4F6DC4711BADE65300931D85 /* Locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Locations.json; sourceTree = "<group>"; };
+		4F6DC4731BADEB6A00931D85 /* MyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
+		4F6DC4741BADEB6A00931D85 /* MyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
+		5167FB05AD76B6979119BF98 /* Pods-Refugees.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Refugees.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Refugees/Pods-Refugees.debug.xcconfig"; sourceTree = "<group>"; };
+		C5306E9D1BAD513F006EF081 /* EmergencyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencyViewController.h; sourceTree = "<group>"; };
+		C5306E9E1BAD513F006EF081 /* EmergencyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencyViewController.m; sourceTree = "<group>"; };
 		C5E23FEE1BACABAF000BA16B /* Refugees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Refugees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E23FF21BACABAF000BA16B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C5E23FF41BACABAF000BA16B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F6DC4701BADBAD900931D85 /* QuartzCore.framework in Frameworks */,
 				C5EF20661BAD424000C61523 /* CoreLocation.framework in Frameworks */,
 				477A0CF56D82DE40E44E047C /* libPods-Refugees.a in Frameworks */,
 				4F6B66351BAD4C3700F106A1 /* MapKit.framework in Frameworks */,
@@ -83,9 +94,20 @@
 		44F22397C02C64D666935E6D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4F6DC46F1BADBAD900931D85 /* QuartzCore.framework */,
 				CA8E839EB4A253E002EC2FA5 /* libPods-Refugees.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4F6DC4751BADEB6A00931D85 /* Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				4F6DC4731BADEB6A00931D85 /* MyAnnotation.h */,
+				4F6DC4741BADEB6A00931D85 /* MyAnnotation.m */,
+			);
+			name = Annotation;
+			path = "../../../../Dropbox/Apps & Programming symlink/OR/OrganicRevolution/OrganicRevolution";
 			sourceTree = "<group>";
 		};
 		BC2F36412D27A4EE457AF9E6 /* Pods */ = {
@@ -122,9 +144,11 @@
 				C5E23FF41BACABAF000BA16B /* AppDelegate.h */,
 				C5E23FF51BACABAF000BA16B /* AppDelegate.m */,
 				C5E23FF71BACABAF000BA16B /* FirstViewController.h */,
+				C5E23FF81BACABAF000BA16B /* FirstViewController.m */,
+				4F6DC46C1BAD9F7B00931D85 /* ChooseViewController.h */,
+				4F6DC46D1BAD9F7B00931D85 /* ChooseViewController.m */,
 				4F6B66311BAD4BC100F106A1 /* MVC.h */,
 				4F6B66321BAD4BC100F106A1 /* MVC.m */,
-				C5E23FF81BACABAF000BA16B /* FirstViewController.m */,
 				C5E23FFA1BACABAF000BA16B /* SecondViewController.h */,
 				C5E23FFB1BACABAF000BA16B /* SecondViewController.m */,
 				C5E2400E1BACC7A2000BA16B /* DonateViewController.h */,
@@ -155,6 +179,8 @@
 		C5E23FF11BACABAF000BA16B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4F6DC4751BADEB6A00931D85 /* Annotation */,
+				4F6DC4711BADE65300931D85 /* Locations.json */,
 				C5EF20651BAD424000C61523 /* CoreLocation.framework */,
 				C5E23FF21BACABAF000BA16B /* main.m */,
 			);
@@ -222,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5E240041BACABAF000BA16B /* LaunchScreen.storyboard in Resources */,
+				4F6DC4721BADE65400931D85 /* Locations.json in Resources */,
 				C5E240011BACABAF000BA16B /* Assets.xcassets in Resources */,
 				C5E23FFF1BACABAF000BA16B /* Main.storyboard in Resources */,
 			);
@@ -270,6 +297,7 @@
 				C5E23FFC1BACABAF000BA16B /* SecondViewController.m in Sources */,
 				C5EF20641BAD421300C61523 /* LocationAccessViewController.m in Sources */,
 				C5E240101BACC7A2000BA16B /* DonateViewController.m in Sources */,
+				4F6DC46E1BAD9F7B00931D85 /* ChooseViewController.m in Sources */,
 				C5EF20611BAD3FB300C61523 /* InfosViewController.m in Sources */,
 				C5EF205E1BAD3FAD00C61523 /* LocationsViewController.m in Sources */,
 				C5E2400D1BACB38A000BA16B /* DataManager.m in Sources */,
@@ -277,6 +305,7 @@
 				C5E23FF61BACABAF000BA16B /* AppDelegate.m in Sources */,
 				C5E23FF91BACABAF000BA16B /* FirstViewController.m in Sources */,
 				C5EF20581BAD3F9200C61523 /* AnnounceViewController.m in Sources */,
+				4F6DC4761BADEB6A00931D85 /* MyAnnotation.m in Sources */,
 				C5EF205B1BAD3FA700C61523 /* ArrivalsViewController.m in Sources */,
 				C5306E9F1BAD513F006EF081 /* EmergencyViewController.m in Sources */,
 				C5E23FF31BACABAF000BA16B /* main.m in Sources */,

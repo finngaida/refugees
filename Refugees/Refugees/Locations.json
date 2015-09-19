@@ -1,0 +1,21 @@
+[
+ 	{
+	 	"name": "Asyl 1",
+	 	"adresse": "Grindelhof 126, 20148 Hamburg",
+ 		"lat": 53.568370,
+ 		"lng": 9.980430
+		
+ 	},
+ 	{
+ 		"name": "Asyl 2",
+ 		"adresse": "Hallerstraße 78, 20146 Hamburg",
+ 		"lat": 53.572350,
+		 "lng": 9.987340
+ 	},
+	 {
+ 		"name": "Asyl 3",
+ 		"adresse": "Milchstraße 1, 20149 Hamburg",
+ 		"lat": 53.570805,
+ 		"lng": 9.995650
+ 	}
+]
