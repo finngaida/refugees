@@ -96,7 +96,7 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     
     originField = [[JVFloatLabeledTextField alloc] initWithFrame:CGRectZero];
     originField.font = [UIFont systemFontOfSize:kJVFieldFontSize];
-    originField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"Arrival Location", @"")
+    originField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"Your origin", @"")
                                                                           attributes:@{NSForegroundColorAttributeName: [UIColor darkGrayColor]}];
     originField.floatingLabelFont = [UIFont boldSystemFontOfSize:kJVFieldFloatingLabelFontSize];
     originField.floatingLabelTextColor = floatingLabelColor;
@@ -124,17 +124,24 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     [submit addTarget:self action:@selector(submitData) forControlEvents:UIControlEventTouchUpInside];
     [submit addTarget:self action:@selector(touchDown:) forControlEvents:UIControlEventTouchDown];
     [submit addTarget:self action:@selector(releaseBtn:) forControlEvents:UIControlEventTouchUpInside];
-    submit.titleLabel.text = @"Submit";
+    UILabel* title = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, submit.frame.size.width, submit.frame.size.height)];
+    title.backgroundColor = [UIColor clearColor];
+    title.textColor = [UIColor whiteColor];
+    title.font = [UIFont fontWithName:@"Nexa Bold" size:40];
+    title.text = @"SUBMIT";
+    title.textAlignment = NSTextAlignmentCenter;
+    [submit addSubview:title];
     [container addSubview:submit];
     
     [container addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(xMargin)-[titleField]-(xMargin)-|" options:0 metrics:@{@"xMargin": @(kJVFieldHMargin)} views:NSDictionaryOfVariableBindings(titleField)]];
     [container addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[div1]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(div1)]];
     [container addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(xMargin)-[priceField]-(xMargin)-[div2(1)]-(xMargin)-[locationField]-(xMargin)-|" options:NSLayoutFormatAlignAllCenterY metrics:@{@"xMargin": @(kJVFieldHMargin)} views:NSDictionaryOfVariableBindings(priceField, div2, locationField)]];
+    [container addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[div4]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(div4)]];
     [container addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(xMargin)-[originField]-(xMargin)-|" options:NSLayoutFormatAlignAllCenterY metrics:@{@"xMargin": @(kJVFieldHMargin)} views:NSDictionaryOfVariableBindings(div4, originField)]];
     [container addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[div3]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(div3)]];
     [container addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(xMargin)-[descriptionField]-(xMargin)-|" options:0 metrics:@{@"xMargin": @(kJVFieldHMargin)} views:NSDictionaryOfVariableBindings(descriptionField)]];
     
-    [container addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[titleField(>=minHeight)][div1(1)][priceField(>=minHeight)][div3(1)][descriptionField]|" options:0 metrics:@{@"minHeight": @(kJVFieldHeight)} views:NSDictionaryOfVariableBindings(titleField, div1, priceField, div3, descriptionField)]];
+    [container addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[titleField(>=minHeight)][div1(1)][originField(>=minHeight)][div4(1)][priceField(>=minHeight)][div3(1)][descriptionField]|" options:0 metrics:@{@"minHeight": @(kJVFieldHeight)} views:NSDictionaryOfVariableBindings(titleField, div1, originField, div4, priceField, div3, descriptionField)]];
     [container addConstraint:[NSLayoutConstraint constraintWithItem:priceField attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:div2 attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0.0]];
     [container addConstraint:[NSLayoutConstraint constraintWithItem:priceField attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:locationField attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0.0]];
     
