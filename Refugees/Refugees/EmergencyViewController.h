@@ -10,7 +10,11 @@
 
 @interface EmergencyViewController : UIViewController {
     
-    IBOutlet UIButton *
+   
+    IBOutlet UIButton *rescueBtn;
+    IBOutlet UIButton *ambulanceBtn;
+    IBOutlet UIButton *policeBtn;
+    
 }
 
 @end
