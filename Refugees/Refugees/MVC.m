@@ -399,8 +399,7 @@ BOOL annotationsSet;
         
         newAnnotation = [[MyAnnotation alloc] init];
         newAnnotation.title = dictionary[@"name"];
-        newAnnotation.subtitle = dictionary[@"adresse"];
-        newAnnotation.opening = dictionary[@"opening"];
+        newAnnotation.subtitle = dictionary[@"anzahl"];
         newAnnotation.coordinate = location;
         
         // add it to our array
