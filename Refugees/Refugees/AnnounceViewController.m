@@ -117,6 +117,13 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     [container addSubview:descriptionField];
     descriptionField.translatesAutoresizingMaskIntoConstraints = NO;
     
+    titleField.delegate = self;
+    originField.delegate = self;
+    priceField.delegate = self;
+    descriptionField.delegate = self;
+    locationField.delegate = self;
+    
+    
     submit = [[UIButton alloc] initWithFrame:CGRectMake(20, container.frame.size.height-220, container.frame.size.width-40, 100)];
     submit.layer.masksToBounds = YES;
     submit.layer.cornerRadius = 10;
@@ -166,6 +173,11 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
         Btn.transform = CGAffineTransformMakeScale(1, 1);
         
     }completion:nil];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {

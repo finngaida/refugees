@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AnnounceViewController : UIViewController
+@interface AnnounceViewController : UIViewController <UITextFieldDelegate, UITextViewDelegate>
 
 @end

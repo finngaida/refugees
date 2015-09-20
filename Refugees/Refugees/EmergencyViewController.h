@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EmergencyViewController : UIViewController {
-    
-    IBOutlet UIButton *
-}
+@interface EmergencyViewController : UIViewController 
 
 @end
