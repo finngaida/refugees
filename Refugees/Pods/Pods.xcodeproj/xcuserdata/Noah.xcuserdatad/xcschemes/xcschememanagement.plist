@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>JVFloatLabeledTextField.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>Pods-Refugees.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +18,16 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>3058BD3049383648DA995BB599B0626A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>31A5928C6BDE1CB74E26163E6BAE0556</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B1D3581B58D28B53EB44BF1E0A20F510</key>
 		<dict>
 			<key>primary</key>
 			<true/>
