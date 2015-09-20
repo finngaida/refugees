@@ -24,6 +24,67 @@
     if ([CLLocationManager authorizationStatus] != kCLAuthorizationStatusAuthorizedWhenInUse) {
         [self performSegueWithIdentifier:@"showAccess" sender:nil];
     }
+    
+    CALayer *btnLayer = [policeBtn layer];
+    [btnLayer setMasksToBounds:YES];
+    [btnLayer setCornerRadius:10.0];
+    
+    CALayer *btnLayer2 = [ambulanceBtn layer];
+    [btnLayer2 setMasksToBounds:YES];
+    [btnLayer2 setCornerRadius:10.0];
+    
+    CALayer *btnLayer3 = [rescueBtn layer];
+    [btnLayer3 setMasksToBounds:YES];
+    [btnLayer3 setCornerRadius:10.0];
+    
+    policeBtn.tag = 1;
+    ambulanceBtn.tag = 2;
+    rescueBtn.tag = 3;
+    
+    [self releaseBtn:ambulanceBtn];
+    [self releaseBtn:policeBtn];
+    [self releaseBtn:rescueBtn];
+
+
+}
+
+-(IBAction)Choose:(id)sender {
+    NSString *phoneNumber;
+    if ([sender tag] == 1) {
+        phoneNumber = @"telprompt://110";
+            }else if ([sender tag] == 2) {
+                  phoneNumber = @"telprompt://112" ;
+            }else if ([sender tag] == 3){
+                  phoneNumber = @"telprompt://+49 40 30620-0";
+            }
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
+    
+    [self releaseBtn:sender];
+}
+
+-(IBAction)touchDown:(id)sender {
+    UIButton *Btn = (UIButton*)sender;
+    
+    [UIView animateWithDuration:0.3 delay:0 usingSpringWithDamping:0.3 initialSpringVelocity:13 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        Btn.transform = CGAffineTransformMakeScale(0.8, 0.8);
+    }completion:nil];
+    
+    
+}
+
+-(IBAction)releaseBtn:(id)sender {
+    UIButton *Btn = (UIButton*)sender;
+    
+    [UIView animateWithDuration:0.3 delay:0.2 usingSpringWithDamping:0.3 initialSpringVelocity:13 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        Btn.transform = CGAffineTransformMakeScale(1, 1);
+        
+    }completion:nil];
+}
+
+
+- (IBAction)hide:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

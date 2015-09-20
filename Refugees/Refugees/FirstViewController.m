@@ -19,8 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    if ([DataManager sharedManager].type) {
+
+  if ([DataManager sharedManager].type) {
         [self show:[DataManager sharedManager].type];
     }
     
@@ -42,6 +42,8 @@
     }
     
 }
+
+
 
 - (IBAction)refugeeTapped:(id)sender {
     [DataManager sharedManager].type = FGTypeRefugee;
