@@ -740,15 +740,14 @@ BOOL alertIsVisible;
 
 - (void)mapView:(MKMapView *)mv annotationView:(MKAnnotationView *)pin calloutAccessoryControlTapped:(UIControl *)control {
     
-    MyAnnotation *annotations = (MyAnnotation *) pin.annotation;
+    //MyAnnotation *annotations = (MyAnnotation *) pin.annotation;
     
     NSLog(@"%@", pin.annotation.title);
     
-    NSString *adress = pin.annotation.subtitle;
-    NSString *opentime = annotations.opening;
+    NSString *anzahl = pin.annotation.subtitle;
     
     NSLog(@"Button Action");
-    NSString *message = [NSString stringWithFormat:@"\nAdresse:\n%@\n\nÖffnungszeiten:\n%@",adress, opentime];
+    NSString *message = [NSString stringWithFormat:@"\nAsylanten:\n%@",anzahl];
 
     UIAlertController * alert=   [UIAlertController
                                   alertControllerWithTitle:pin.annotation.title
