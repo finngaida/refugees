@@ -44,8 +44,11 @@
 
     UIView *cautionView;
     UIImageView *caution;
-    
+    UIButton *cautionBtn;
+    UIButton *closeAlterBtn;
     NSTimer *alertTimer;
+    UILabel *alertLabel;
+    
 
 }
 extern BOOL hamburger;

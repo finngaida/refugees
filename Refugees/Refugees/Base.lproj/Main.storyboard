@@ -83,7 +83,7 @@
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeD-Ag-3tk">
                                 <rect key="frame" x="150" y="450" width="300" height="98"/>
-                                <color key="backgroundColor" red="0.89752303328463723" green="0.90901065574615847" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.80738957491140395" green="0.8213565860365698" blue="0.83924144942067735" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="98" id="aEM-QN-ZOt"/>
                                     <constraint firstAttribute="height" constant="98" id="ex8-QT-1Xa"/>

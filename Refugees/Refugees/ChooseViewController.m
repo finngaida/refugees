@@ -28,8 +28,6 @@ BOOL hamburger;
     CALayer *btnLayer3 = [Unknown layer];
     [btnLayer3 setMasksToBounds:YES];
     [btnLayer3 setCornerRadius:10.0];
-    
-    
 
     // Do any additional setup after loading the view.
 }

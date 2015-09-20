@@ -156,11 +156,123 @@
     caution.contentMode = UIViewContentModeScaleAspectFit;
     [cautionView addSubview:caution];
     
+    cautionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    cautionBtn.frame = CGRectMake(78, 135+60, caution.bounds.size.width, 60);
+    cautionBtn.layer.cornerRadius = (self.view.bounds.size.width-86)/2;
+    [cautionBtn addTarget:self action:@selector(cautionAction:) forControlEvents:UIControlEventTouchUpInside];
+    [cautionBtn setHidden:YES];
+    [self.view addSubview:cautionBtn];
+
+    
     [self checkForAlert];
     [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(checkForAlert) userInfo:nil repeats:YES];
 
     
 }
+
+-(void)cautionAction:(id)sender {
+
+    NSLog(@"shit");
+    
+        [cautionBtn removeTarget:self action:@selector(cautionAction:) forControlEvents:UIControlEventTouchUpInside];
+                        [mapOverlay removeTarget:self action:@selector(openMap) forControlEvents:UIControlEventTouchUpInside];
+    closeAlterBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    closeAlterBtn.frame = CGRectMake(self.view.bounds.size.width/2-30, 200, 60, 60);
+    [closeAlterBtn addTarget:self action:@selector(closeOpenAlert) forControlEvents:UIControlEventTouchUpInside];
+    [closeAlterBtn setTitle:@"+" forState:UIControlStateNormal];
+    [closeAlterBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [closeAlterBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+    closeAlterBtn.titleLabel.font = [UIFont fontWithName:@"Nexa Bold" size:80];
+    closeAlterBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
+    closeAlterBtn.layer.cornerRadius = 0;
+    closeAlterBtn.alpha = 0;
+    closeAlterBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 0, -20, 0);
+    closeAlterBtn.transform = CGAffineTransformMakeRotation(( 45 * M_PI ) / 180 );
+    [self.view addSubview:closeAlterBtn];
+    
+    alertLabel = [[UILabel alloc]init];
+    alertLabel.frame = CGRectMake(0, 0, self.view.bounds.size.width-86, self.view.bounds.size.width-86);
+    alertLabel.font = [UIFont fontWithName:@"Nexa Bold" size:30];
+    alertLabel.numberOfLines = 6;
+    alertLabel.layer.cornerRadius = (self.view.bounds.size.width-86)/2;
+    alertLabel.textColor = [UIColor whiteColor];
+    alertLabel.textAlignment = NSTextAlignmentCenter;
+    alertLabel.layer.borderWidth =0;
+    alertLabel.alpha = 0;
+    [cautionView addSubview:alertLabel];
+                       
+           PFQuery *query = [PFQuery queryWithClassName:@"mainClass"];
+           [query getObjectInBackgroundWithId:@"aXpNBp34vP"
+                                        block:^(PFObject *objects, NSError *error) {
+                                            if (!error) {
+                                                NSString *string = [objects objectForKey:@"alertMsg"];
+                                                alertLabel.text = string;
+                                                
+                                                    
+                                                }else {
+                                                    
+                                                }}];
+
+    
+
+    [UIView animateWithDuration:0.2 delay:0.5 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        //cautionView.transform = CGAffineTransformMakeTranslation(0, -120);
+        closeAlterBtn.alpha =1;
+        alertLabel.alpha = 1;
+    }completion:^(BOOL finished){
+
+    }];
+    cautionView.backgroundColor = [UIColor colorWithRed:0.984f green:0.329f blue:0.329f alpha:1.0f];
+
+    [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        cautionView.frame = CGRectMake(43, 190, self.view.bounds.size.width-86, self.view.bounds.size.width-86);
+        cautionView.layer.cornerRadius = (self.view.bounds.size.width-86)/2;
+        caution.frame = CGRectMake(cautionView.bounds.size.width/2-110, 0, 219, 120);
+        caution.alpha = 0;
+
+
+    }completion:^(BOOL finished){
+        [self.view bringSubviewToFront:closeAlterBtn];
+    }];
+}
+
+-(void)closeOpenAlert{
+    NSLog(@"close");
+    
+    [UIView animateWithDuration:0.2 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        closeAlterBtn.alpha =0;
+        alertLabel.alpha = 0;
+
+    }completion:^(BOOL finished){
+        [closeAlterBtn removeFromSuperview];
+    }];
+    
+    [UIView animateWithDuration:0.3 delay:0.4 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        caution.alpha = 1;
+        
+    }completion:^(BOOL finished){
+        
+    }];
+    
+    [UIView animateWithDuration:0.5 delay:0.2 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        cautionView.backgroundColor = [UIColor clearColor];
+
+        cautionView.frame = CGRectMake(78, 135, 219, 120);
+        caution.frame = CGRectMake(0, 0, 219, 120);
+        
+        
+    }completion:^(BOOL finished){
+                [cautionBtn addTarget:self action:@selector(cautionAction:) forControlEvents:UIControlEventTouchUpInside];
+                            [mapOverlay addTarget:self action:@selector(openMap) forControlEvents:UIControlEventTouchUpInside];
+        cautionView.layer.cornerRadius = 0;
+
+    }];
+
+    
+
+}
+
+
 BOOL annotationsSet;
 
 -(void)openMap {
@@ -204,7 +316,8 @@ BOOL annotationsSet;
 
 
     }completion:^(BOOL finished){
-        
+        [mapView setUserInteractionEnabled:YES];
+
         if (!annotationsSet) {
             [self addAnnotations];
         }
@@ -276,6 +389,7 @@ BOOL annotationsSet;
         coverView2.alpha = 1;
     }completion:^(BOOL finished){
      [mapOverlay setHidden:NO];
+        [mapView setUserInteractionEnabled:NO];
     }];
     
     [UIView animateWithDuration:1 delay:0.0  options:UIViewAnimationOptionCurveEaseInOut animations:^{
@@ -290,7 +404,7 @@ BOOL annotationsSet;
         midOverlay.transform = CGAffineTransformMakeTranslation(0, 0);
         
         cautionView.transform = CGAffineTransformMakeTranslation(0, 0);
-        
+
         if (!hamburger) {
             guideBtn.transform = CGAffineTransformMakeTranslation(0, 0);
             gameBtn.transform = CGAffineTransformMakeTranslation(0, 0);
@@ -306,6 +420,7 @@ BOOL annotationsSet;
         
     }completion:nil];
 
+    
 }
 
 
@@ -369,7 +484,7 @@ BOOL annotationsSet;
     
 }
 
--(IBAction)openSocial:(id)sender {
+-(void)openSocial:(id)sender {
     
     if (sender == fbBtn) {
         NSString *fbURL = @"fb://profile/379148348868863";
@@ -398,7 +513,7 @@ BOOL annotationsSet;
     }
 }
 
--(IBAction)createDetail:(id)sender {
+-(void)createDetail:(id)sender {
     
     UIButton *senderBtn = (UIButton*)sender;
     
@@ -486,6 +601,8 @@ BOOL alertIsVisible;
                                              }completion:NULL];
                                              [self alertDisappeard];
                                              alertIsVisible = NO;
+                                             [cautionBtn setHidden:YES];
+
                                              
                                          }else {
                                              if (!alertIsVisible) {
@@ -498,6 +615,7 @@ BOOL alertIsVisible;
                                              }
                                              NSLog(@"String has content - Display string");
                                             alertIsVisible = YES;
+                                             [cautionBtn setHidden:NO];
 
 
                                          }

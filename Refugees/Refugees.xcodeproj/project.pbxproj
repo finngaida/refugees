@@ -26,6 +26,8 @@
 		4F6DC48A1BADFDA200931D85 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F6DC4891BADFDA200931D85 /* Accounts.framework */; };
 		4F6DC48C1BADFDAA00931D85 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F6DC48B1BADFDAA00931D85 /* Social.framework */; };
 		4F6DC4901BADFFD800931D85 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F6DC48F1BADFFD800931D85 /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
+		4F6DC4941BAE1DA300931D85 /* Nexa Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F6DC4931BAE1D5900931D85 /* Nexa Light.otf */; settings = {ASSET_TAGS = (); }; };
+		4F6DC4951BAE1DA600931D85 /* Nexa Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F6DC4921BAE1D5900931D85 /* Nexa Bold.otf */; settings = {ASSET_TAGS = (); }; };
 		C5306E9F1BAD513F006EF081 /* EmergencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5306E9E1BAD513F006EF081 /* EmergencyViewController.m */; };
 		C5E23FF31BACABAF000BA16B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E23FF21BACABAF000BA16B /* main.m */; };
 		C5E23FF61BACABAF000BA16B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E23FF51BACABAF000BA16B /* AppDelegate.m */; };
@@ -67,6 +69,8 @@
 		4F6DC48B1BADFDAA00931D85 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		4F6DC48D1BADFF9400931D85 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../Downloads/parse-library-1.8.5/Bolts.framework"; sourceTree = "<group>"; };
 		4F6DC48F1BADFFD800931D85 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		4F6DC4921BAE1D5900931D85 /* Nexa Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa Bold.otf"; sourceTree = "<group>"; };
+		4F6DC4931BAE1D5900931D85 /* Nexa Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa Light.otf"; sourceTree = "<group>"; };
 		5167FB05AD76B6979119BF98 /* Pods-Refugees.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Refugees.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Refugees/Pods-Refugees.debug.xcconfig"; sourceTree = "<group>"; };
 		C5306E9D1BAD513F006EF081 /* EmergencyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencyViewController.h; sourceTree = "<group>"; };
 		C5306E9E1BAD513F006EF081 /* EmergencyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencyViewController.m; sourceTree = "<group>"; };
@@ -162,6 +166,26 @@
 			path = "../../../../Dropbox/Apps & Programming symlink/OR/OrganicRevolution/OrganicRevolution";
 			sourceTree = "<group>";
 		};
+		4F6DC4911BAE1D4B00931D85 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				4F6DC4921BAE1D5900931D85 /* Nexa Bold.otf */,
+				4F6DC4931BAE1D5900931D85 /* Nexa Light.otf */,
+			);
+			name = Font;
+			sourceTree = "<group>";
+		};
+		4F6DC4961BAE1E2F00931D85 /* Visible Files */ = {
+			isa = PBXGroup;
+			children = (
+				4F6DC46C1BAD9F7B00931D85 /* ChooseViewController.h */,
+				4F6DC46D1BAD9F7B00931D85 /* ChooseViewController.m */,
+				4F6B66311BAD4BC100F106A1 /* MVC.h */,
+				4F6B66321BAD4BC100F106A1 /* MVC.m */,
+			);
+			name = "Visible Files";
+			sourceTree = "<group>";
+		};
 		BC2F36412D27A4EE457AF9E6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,10 +220,7 @@
 				C5E23FF51BACABAF000BA16B /* AppDelegate.m */,
 				C5E23FF71BACABAF000BA16B /* FirstViewController.h */,
 				C5E23FF81BACABAF000BA16B /* FirstViewController.m */,
-				4F6DC46C1BAD9F7B00931D85 /* ChooseViewController.h */,
-				4F6DC46D1BAD9F7B00931D85 /* ChooseViewController.m */,
-				4F6B66311BAD4BC100F106A1 /* MVC.h */,
-				4F6B66321BAD4BC100F106A1 /* MVC.m */,
+				4F6DC4961BAE1E2F00931D85 /* Visible Files */,
 				C5E23FFA1BACABAF000BA16B /* SecondViewController.h */,
 				C5E23FFB1BACABAF000BA16B /* SecondViewController.m */,
 				C5E2400E1BACC7A2000BA16B /* DonateViewController.h */,
@@ -230,6 +251,7 @@
 		C5E23FF11BACABAF000BA16B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4F6DC4911BAE1D4B00931D85 /* Font */,
 				4F6DC4751BADEB6A00931D85 /* Annotation */,
 				4F6DC4711BADE65300931D85 /* Locations.json */,
 				C5E23FF21BACABAF000BA16B /* main.m */,
@@ -297,6 +319,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F6DC4941BAE1DA300931D85 /* Nexa Light.otf in Resources */,
+				4F6DC4951BAE1DA600931D85 /* Nexa Bold.otf in Resources */,
 				C5E240041BACABAF000BA16B /* LaunchScreen.storyboard in Resources */,
 				4F6DC4721BADE65400931D85 /* Locations.json in Resources */,
 				C5E240011BACABAF000BA16B /* Assets.xcassets in Resources */,
