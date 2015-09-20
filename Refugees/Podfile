@@ -4,6 +4,7 @@ platform :ios, '6.0'
 target 'Refugees' do
 
 pod 'PayPal-iOS-SDK'
+pod 'JVFloatLabeledTextField'
 
 end
 

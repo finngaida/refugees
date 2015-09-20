@@ -47,7 +47,7 @@ BOOL hamburger;
     
     [self performSegueWithIdentifier:@"showSecond" sender:nil];
     
-   // [self releaseBtn:self];
+   [self releaseBtn:sender];
 }
 
 -(IBAction)touchDown:(id)sender {
