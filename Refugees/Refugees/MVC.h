@@ -18,6 +18,7 @@
     UIImageView *botOverlay;
     UIImageView *midOverlay;
     UIImageView *logoImg;
+    UIButton *logoBtn;
     UIImageView *heartImg;
 
     UIButton *guideBtn;

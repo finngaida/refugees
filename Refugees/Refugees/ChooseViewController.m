@@ -44,7 +44,8 @@ BOOL hamburger;
     }else if ([sender tag] == 2) {
         hamburger = YES;
     }
-        [self performSegueWithIdentifier:@"showSecond" sender:nil];
+    
+    [self performSegueWithIdentifier:@"showSecond" sender:nil];
     
    // [self releaseBtn:self];
 }

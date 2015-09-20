@@ -8,6 +8,7 @@
 
 #import "MVC.h"
 #import <QuartzCore/QuartzCore.h>
+#import <Social/Social.h>
 #import "MyAnnotation.h"
 
 @interface MVC ()
@@ -58,11 +59,14 @@
     midOverlay.contentMode = UIViewContentModeScaleAspectFit;
     [self.view addSubview:midOverlay];
     
+    logoBtn = [[UIButton alloc] initWithFrame:CGRectMake(54, 19, 264, 74)];
+    [logoBtn addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
     logoImg = [[UIImageView alloc]init];
-    logoImg.frame = CGRectMake(54, 19, 264, 74);
+    logoImg.frame = CGRectMake(0, 0, 264, 74);
     logoImg.image = [UIImage imageNamed:@"logo"];
     logoImg.contentMode = UIViewContentModeScaleAspectFit;
-    [self.view addSubview:logoImg];
+    [logoBtn addSubview:logoImg];
+    [self.view addSubview:logoBtn];
     
     heartImg = [[UIImageView alloc]init];
     heartImg.frame = CGRectMake(152, 100, 70, 65);
@@ -91,36 +95,42 @@
     if (hamburger) {
         newsBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         newsBtn.frame = CGRectMake(15, 483, 97, 69);
+        newsBtn.tag = 6;
         [newsBtn setImage:[UIImage imageNamed:@"news"] forState:UIControlStateNormal];
         [newsBtn addTarget:self action:@selector(createDetail:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:newsBtn];
         
         statsBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         statsBtn.frame = CGRectMake(148, 518, 80, 84);
+        statsBtn.tag = 1;
         [statsBtn setImage:[UIImage imageNamed:@"stats"] forState:UIControlStateNormal];
         [statsBtn addTarget:self action:@selector(createDetail:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:statsBtn];
         
         storysBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         storysBtn.frame = CGRectMake(282, 482, 70, 84);
+        storysBtn.tag = 2;
         [storysBtn setImage:[UIImage imageNamed:@"people"] forState:UIControlStateNormal];
         [storysBtn addTarget:self action:@selector(createDetail:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:storysBtn];
     }else {
         guideBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         guideBtn.frame = CGRectMake(15, 467, 88, 98);
+        guideBtn.tag = 8;
         [guideBtn setImage:[UIImage imageNamed:@"sign"] forState:UIControlStateNormal];
         [guideBtn addTarget:self action:@selector(createDetail:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:guideBtn];
         
         gameBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         gameBtn.frame = CGRectMake(148, 550, 81, 48);
+//        gameBtn.tag = 4;
         [gameBtn setImage:[UIImage imageNamed:@"gaming"] forState:UIControlStateNormal];
         [gameBtn addTarget:self action:@selector(createDetail:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:gameBtn];
         
         emergencyBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         emergencyBtn.frame = CGRectMake(275, 472, 89, 89);
+        emergencyBtn.tag = 5;
         [emergencyBtn setImage:[UIImage imageNamed:@"saver"] forState:UIControlStateNormal];
         [emergencyBtn addTarget:self action:@selector(createDetail:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:emergencyBtn];
@@ -488,26 +498,39 @@ BOOL annotationsSet;
     
     if (sender == fbBtn) {
         NSString *fbURL = @"fb://profile/379148348868863";
-        NSString *fbURLS = @"https://www.facebook.com/jugendhackt";
-        BOOL canOpenURL = [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:fbURL]];
+        NSString __unused *fbURLS = @"https://www.facebook.com/jugendhackt";
+        BOOL __unused canOpenURL = [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:fbURL]];
         
-        if(canOpenURL) {
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:fbURL]];
-        } else {
-            [[UIApplication sharedApplication]openURL:[NSURL URLWithString:fbURLS]];
+//        if(canOpenURL) {
+//            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:fbURL]];
+//        } else {
+//            [[UIApplication sharedApplication]openURL:[NSURL URLWithString:fbURLS]];
+//        }
+        
+        if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+            SLComposeViewController *post = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+            [post setInitialText:@"I'm helping refugees with the \"Moin Refugees!\" App!"];
+            [post addURL:[NSURL URLWithString:@"https://hackdash.org/projects/55fd2a6474d6ac1d2145177e"]];
+            [self presentViewController:post animated:YES completion:nil];
         }
-
     }
     
     if (sender == twtBtn) {
         NSString *fbURL = @"twitter://user?screen_name=jhacktnord";
-        NSString *fbURLS = @"https://twitter.com/jhacktnord";
-        BOOL canOpenURL = [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:fbURL]];
+        NSString __unused *fbURLS = @"https://twitter.com/jhacktnord";
+        BOOL __unused canOpenURL = [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:fbURL]];
         
-        if(canOpenURL) {
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:fbURL]];
-        } else {
-            [[UIApplication sharedApplication]openURL:[NSURL URLWithString:fbURLS]];
+//        if(canOpenURL) {
+//            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:fbURL]];
+//        } else {
+//            [[UIApplication sharedApplication]openURL:[NSURL URLWithString:fbURLS]];
+//        }
+        
+        if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
+            SLComposeViewController *post = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+            [post setInitialText:@"I'm helping refugees with the \"Moin Refugees!\" App!"];
+            [post addURL:[NSURL URLWithString:@"https://hackdash.org/projects/55fd2a6474d6ac1d2145177e"]];
+            [self presentViewController:post animated:YES completion:nil];
         }
 
     }
@@ -525,7 +548,26 @@ BOOL annotationsSet;
         senderBtn.transform = CGAffineTransformMakeScale(1, 1);
     }completion:NULL];
     
+    NSString *seg;
+    switch (senderBtn.tag) {
+            case 0:seg = @"showNews";break;
+            case 1:seg = @"showInfos";break;
+            case 2:seg = @"showArrivals";break;
+            case 3:seg = @"showGuides";break;
+            case 4:seg = @"showGames";break;
+            case 5:seg = @"showEmergency";break;
+            case 6:seg = @"showDonate";break;
+            case 7:seg = @"showLocations";break;
+            case 8:seg = @"showAnnounce";break;
+            default:break;
+    }
 
+    [self performSegueWithIdentifier:seg sender:nil];
+    
+}
+
+- (void)goBack {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
