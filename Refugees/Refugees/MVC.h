@@ -31,7 +31,7 @@
     
     UIButton *alertBtn;
     UIButton *donateBtn;
-    UIView *donateView;
+    UIImageView *donateView;
     UIView *alertView;
     
     UIButton *fbBtn;
@@ -49,6 +49,7 @@
     UIButton *closeAlterBtn;
     NSTimer *alertTimer;
     UILabel *alertLabel;
+    
     
 
 }

@@ -54,8 +54,6 @@
 		4F6DC46D1BAD9F7B00931D85 /* ChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseViewController.m; sourceTree = "<group>"; };
 		4F6DC46F1BADBAD900931D85 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4F6DC4711BADE65300931D85 /* Locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Locations.json; sourceTree = "<group>"; };
-		4F6DC4731BADEB6A00931D85 /* MyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
-		4F6DC4741BADEB6A00931D85 /* MyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
 		4F6DC4771BADFD2800931D85 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		4F6DC4791BADFD4600931D85 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4F6DC47B1BADFD4B00931D85 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -158,16 +156,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4F6DC4751BADEB6A00931D85 /* Annotation */ = {
-			isa = PBXGroup;
-			children = (
-				4F6DC4731BADEB6A00931D85 /* MyAnnotation.h */,
-				4F6DC4741BADEB6A00931D85 /* MyAnnotation.m */,
-			);
-			name = Annotation;
-			path = "../../../../Dropbox/Apps & Programming symlink/OR/OrganicRevolution/OrganicRevolution";
-			sourceTree = "<group>";
-		};
 		4F6DC4911BAE1D4B00931D85 /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,7 +244,6 @@
 			isa = PBXGroup;
 			children = (
 				4F6DC4911BAE1D4B00931D85 /* Font */,
-				4F6DC4751BADEB6A00931D85 /* Annotation */,
 				4F6DC4711BADE65300931D85 /* Locations.json */,
 				C5E23FF21BACABAF000BA16B /* main.m */,
 			);
@@ -296,7 +283,7 @@
 				TargetAttributes = {
 					C5E23FED1BACABAF000BA16B = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = RF278284CD;
+						DevelopmentTeam = 5N7RH4RS44;
 					};
 				};
 			};
@@ -499,6 +486,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -508,6 +496,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.finngaida.Refugees;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -517,6 +506,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -526,6 +516,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.finngaida.Refugees;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

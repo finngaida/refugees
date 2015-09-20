@@ -22,6 +22,17 @@
 }
 @synthesize mapView, locationManager, mapLocations, coordinate;
 
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:YES];
+    [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        donateView.alpha = 1;
+        donateView.frame = CGRectMake(78, 404, 219, 120);
+        donateBtn.frame = CGRectMake(78, 404, 219, 120);
+
+        
+    }completion:NULL];
+}
+
 - (void)viewDidLoad {
     
     [super viewDidLoad];
@@ -113,6 +124,21 @@
         [storysBtn setImage:[UIImage imageNamed:@"people"] forState:UIControlStateNormal];
         [storysBtn addTarget:self action:@selector(createDetail:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:storysBtn];
+        
+        donateView = [[UIImageView alloc]init];
+        donateView.frame = CGRectMake(78, 404+140, 219, 120);
+        donateView.image = [UIImage imageNamed:@"donation"];
+        donateView.contentMode = UIViewContentModeScaleAspectFit;
+        donateView.alpha = 0;
+        [self.view insertSubview:donateView belowSubview:botOverlay];
+        
+        donateBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        donateBtn.frame = CGRectMake(78, 404+140, 219, 120);
+        [donateBtn addTarget:self action:@selector(createDetail:) forControlEvents:UIControlEventTouchUpInside];
+        donateBtn.tag = 6;
+        donateBtn.alpha = 1;
+        [self.view addSubview:donateBtn];
+        
     }else {
         guideBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         guideBtn.frame = CGRectMake(15, 467, 88, 98);
@@ -134,6 +160,8 @@
         [emergencyBtn setImage:[UIImage imageNamed:@"saver"] forState:UIControlStateNormal];
         [emergencyBtn addTarget:self action:@selector(createDetail:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:emergencyBtn];
+        
+
     }
     
     fbBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -172,8 +200,8 @@
     [cautionBtn addTarget:self action:@selector(cautionAction:) forControlEvents:UIControlEventTouchUpInside];
     [cautionBtn setHidden:YES];
     [self.view addSubview:cautionBtn];
+    [self.view bringSubviewToFront:donateBtn];
 
-    
     [self checkForAlert];
     [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(checkForAlert) userInfo:nil repeats:YES];
 
@@ -317,10 +345,13 @@ BOOL annotationsSet;
             gameBtn.transform = CGAffineTransformMakeTranslation(0, +self.view.bounds.size.height/2);
             emergencyBtn.transform = CGAffineTransformMakeTranslation(0, +self.view.bounds.size.height/2);
 
+
         }else {
             storysBtn.transform = CGAffineTransformMakeTranslation(0, +self.view.bounds.size.height/2);
             newsBtn.transform = CGAffineTransformMakeTranslation(0, +self.view.bounds.size.height/2);
             statsBtn.transform = CGAffineTransformMakeTranslation(0, +self.view.bounds.size.height/2);
+            donateView.frame = CGRectMake(78, 404+self.view.bounds.size.height/2, 219, 120);
+            donateBtn.frame = CGRectMake(78, 404+self.view.bounds.size.height/2, 219, 120);
         }
 
 
@@ -424,6 +455,8 @@ BOOL annotationsSet;
             storysBtn.transform = CGAffineTransformMakeTranslation(0, 0);
             newsBtn.transform = CGAffineTransformMakeTranslation(0, 0);
             statsBtn.transform = CGAffineTransformMakeTranslation(0, 0);
+            donateView.frame = CGRectMake(78, 404, 219, 120);
+            donateBtn.frame = CGRectMake(78, 404, 219, 120);
         }
         
         [self locateUser];
