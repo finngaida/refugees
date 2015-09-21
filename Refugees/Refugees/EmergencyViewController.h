@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EmergencyViewController : UIViewController 
+@interface EmergencyViewController : UIViewController {
+    
+   
+    IBOutlet UIButton *rescueBtn;
+    IBOutlet UIButton *ambulanceBtn;
+    IBOutlet UIButton *policeBtn;
+    
+}
 
 @end
