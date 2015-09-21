@@ -11,3 +11,10 @@ An app to help both refugees and helpers in the region of Hamburg (for now) to r
 - Everybody can donate
 - Emergency option for refugees
 - See local refugee locations on a map
+
+## Some screenshots
+![main menu](file:///Users/fga/Desktop/refugees/res/screenshots/1.png)
+![specific menu](file:///Users/fga/Desktop/refugees/res/screenshots/2.png)
+![paypal screen](file:///Users/fga/Desktop/refugees/res/screenshots/3.png)
+![emergency menu](file:///Users/fga/Desktop/refugees/res/screenshots/4.png)
+![register screen](file:///Users/fga/Desktop/refugees/res/screenshots/5.png)
