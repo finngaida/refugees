@@ -5,6 +5,7 @@ target 'Refugees' do
 
 pod 'PayPal-iOS-SDK'
 pod 'CSNotificationView', '~> 0.5'
+pod 'JVFloatLabeledTextField'
 
 end
 

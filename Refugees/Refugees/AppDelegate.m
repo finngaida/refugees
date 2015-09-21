@@ -20,7 +20,36 @@
     // Override point for customization after application launch.
     [PayPalMobile initializeWithClientIdsForEnvironments:@{PayPalEnvironmentProduction:@"", PayPalEnvironmentSandbox:@"ARiWxWX_ex015kUIP0DSUxQY_Jt6ieUgIi1ZM_hxPqnUJXuNXD9AMwq9AFxmNdBKs2URsJ4x0ObVYmBD"}];
     
+    [Parse enableLocalDatastore];
+    
+    // Initialize Parse.
+    [Parse setApplicationId:@"dwE0G4hvZTyj7QdrEm9SMCH2FHY52kLEuyX1KrwD"
+                  clientKey:@"iDVlIpPUg8EiVLja6ud8QswVhBNzrpcF7A2uSTRO"];
+    
+    // [Optional] Track statistics around application opens.
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    // Register for Push Notitications
+    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+                                                    UIUserNotificationTypeBadge |
+                                                    UIUserNotificationTypeSound);
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+                                                                             categories:nil];
+    [application registerUserNotificationSettings:settings];
+    [application registerForRemoteNotifications];
+    
     return YES;
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // Store the deviceToken in the current installation and save it to Parse.
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

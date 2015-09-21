@@ -6,7 +6,7 @@
 //  Copyright © 2015 Finn Gaida. All rights reserved.
 //
 
-#import "PayPalMobile.h"
+#import <PayPalMobile.h>
 #import <UIKit/UIKit.h>
 
 @interface DonateViewController : UIViewController <PayPalPaymentDelegate>

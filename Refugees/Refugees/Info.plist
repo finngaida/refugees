@@ -46,5 +46,10 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Nexa Bold.otf</string>
+		<string>Nexa Light.otf</string>
+	</array>
 </dict>
 </plist>

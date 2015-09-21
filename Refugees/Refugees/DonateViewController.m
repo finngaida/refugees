@@ -70,6 +70,10 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)hide:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 /*
 #pragma mark - Navigation
 
