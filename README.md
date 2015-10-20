@@ -14,3 +14,7 @@ An app to help both refugees and helpers in the region of Hamburg (for now) to r
 
 ## Some screenshots
 ![](https://cloud.githubusercontent.com/assets/4094838/10623574/6c7c0afa-7790-11e5-90cb-7303e703b844.png)
+
+
+## Soon
+Updating features and Interface
