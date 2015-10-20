@@ -13,8 +13,4 @@ An app to help both refugees and helpers in the region of Hamburg (for now) to r
 - See local refugee locations on a map
 
 ## Some screenshots
-![main menu](https://cloud.githubusercontent.com/assets/4094838/10623525/fca5be88-778f-11e5-8379-429830d1b6ba.png)
-![specific menu](file:///Users/fga/Desktop/refugees/res/screenshots/2.png)
-![paypal screen](file:///Users/fga/Desktop/refugees/res/screenshots/3.png)
-![emergency menu](file:///Users/fga/Desktop/refugees/res/screenshots/4.png)
-![register screen](file:///Users/fga/Desktop/refugees/res/screenshots/5.png)
+![main menu](https://cloud.githubusercontent.com/assets/4094838/10623574/6c7c0afa-7790-11e5-90cb-7303e703b844.png)
