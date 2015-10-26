@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="E8b-yq-5z9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="E8b-yq-5z9">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -195,14 +195,15 @@
                         <segue destination="MVU-Ns-Mdv" kind="show" identifier="showArrivals" id="kcd-el-kU9"/>
                         <segue destination="evA-JH-xao" kind="show" identifier="showLocations" id="r4f-5C-L9i"/>
                         <segue destination="dJI-nv-tp2" kind="show" identifier="showEmergency" id="adU-9t-VR0"/>
-                        <segue destination="sO6-uZ-1Gn" kind="show" identifier="showInfos" id="Pid-AM-EEW"/>
+                        <segue destination="sO6-uZ-1Gn" kind="show" identifier="showStats" id="Pid-AM-EEW"/>
                         <segue destination="8g8-6j-S7O" kind="show" identifier="showStory" id="MZl-Bs-yZi"/>
                         <segue destination="P3G-RR-Y4Y" kind="show" identifier="showGames" id="qCx-Mp-wyu"/>
+                        <segue destination="TUd-NO-y9o" kind="show" identifier="showNews" id="Eg1-5o-9pg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2J8-jf-3z4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="650" y="-285"/>
+            <point key="canvasLocation" x="894" y="-353"/>
         </scene>
         <!--Dontate-->
         <scene sceneID="Gc3-ET-Qkn">
