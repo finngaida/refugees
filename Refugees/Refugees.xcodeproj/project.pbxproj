@@ -29,6 +29,7 @@
 		4F6DC4941BAE1DA300931D85 /* Nexa Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F6DC4931BAE1D5900931D85 /* Nexa Light.otf */; };
 		4F6DC4951BAE1DA600931D85 /* Nexa Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F6DC4921BAE1D5900931D85 /* Nexa Bold.otf */; };
 		4FA3152D1BDE65720068F9F0 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA3152C1BDE65720068F9F0 /* GameViewController.m */; };
+		4FC99E1B1BDE9B3D0041AED5 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC99E1A1BDE9B3D0041AED5 /* GuideViewController.m */; settings = {ASSET_TAGS = (); }; };
 		4FDDD52D1BDDDDFC005B3DA0 /* newsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDDD52C1BDDDDFC005B3DA0 /* newsTableViewCell.xib */; };
 		4FDDD5301BDDE082005B3DA0 /* newsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDDD52F1BDDE082005B3DA0 /* newsTableViewCell.m */; };
 		4FDDD5341BDE0280005B3DA0 /* StoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDDD5331BDE0280005B3DA0 /* StoryViewController.m */; };
@@ -80,6 +81,8 @@
 		4F6DC4931BAE1D5900931D85 /* Nexa Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa Light.otf"; sourceTree = "<group>"; };
 		4FA3152B1BDE65720068F9F0 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameViewController.h; path = Assets.xcassets/GameViewController.h; sourceTree = "<group>"; };
 		4FA3152C1BDE65720068F9F0 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameViewController.m; path = Assets.xcassets/GameViewController.m; sourceTree = "<group>"; };
+		4FC99E191BDE9B3D0041AED5 /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
+		4FC99E1A1BDE9B3D0041AED5 /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
 		4FDDD52C1BDDDDFC005B3DA0 /* newsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = newsTableViewCell.xib; sourceTree = "<group>"; };
 		4FDDD52E1BDDE082005B3DA0 /* newsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = newsTableViewCell.h; sourceTree = "<group>"; };
 		4FDDD52F1BDDE082005B3DA0 /* newsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = newsTableViewCell.m; sourceTree = "<group>"; };
@@ -207,6 +210,8 @@
 				C5306E9E1BAD513F006EF081 /* EmergencyViewController.m */,
 				4FA3152B1BDE65720068F9F0 /* GameViewController.h */,
 				4FA3152C1BDE65720068F9F0 /* GameViewController.m */,
+				4FC99E191BDE9B3D0041AED5 /* GuideViewController.h */,
+				4FC99E1A1BDE9B3D0041AED5 /* GuideViewController.m */,
 			);
 			name = Refugee;
 			sourceTree = "<group>";
@@ -458,6 +463,7 @@
 				C5EF205B1BAD3FA700C61523 /* ArrivalsViewController.m in Sources */,
 				4FDDD5341BDE0280005B3DA0 /* StoryViewController.m in Sources */,
 				C5306E9F1BAD513F006EF081 /* EmergencyViewController.m in Sources */,
+				4FC99E1B1BDE9B3D0041AED5 /* GuideViewController.m in Sources */,
 				4F2E107C1BDD6D020071F51D /* StatsViewController.m in Sources */,
 				C5E23FF31BACABAF000BA16B /* main.m in Sources */,
 			);

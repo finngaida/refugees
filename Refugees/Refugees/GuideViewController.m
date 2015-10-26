@@ -1,23 +1,21 @@
 //
-//  GameViewController.m
+//  GuideViewController.m
 //  Refugees
 //
-//  Created by Noah Raissi on 26.10.15.
+//  Created by Noah on 26.10.15.
 //  Copyright © 2015 Refugees Welcome. All rights reserved.
 //
 
-#import "GameViewController.h"
-#import <AVKit/AVKit.h>
+#import "GuideViewController.h"
 #import <AVFoundation/AVFoundation.h>
-@interface GameViewController ()
+@interface GuideViewController ()
 
 @end
 
-@implementation GameViewController
+@implementation GuideViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     AVSpeechSynthesizer *synthesizer = [[AVSpeechSynthesizer alloc]init];
     AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:@"Games"];
     [utterance setRate:0.2f];
@@ -45,7 +43,7 @@
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.layer.borderWidth =0;
     [self.view addSubview:titleLabel];
-
+    
     // Do any additional setup after loading the view.
 }
 
@@ -80,13 +78,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

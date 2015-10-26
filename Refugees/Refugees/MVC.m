@@ -583,7 +583,7 @@ BOOL annotationsSet;
     NSString *seg;
     switch (senderBtn.tag) {
             case 0:seg = @"showNews";break;
-            case 1:seg = @"showInfos";break;
+            case 1:seg = @"showStats";break;
             case 2:seg = @"showStory";break;
             case 3:seg = @"showGuides";break;
             case 4:seg = @"showGames";break;
