@@ -38,16 +38,40 @@ BOOL hamburger;
 }
 
 -(IBAction)Choose:(id)sender {
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    PFObject *usercount = [PFObject objectWithoutDataWithClassName:@"UserCount" objectId:@"7x6mQQxymL"];
     
     if ([sender tag] == 1) {
         hamburger = NO;
+        [currentInstallation addUniqueObject:@"Refugee" forKey:@"channels"];
+        [currentInstallation saveInBackground];
+        [usercount incrementKey:@"Refugees" byAmount:[NSNumber numberWithInt:1]];
+        [usercount saveInBackground];
+
+        [self performSegueWithIdentifier:@"showAnnounce" sender:nil];
+
+
     }else if ([sender tag] == 2) {
         hamburger = YES;
+        [currentInstallation addUniqueObject:@"Supporter" forKey:@"channels"];
+        [currentInstallation saveInBackground];
+        [usercount incrementKey:@"Supporter" byAmount:[NSNumber numberWithInt:1]];
+        [usercount saveInBackground];
+        
+        [self performSegueWithIdentifier:@"showSecond" sender:nil];
+
+    }else if ([sender tag] == 3) {
+        hamburger = YES;
+        [currentInstallation addUniqueObject:@"Guest" forKey:@"channels"];
+        [currentInstallation saveInBackground];
+        [usercount incrementKey:@"Guests" byAmount:[NSNumber numberWithInt:1]];
+        [usercount saveInBackground];
+        
+        [self performSegueWithIdentifier:@"showSecond" sender:nil];
     }
     
-    [self performSegueWithIdentifier:@"showSecond" sender:nil];
-    
    [self releaseBtn:sender];
+
 }
 
 -(IBAction)touchDown:(id)sender {

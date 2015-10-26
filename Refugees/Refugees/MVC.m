@@ -10,7 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import <Social/Social.h>
 #import "MyAnnotation.h"
-
+#import "AnnounceViewController.h"
 @interface MVC ()
 
 @end
@@ -106,7 +106,7 @@
     if (hamburger) {
         newsBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         newsBtn.frame = CGRectMake(15, 483, 97, 69);
-        newsBtn.tag = 6;
+        newsBtn.tag = 0;
         [newsBtn setImage:[UIImage imageNamed:@"news"] forState:UIControlStateNormal];
         [newsBtn addTarget:self action:@selector(createDetail:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:newsBtn];
@@ -149,7 +149,7 @@
         
         gameBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         gameBtn.frame = CGRectMake(148, 550, 81, 48);
-//        gameBtn.tag = 4;
+        gameBtn.tag = 4;
         [gameBtn setImage:[UIImage imageNamed:@"gaming"] forState:UIControlStateNormal];
         [gameBtn addTarget:self action:@selector(createDetail:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:gameBtn];
@@ -584,7 +584,7 @@ BOOL annotationsSet;
     switch (senderBtn.tag) {
             case 0:seg = @"showNews";break;
             case 1:seg = @"showInfos";break;
-            case 2:seg = @"showArrivals";break;
+            case 2:seg = @"showStory";break;
             case 3:seg = @"showGuides";break;
             case 4:seg = @"showGames";break;
             case 5:seg = @"showEmergency";break;
@@ -599,7 +599,9 @@ BOOL annotationsSet;
 }
 
 - (void)goBack {
-    [self dismissViewControllerAnimated:YES completion:nil];
+
+[[[self presentingViewController]presentingViewController]dismissViewControllerAnimated:YES completion:nil];
+
 }
 
 - (void)didReceiveMemoryWarning {

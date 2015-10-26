@@ -55,7 +55,7 @@
             }else if ([sender tag] == 2) {
                   phoneNumber = @"telprompt://112" ;
             }else if ([sender tag] == 3){
-                  phoneNumber = @"telprompt://+49 40 30620-0";
+                  phoneNumber = @"telprompt://+4940306200";
             }
     
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];

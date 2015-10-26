@@ -10,6 +10,7 @@
 #import "AnnounceViewController.h"
 #import "JVFloatLabeledTextField.h"
 #import "JVFloatLabeledTextView.h"
+#import "MVC.h"
 
 @interface AnnounceViewController ()
 @property (nonatomic) CLLocationManager *manager;
@@ -36,13 +37,19 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     // Do any additional setup after loading the view.
     
     _manager = [CLLocationManager new];
-    
+ /*
     if ([CLLocationManager authorizationStatus] != kCLAuthorizationStatusAuthorizedWhenInUse) {
         [self performSegueWithIdentifier:@"showAccess" sender:nil];
     }
-    
+   */ 
     [self.view setTintColor:[UIColor blueColor]];
     
+    self.navigationItem.title = @"Announce Yourself!";
+    UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(hide:)];
+    self.navigationItem.leftBarButtonItem = leftBtn;
+    
+    UIBarButtonItem *submitBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(submitIt)];
+    [self.navigationItem setRightBarButtonItem:submitBtn animated:YES];
     UIView *container = [[UIView alloc] initWithFrame:CGRectMake(0, 80, self.view.frame.size.width, self.view.frame.size.height)];
     [self.view addSubview:container];
     
@@ -116,8 +123,8 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     descriptionField.floatingLabelTextColor = floatingLabelColor;
     [container addSubview:descriptionField];
     descriptionField.translatesAutoresizingMaskIntoConstraints = NO;
-    
-    submit = [[UIButton alloc] initWithFrame:CGRectMake(20, container.frame.size.height-220, container.frame.size.width-40, 100)];
+    /*
+    submit = [[UIButton alloc] initWithFrame:CGRectMake(20, container.frame.size.height-420, container.frame.size.width-40, 100)];
     submit.layer.masksToBounds = YES;
     submit.layer.cornerRadius = 10;
     submit.backgroundColor = [UIColor colorWithRed:(184.0/255.0) green:(233.0/255.0) blue:(134.0/255.0) alpha:1.0];
@@ -132,7 +139,7 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     title.textAlignment = NSTextAlignmentCenter;
     [submit addSubview:title];
     [container addSubview:submit];
-    
+    */
     [container addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(xMargin)-[titleField]-(xMargin)-|" options:0 metrics:@{@"xMargin": @(kJVFieldHMargin)} views:NSDictionaryOfVariableBindings(titleField)]];
     [container addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[div1]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(div1)]];
     [container addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(xMargin)-[priceField]-(xMargin)-[div2(1)]-(xMargin)-[locationField]-(xMargin)-|" options:NSLayoutFormatAlignAllCenterY metrics:@{@"xMargin": @(kJVFieldHMargin)} views:NSDictionaryOfVariableBindings(priceField, div2, locationField)]];
@@ -146,6 +153,8 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     [container addConstraint:[NSLayoutConstraint constraintWithItem:priceField attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:locationField attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0.0]];
     
     [titleField becomeFirstResponder];
+    
+    
     
 }
 
@@ -187,6 +196,24 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     [[NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]] dataTaskWithRequest:req completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
     }];
+    
+}
+
+-(void)submitIt {
+        
+    [self.view endEditing:YES];
+    
+    [self performSegueWithIdentifier:@"showMain" sender:nil];
+
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setObject:titleField.text forKey:@"Name"];
+    [currentInstallation setObject:originField.text forKey:@"Origin"];
+    [currentInstallation setObject:priceField.text forKey:@"Arrival"];
+    [currentInstallation setObject:locationField.text forKey:@"Location"];
+    [currentInstallation setObject:descriptionField.text forKey:@"About"];
+    [currentInstallation saveEventually];
+
+    NSLog(@"%@",titleField.text);
     
 }
 

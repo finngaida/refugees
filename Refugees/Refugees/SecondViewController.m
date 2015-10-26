@@ -33,14 +33,14 @@
     
     _helpersItems =  @[
                        @[
-                           @{@"title":@"See arrivals", @"subtitle":@"Look at arrival times submitted by refugees", @"queue":@"showArrivals"},
+                           @{@"title":@"See news", @"subtitle":@"Look at news", @"queue":@"showNews"},
                            @{@"title":@"Donate", @"subtitle":@"And help local refugees and helpers clear the situation", @"queue":@"showDonate"},
                            @{@"title":@"Find locations", @"subtitle":@"Close by locations that have agreed to house refugees", @"queue":@"showLocations"},
                            @{@"title":@"Learn", @"subtitle":@"Find out little known or missing information in the debate", @"queue":@"showLocations"}]];
     
     _dudesItems =    @[
                        @[
-                           @{@"title":@"Donate", @"subtitle":@"And help local refugees and helpers clear the situation", @"queue":@"showDonate"},
+                           @{@"title":@"See news", @"subtitle":@"Look at news", @"queue":@"showNews"},
                            @{@"title":@"Find locations", @"subtitle":@"Close by locations that have agreed to house refugees", @"queue":@"showLocations"},
                            @{@"title":@"Learn", @"subtitle":@"Find out little known or missing information in the debate", @"queue":@"showInfos"}]];
     
