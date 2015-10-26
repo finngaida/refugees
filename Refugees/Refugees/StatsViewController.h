@@ -37,6 +37,7 @@
     UIButton *closeBtn;
     int supps;
     int refs;
+
 }
 
 

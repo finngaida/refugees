@@ -9,6 +9,7 @@
 #import "StoryViewController.h"
 #import <AVKit/AVKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import <Parse/Parse.h>
 
 @interface StoryViewController ()
 
@@ -92,10 +93,22 @@
 
 
 -(void)play{
-    
+    PFQuery *query = [PFQuery queryWithClassName:@"mainClass"];
+    [query getObjectInBackgroundWithId:@"aXpNBp34vP"
+                                 block:^(PFObject *textdu, NSError *error) {
+                                     if (!error) {
+                                         YouUrl = [textdu objectForKey:@"YTURL"];
+                                         urls = [[NSURL alloc]initWithString:YouUrl];
+
+                                         
+                                     }else {
+                                         NSLog(@"No Service");
+                                         
+                                     }
+                                 }];
+
  
-    NSURL *url = [[NSURL alloc]initWithString:@"https://r5---sn-i5h7ln76.c.youtube.com/videoplayback?pl=14&dur=781.212&lmt=1445861053032416&ip=188.108.151.163&ms=nxu&mv=m&source=youtube&id=o-ALH3lsbdO7Wwi0ZKjptvqko-_10oeDAjwU_ZsjR3-toG&mn=sn-i5h7ln76&mm=30&signature=B426E475A9DFDCD6BB60E0EAEAC4C2A43B91191F.330D242DA1034853B0894DB5E8040AAFE07F7785&sver=3&requiressl=yes&itag=18&ratebypass=yes&fexp=9406715%2C9407610%2C9408145%2C9408710%2C9414764%2C9416126%2C9417368%2C9417707%2C9419401%2C9421524%2C9421978%2C9422359%2C9423240&ipbits=8&mt=1445864495&mime=video%2Fmp4&initcwndbps=3028750&cp=U0lTSlhTVF9JUENPM19QTVhCOmNkdWpBUWw2Um15&key=yt6&expire=1445886146&sparams=cp%2Cdur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&upn=bdYr6r5dEcM&signature="];
-    AVAsset *asset = [AVAsset assetWithURL:url];
+    AVAsset *asset = [AVAsset assetWithURL:urls];
     AVPlayerItem *playerItem = [[AVPlayerItem alloc] initWithAsset:asset];
     AVPlayer *player = [AVPlayer playerWithPlayerItem:playerItem];
    // AVPlayerLayer *layer = [AVPlayerLayer playerLayerWithPlayer:player];

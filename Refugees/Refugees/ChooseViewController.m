@@ -48,7 +48,7 @@ BOOL hamburger;
         [usercount incrementKey:@"Refugees" byAmount:[NSNumber numberWithInt:1]];
         [usercount saveInBackground];
 
-        [self performSegueWithIdentifier:@"showAnnounce" sender:nil];
+        [self performSegueWithIdentifier:@"showRegister" sender:nil];
 
 
     }else if ([sender tag] == 2) {

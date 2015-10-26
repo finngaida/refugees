@@ -17,6 +17,8 @@
     UILabel*dateLbl;
     
     UIView *viewPlayerContainer;
+    NSString *YouUrl;
+    NSURL *urls;
 }
 
 @end
