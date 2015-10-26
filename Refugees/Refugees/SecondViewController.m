@@ -25,7 +25,6 @@
 
     _refugeesItems = @[
                        @[
-                           @{@"title":@"Announce yourself", @"subtitle":@"Tell helpers your time of arrival, so they can prepare better", @"queue":@"showAnnounce"},
                            @{@"title":@"Find locations", @"subtitle":@"Close by locations that have agreed to house refugees", @"queue":@"showLocations"},
                            @{@"title":@"Learn", @"subtitle":@"Find out little known or missing information in the debate", @"queue":@"showInfos"}],
                        @[

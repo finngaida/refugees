@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     AVSpeechSynthesizer *synthesizer = [[AVSpeechSynthesizer alloc]init];
-    AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:@"Games"];
+    AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:@"Guide"];
     [utterance setRate:0.2f];
     [synthesizer speakUtterance:utterance];
     
@@ -36,7 +36,7 @@
     
     titleLabel = [[UILabel alloc]init];
     titleLabel.frame = CGRectMake(20,28+45,self.view.bounds.size.width-40,55);
-    titleLabel.text = [NSString stringWithFormat:@"GAMES"];
+    titleLabel.text = [NSString stringWithFormat:@"Choose one Guide"];
     titleLabel.font = [UIFont fontWithName:@"Nexa Bold" size:40];
     titleLabel.numberOfLines = 1;
     titleLabel.textColor = [UIColor blackColor];

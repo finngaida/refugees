@@ -57,7 +57,7 @@
                                     <action selector="Choose:" destination="E8b-yq-5z9" eventType="touchUpInside" id="RtR-la-wh7"/>
                                     <action selector="releaseBtn:" destination="E8b-yq-5z9" eventType="touchUpOutside" id="PMQ-Fa-vud"/>
                                     <action selector="touchDown:" destination="E8b-yq-5z9" eventType="touchDown" id="hge-o1-TSo"/>
-                                    <segue destination="4d3-9D-QJD" kind="presentation" identifier="showAnnounce" id="S8V-M2-6xf"/>
+                                    <segue destination="4d3-9D-QJD" kind="presentation" identifier="showRegister" id="S8V-M2-6xf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arh-xQ-F0f">
@@ -193,7 +193,7 @@
                     <connections>
                         <segue destination="YJM-PE-Xzl" kind="show" identifier="showDonate" id="0tP-Ww-JBY"/>
                         <segue destination="MVU-Ns-Mdv" kind="show" identifier="showArrivals" id="kcd-el-kU9"/>
-                        <segue destination="evA-JH-xao" kind="show" identifier="showLocations" id="r4f-5C-L9i"/>
+                        <segue destination="evA-JH-xao" kind="show" identifier="showGuides" id="r4f-5C-L9i"/>
                         <segue destination="dJI-nv-tp2" kind="show" identifier="showEmergency" id="adU-9t-VR0"/>
                         <segue destination="sO6-uZ-1Gn" kind="show" identifier="showStats" id="Pid-AM-EEW"/>
                         <segue destination="8g8-6j-S7O" kind="show" identifier="showStory" id="MZl-Bs-yZi"/>
@@ -371,7 +371,7 @@
             </objects>
             <point key="canvasLocation" x="5930" y="-1"/>
         </scene>
-        <!--Close locations-->
+        <!--Guide-->
         <scene sceneID="Tze-3q-4xM">
             <objects>
                 <viewController id="cL3-4B-1gd" customClass="LocationsViewController" sceneMemberID="viewController">
@@ -384,7 +384,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Close locations" id="d9a-oY-L0r">
+                    <navigationItem key="navigationItem" title="Guide" id="d9a-oY-L0r">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="nWz-9v-VnX">
                             <connections>
                                 <action selector="hide:" destination="cL3-4B-1gd" id="guf-tQ-8in"/>
@@ -781,7 +781,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="GameViewController" id="9Vk-Og-jha">
+                    <navigationItem key="navigationItem" title="Games" id="9Vk-Og-jha">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="Rom-Sz-ScB">
                             <connections>
                                 <action selector="hide:" destination="LHJ-ag-lK9" id="F2n-QE-nAm"/>
@@ -818,7 +818,7 @@
         <image name="rescue" width="87" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eCs-dX-Lma"/>
-        <segue reference="Slm-F4-ybo"/>
+        <segue reference="3tW-Om-pu0"/>
+        <segue reference="8Cv-ft-mQE"/>
     </inferredMetricsTieBreakers>
 </document>

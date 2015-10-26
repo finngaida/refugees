@@ -38,7 +38,7 @@
     
     titleLabel = [[UILabel alloc]init];
     titleLabel.frame = CGRectMake(20,28+45,self.view.bounds.size.width-40,55);
-    titleLabel.text = [NSString stringWithFormat:@"GAMES"];
+    titleLabel.text = [NSString stringWithFormat:@"Choose a Game"];
     titleLabel.font = [UIFont fontWithName:@"Nexa Bold" size:40];
     titleLabel.numberOfLines = 1;
     titleLabel.textColor = [UIColor blackColor];
