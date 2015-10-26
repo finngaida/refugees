@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		477A0CF56D82DE40E44E047C /* libPods-Refugees.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8E839EB4A253E002EC2FA5 /* libPods-Refugees.a */; };
+		4F2E107C1BDD6D020071F51D /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2E107B1BDD6D020071F51D /* StatsViewController.m */; };
 		4F6B66331BAD4BC100F106A1 /* MVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6B66321BAD4BC100F106A1 /* MVC.m */; };
 		4F6B66351BAD4C3700F106A1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F6B66341BAD4C3700F106A1 /* MapKit.framework */; };
 		4F6DC46E1BAD9F7B00931D85 /* ChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6DC46D1BAD9F7B00931D85 /* ChooseViewController.m */; };
@@ -27,6 +28,12 @@
 		4F6DC4901BADFFD800931D85 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F6DC48F1BADFFD800931D85 /* Bolts.framework */; };
 		4F6DC4941BAE1DA300931D85 /* Nexa Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F6DC4931BAE1D5900931D85 /* Nexa Light.otf */; };
 		4F6DC4951BAE1DA600931D85 /* Nexa Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F6DC4921BAE1D5900931D85 /* Nexa Bold.otf */; };
+		4FA3152D1BDE65720068F9F0 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA3152C1BDE65720068F9F0 /* GameViewController.m */; };
+		4FDDD52D1BDDDDFC005B3DA0 /* newsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDDD52C1BDDDDFC005B3DA0 /* newsTableViewCell.xib */; };
+		4FDDD5301BDDE082005B3DA0 /* newsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDDD52F1BDDE082005B3DA0 /* newsTableViewCell.m */; };
+		4FDDD5341BDE0280005B3DA0 /* StoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDDD5331BDE0280005B3DA0 /* StoryViewController.m */; };
+		4FDDD5391BDE0FB8005B3DA0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FDDD5371BDE0FB8005B3DA0 /* AVFoundation.framework */; };
+		4FDDD53A1BDE0FB8005B3DA0 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FDDD5381BDE0FB8005B3DA0 /* AVKit.framework */; };
 		C5306E9F1BAD513F006EF081 /* EmergencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5306E9E1BAD513F006EF081 /* EmergencyViewController.m */; };
 		C549C5651BAE83DC00F1BA11 /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = C549C5641BAE83DC00F1BA11 /* MyAnnotation.m */; };
 		C5E23FF31BACABAF000BA16B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E23FF21BACABAF000BA16B /* main.m */; };
@@ -47,6 +54,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F2E107A1BDD6D020071F51D /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
+		4F2E107B1BDD6D020071F51D /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
 		4F6B66311BAD4BC100F106A1 /* MVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVC.h; sourceTree = "<group>"; };
 		4F6B66321BAD4BC100F106A1 /* MVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVC.m; sourceTree = "<group>"; };
 		4F6B66341BAD4C3700F106A1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -69,6 +78,16 @@
 		4F6DC48F1BADFFD800931D85 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		4F6DC4921BAE1D5900931D85 /* Nexa Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa Bold.otf"; sourceTree = "<group>"; };
 		4F6DC4931BAE1D5900931D85 /* Nexa Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa Light.otf"; sourceTree = "<group>"; };
+		4FA3152B1BDE65720068F9F0 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameViewController.h; path = Assets.xcassets/GameViewController.h; sourceTree = "<group>"; };
+		4FA3152C1BDE65720068F9F0 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameViewController.m; path = Assets.xcassets/GameViewController.m; sourceTree = "<group>"; };
+		4FDDD52C1BDDDDFC005B3DA0 /* newsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = newsTableViewCell.xib; sourceTree = "<group>"; };
+		4FDDD52E1BDDE082005B3DA0 /* newsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = newsTableViewCell.h; sourceTree = "<group>"; };
+		4FDDD52F1BDDE082005B3DA0 /* newsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = newsTableViewCell.m; sourceTree = "<group>"; };
+		4FDDD5321BDE0280005B3DA0 /* StoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryViewController.h; sourceTree = "<group>"; };
+		4FDDD5331BDE0280005B3DA0 /* StoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryViewController.m; sourceTree = "<group>"; };
+		4FDDD5351BDE0F4F005B3DA0 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		4FDDD5371BDE0FB8005B3DA0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4FDDD5381BDE0FB8005B3DA0 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		5167FB05AD76B6979119BF98 /* Pods-Refugees.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Refugees.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Refugees/Pods-Refugees.debug.xcconfig"; sourceTree = "<group>"; };
 		C5306E9D1BAD513F006EF081 /* EmergencyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencyViewController.h; sourceTree = "<group>"; };
 		C5306E9E1BAD513F006EF081 /* EmergencyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencyViewController.m; sourceTree = "<group>"; };
@@ -110,6 +129,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FDDD5391BDE0FB8005B3DA0 /* AVFoundation.framework in Frameworks */,
+				4FDDD53A1BDE0FB8005B3DA0 /* AVKit.framework in Frameworks */,
 				4F6DC48C1BADFDAA00931D85 /* Social.framework in Frameworks */,
 				4F6DC48A1BADFDA200931D85 /* Accounts.framework in Frameworks */,
 				4F6DC4881BADFD9700931D85 /* libz.tbd in Frameworks */,
@@ -135,6 +156,9 @@
 		44F22397C02C64D666935E6D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4FDDD5371BDE0FB8005B3DA0 /* AVFoundation.framework */,
+				4FDDD5381BDE0FB8005B3DA0 /* AVKit.framework */,
+				4FDDD5351BDE0F4F005B3DA0 /* MediaPlayer.framework */,
 				C5EF20651BAD424000C61523 /* CoreLocation.framework */,
 				4F6DC48F1BADFFD800931D85 /* Bolts.framework */,
 				4F6DC4771BADFD2800931D85 /* Parse.framework */,
@@ -176,6 +200,49 @@
 			name = "Visible Files";
 			sourceTree = "<group>";
 		};
+		4FDAB6BC1BD98B3E00F232D9 /* Refugee */ = {
+			isa = PBXGroup;
+			children = (
+				C5306E9D1BAD513F006EF081 /* EmergencyViewController.h */,
+				C5306E9E1BAD513F006EF081 /* EmergencyViewController.m */,
+				4FA3152B1BDE65720068F9F0 /* GameViewController.h */,
+				4FA3152C1BDE65720068F9F0 /* GameViewController.m */,
+			);
+			name = Refugee;
+			sourceTree = "<group>";
+		};
+		4FDAB6BD1BD98B4600F232D9 /* Supporter */ = {
+			isa = PBXGroup;
+			children = (
+				4FDDD5321BDE0280005B3DA0 /* StoryViewController.h */,
+				4FDDD5331BDE0280005B3DA0 /* StoryViewController.m */,
+				C5EF205F1BAD3FB300C61523 /* InfosViewController.h */,
+				C5EF20601BAD3FB300C61523 /* InfosViewController.m */,
+				4F2E107A1BDD6D020071F51D /* StatsViewController.h */,
+				4F2E107B1BDD6D020071F51D /* StatsViewController.m */,
+				C5E2400E1BACC7A2000BA16B /* DonateViewController.h */,
+				C5E2400F1BACC7A2000BA16B /* DonateViewController.m */,
+			);
+			name = Supporter;
+			sourceTree = "<group>";
+		};
+		4FDDD5311BDDE087005B3DA0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4FDDD52C1BDDDDFC005B3DA0 /* newsTableViewCell.xib */,
+				4FDDD52E1BDDE082005B3DA0 /* newsTableViewCell.h */,
+				4FDDD52F1BDDE082005B3DA0 /* newsTableViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		4FDDD53E1BDE12B9005B3DA0 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Player;
+			sourceTree = "<group>";
+		};
 		BC2F36412D27A4EE457AF9E6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,18 +280,14 @@
 				4F6DC4961BAE1E2F00931D85 /* Visible Files */,
 				C5E23FFA1BACABAF000BA16B /* SecondViewController.h */,
 				C5E23FFB1BACABAF000BA16B /* SecondViewController.m */,
-				C5E2400E1BACC7A2000BA16B /* DonateViewController.h */,
-				C5E2400F1BACC7A2000BA16B /* DonateViewController.m */,
+				4FDAB6BC1BD98B3E00F232D9 /* Refugee */,
+				4FDAB6BD1BD98B4600F232D9 /* Supporter */,
 				C5EF20561BAD3F9200C61523 /* AnnounceViewController.h */,
 				C5EF20571BAD3F9200C61523 /* AnnounceViewController.m */,
 				C5EF20591BAD3FA700C61523 /* ArrivalsViewController.h */,
 				C5EF205A1BAD3FA700C61523 /* ArrivalsViewController.m */,
 				C5EF205C1BAD3FAD00C61523 /* LocationsViewController.h */,
 				C5EF205D1BAD3FAD00C61523 /* LocationsViewController.m */,
-				C5EF205F1BAD3FB300C61523 /* InfosViewController.h */,
-				C5EF20601BAD3FB300C61523 /* InfosViewController.m */,
-				C5306E9D1BAD513F006EF081 /* EmergencyViewController.h */,
-				C5306E9E1BAD513F006EF081 /* EmergencyViewController.m */,
 				C5EF20621BAD421300C61523 /* LocationAccessViewController.h */,
 				C5EF20631BAD421300C61523 /* LocationAccessViewController.m */,
 				C5E2400B1BACB38A000BA16B /* DataManager.h */,
@@ -232,6 +295,8 @@
 				C549C5631BAE83DC00F1BA11 /* MyAnnotation.h */,
 				C549C5641BAE83DC00F1BA11 /* MyAnnotation.m */,
 				C5E23FFD1BACABAF000BA16B /* Main.storyboard */,
+				4FDDD53E1BDE12B9005B3DA0 /* Player */,
+				4FDDD5311BDDE087005B3DA0 /* Cell */,
 				C5E240001BACABAF000BA16B /* Assets.xcassets */,
 				C5E240021BACABAF000BA16B /* LaunchScreen.storyboard */,
 				C5E240051BACABAF000BA16B /* Info.plist */,
@@ -262,6 +327,7 @@
 				C5E23FEB1BACABAF000BA16B /* Frameworks */,
 				C5E23FEC1BACABAF000BA16B /* Resources */,
 				DE3C95C2AAE62B0F88FECB5C /* Copy Pods Resources */,
+				C5A38C570FF970BA60A504A1 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,7 +349,7 @@
 				TargetAttributes = {
 					C5E23FED1BACABAF000BA16B = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = RF278284CD;
+						DevelopmentTeam = 5N7RH4RS44;
 					};
 				};
 			};
@@ -312,6 +378,7 @@
 			files = (
 				4F6DC4941BAE1DA300931D85 /* Nexa Light.otf in Resources */,
 				4F6DC4951BAE1DA600931D85 /* Nexa Bold.otf in Resources */,
+				4FDDD52D1BDDDDFC005B3DA0 /* newsTableViewCell.xib in Resources */,
 				C5E240041BACABAF000BA16B /* LaunchScreen.storyboard in Resources */,
 				4F6DC4721BADE65400931D85 /* Locations.json in Resources */,
 				C5E240011BACABAF000BA16B /* Assets.xcassets in Resources */,
@@ -337,6 +404,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		C5A38C570FF970BA60A504A1 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Refugees/Pods-Refugees-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DE3C95C2AAE62B0F88FECB5C /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -359,6 +441,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FDDD5301BDDE082005B3DA0 /* newsTableViewCell.m in Sources */,
+				4FA3152D1BDE65720068F9F0 /* GameViewController.m in Sources */,
 				C5E23FFC1BACABAF000BA16B /* SecondViewController.m in Sources */,
 				C5EF20641BAD421300C61523 /* LocationAccessViewController.m in Sources */,
 				C5E240101BACC7A2000BA16B /* DonateViewController.m in Sources */,
@@ -372,7 +456,9 @@
 				C549C5651BAE83DC00F1BA11 /* MyAnnotation.m in Sources */,
 				C5EF20581BAD3F9200C61523 /* AnnounceViewController.m in Sources */,
 				C5EF205B1BAD3FA700C61523 /* ArrivalsViewController.m in Sources */,
+				4FDDD5341BDE0280005B3DA0 /* StoryViewController.m in Sources */,
 				C5306E9F1BAD513F006EF081 /* EmergencyViewController.m in Sources */,
+				4F2E107C1BDD6D020071F51D /* StatsViewController.m in Sources */,
 				C5E23FF31BACABAF000BA16B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,7 +502,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Noah Raissi (46CPFZVQYR)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Noah Raissi (46CPFZVQYR)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_BITCODE = NO;
@@ -460,7 +547,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Noah Raissi (46CPFZVQYR)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Noah Raissi (46CPFZVQYR)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -485,8 +573,8 @@
 			baseConfigurationReference = 5167FB05AD76B6979119BF98 /* Pods-Refugees.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Noah Raissi (46CPFZVQYR)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Noah Raissi (46CPFZVQYR)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -494,7 +582,7 @@
 				INFOPLIST_FILE = Refugees/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.finngaida.Refugees;
+				PRODUCT_BUNDLE_IDENTIFIER = de.noahraissi.refugees;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -505,8 +593,8 @@
 			baseConfigurationReference = F6EC0B8CBFB7C081D4BCBC36 /* Pods-Refugees.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Noah Raissi (46CPFZVQYR)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Noah Raissi (46CPFZVQYR)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -514,7 +602,7 @@
 				INFOPLIST_FILE = Refugees/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.finngaida.Refugees;
+				PRODUCT_BUNDLE_IDENTIFIER = de.noahraissi.refugees;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

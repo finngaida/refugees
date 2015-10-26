@@ -1,13 +1,16 @@
 PODS:
   - JVFloatLabeledTextField (1.1.0)
   - PayPal-iOS-SDK (2.12.1)
+  - UICountingLabel (1.2.0)
 
 DEPENDENCIES:
   - JVFloatLabeledTextField
   - PayPal-iOS-SDK
+  - UICountingLabel
 
 SPEC CHECKSUMS:
   JVFloatLabeledTextField: ea4a3d8387ddd43724c472bb2b8ab39b79af05d4
   PayPal-iOS-SDK: 4cd1d720f4d6c39d298f9872a4a75ca944a89740
+  UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0

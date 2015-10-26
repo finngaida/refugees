@@ -7,231 +7,284 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		276841631433F9DD1596424AF3810BCD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9537C44E1916A6EF4422BC95108555 /* UIKit.framework */; };
-		33774790690C4E22A2D020FB0E224217 /* JVFloatLabeledTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 1138578CBCF0CC057513A6EDFB180BFE /* JVFloatLabeledTextField.h */; };
-		3540136643828AE7DA00C11A2C2B861C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 663363602CE8F9C24EE814C92D9D99A0 /* Foundation.framework */; };
-		4465AE0A048827A84CE6C26493D6C818 /* NSString+TextDirectionality.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BD4E5B556DA8B916815DF70559C0FA /* NSString+TextDirectionality.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		71033C18ECFE6AB6F69967A778B5E491 /* JVFloatLabeledTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EEF7E10B285E7597A6409CB379FBAA8 /* JVFloatLabeledTextView.h */; };
-		72F7EEAEF1ACBCAABF6725E871FA7A25 /* JVFloatLabeledTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B2EAFFFDC717181A045F0F72A027FDAC /* JVFloatLabeledTextField.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		BD56705A15294B1136B565B9669BEF16 /* NSString+TextDirectionality.h in Headers */ = {isa = PBXBuildFile; fileRef = E12420CE219C6CAF8405ECBCF5839EE5 /* NSString+TextDirectionality.h */; };
-		C5A774EC1BB0300700D1C080 /* Pods-Refugees-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A774EB1BB0300700D1C080 /* Pods-Refugees-dummy.m */; };
-		D494D75DD53DA5F019F7FC0B8D66359A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 663363602CE8F9C24EE814C92D9D99A0 /* Foundation.framework */; };
-		F0E64C8D3E8B0ED220C0A7264693AC71 /* JVFloatLabeledTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA008177833687D53581AADF3EBCD27 /* JVFloatLabeledTextField-dummy.m */; };
-		F4EDBBE51BA424ED8AA519816DA580E2 /* JVFloatLabeledTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFE6189EE0048EDB197E2C077324D0B /* JVFloatLabeledTextView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		F931C6C2E9FDED6F11AC90ED5588DEE1 /* Pods-Refugees-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6872BDFDB5A3FD59817C1B5DD719F11D /* Pods-Refugees-dummy.m */; };
+		06FB32BA96BD4938A0974DF373D7E61B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		0F5B6AC14F58EABEB001C30A452D5268 /* JVFloatLabeledTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1E9EDDAAF160A22629DD203F23F91D /* JVFloatLabeledTextField.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1E04E83623789E01EB3D44E0864941E5 /* JVFloatLabeledTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E33B12C7A169F6492ED0205249E13E /* JVFloatLabeledTextView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		40AA06B89210999356E0D2E03478E584 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		42A562A69AE541B3C2B771F3CE055896 /* UICountingLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B53A383E8ED11C00CBA30D5E4A644073 /* UICountingLabel-dummy.m */; };
+		499E5A5E8F45A0E6FC10DBAB17BBB66E /* NSString+TextDirectionality.h in Headers */ = {isa = PBXBuildFile; fileRef = 28CCBECC3D496B5EFCCE8C4839BAC8B1 /* NSString+TextDirectionality.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		740275241245444929B51C5C824BC87F /* JVFloatLabeledTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C9FB31B2F39C0913215B87C4C1A68 /* JVFloatLabeledTextField-dummy.m */; };
+		75B9287485714913A1A259FEA70BE606 /* NSString+TextDirectionality.m in Sources */ = {isa = PBXBuildFile; fileRef = C8635F605AFFEE2D3CB48048773329F7 /* NSString+TextDirectionality.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8C3C27FFD4B270EC7E8AF5E7C4051A09 /* JVFloatLabeledTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EB0212171B73E5EF93FE4CAB6354255 /* JVFloatLabeledTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		951A36971C2EC0D36A1F0A75DB4E812B /* UICountingLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CFB2BBAF4D5E44EC6007FB1BBA1C7AB /* UICountingLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		953DEF7878B9066A90A135C922EB7344 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		994C714EFB8B3AD6518C9EA43A276402 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */; };
+		BF2E0794A794AB54B15AE9EC282A20B4 /* UICountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D18C852650857795AD9270830EDEA43F /* UICountingLabel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CFF5177687FB45610BF82F645C636DFA /* JVFloatLabeledTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 32D3346228118F2EF7294E7134621DEF /* JVFloatLabeledTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3240585A825E5CC9D3A12B4FAA6D7DA /* Pods-Refugees-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FA6AAD82B226CD48695E90114FCB01 /* Pods-Refugees-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E4A4B06D1657608426DEB2A9E8D83813 /* PBXContainerItemProxy */ = {
+		8E41FB76A7F5A3C4E706E7D5E9678E84 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 31A5928C6BDE1CB74E26163E6BAE0556;
+			remoteGlobalIDString = C463208E1658065D3ED61CA627DCCA14;
+			remoteInfo = UICountingLabel;
+		};
+		EF9C001FFC3CF29B74870E7F86AF3E10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 266E27D897FD7FD68078059CF4D7455F;
 			remoteInfo = JVFloatLabeledTextField;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		08D8CE9BE8098CF630F06A1BA870193B /* PayPalFuturePaymentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalFuturePaymentViewController.h; path = PayPalMobile/PayPalFuturePaymentViewController.h; sourceTree = "<group>"; };
-		0FA008177833687D53581AADF3EBCD27 /* JVFloatLabeledTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JVFloatLabeledTextField-dummy.m"; sourceTree = "<group>"; };
-		1138578CBCF0CC057513A6EDFB180BFE /* JVFloatLabeledTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JVFloatLabeledTextField.h; path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextField.h; sourceTree = "<group>"; };
-		1D9537C44E1916A6EF4422BC95108555 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		270AD9B418CE1B866B51408B3F54D600 /* CardIOView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOView.h; path = PayPalMobile/CardIOView.h; sourceTree = "<group>"; };
-		2919B08DDA880DE2F1454AF6A31FB027 /* libJVFloatLabeledTextField.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJVFloatLabeledTextField.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		441E6B442C3006F94DB1F329B3CD58A1 /* JVFloatLabeledTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVFloatLabeledTextField-prefix.pch"; sourceTree = "<group>"; };
-		4C3B602AF218A62C981AE0DF8FC79505 /* CardIOUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOUtilities.h; path = PayPalMobile/CardIOUtilities.h; sourceTree = "<group>"; };
-		4D7EAACC08519DE304FE80F695D22BE7 /* CardIOViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOViewDelegate.h; path = PayPalMobile/CardIOViewDelegate.h; sourceTree = "<group>"; };
-		4EEF7E10B285E7597A6409CB379FBAA8 /* JVFloatLabeledTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JVFloatLabeledTextView.h; path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextView.h; sourceTree = "<group>"; };
-		62EDD231E55E54B95E32033EBBC067EF /* Pods-Refugees-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Refugees-resources.sh"; sourceTree = "<group>"; };
-		663363602CE8F9C24EE814C92D9D99A0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6872BDFDB5A3FD59817C1B5DD719F11D /* Pods-Refugees-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Refugees-dummy.m"; sourceTree = "<group>"; };
-		6A02FF3FF598CAB81F09946ED5D83C9B /* Pods-Refugees-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Refugees-acknowledgements.plist"; sourceTree = "<group>"; };
-		6A6B6EC2353A1798C0FA0AA9918051CE /* PayPalPayment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalPayment.h; path = PayPalMobile/PayPalPayment.h; sourceTree = "<group>"; };
-		72B1A55DA6EDE3992D4780D95EB1FC6B /* PayPalConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalConfiguration.h; path = PayPalMobile/PayPalConfiguration.h; sourceTree = "<group>"; };
-		755B24EAE36416B5C5347B810347EE49 /* CardIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIO.h; path = PayPalMobile/CardIO.h; sourceTree = "<group>"; };
-		7772C363BB5DF7E0ED7F0DE8D526381D /* PayPalPaymentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalPaymentViewController.h; path = PayPalMobile/PayPalPaymentViewController.h; sourceTree = "<group>"; };
-		7BA04B68D40249086873910440FEE41B /* CardIODetectionMode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIODetectionMode.h; path = PayPalMobile/CardIODetectionMode.h; sourceTree = "<group>"; };
-		8596E6C477736945C43A11954E40F874 /* CardIOPaymentViewControllerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOPaymentViewControllerDelegate.h; path = PayPalMobile/CardIOPaymentViewControllerDelegate.h; sourceTree = "<group>"; };
-		8EFE6189EE0048EDB197E2C077324D0B /* JVFloatLabeledTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JVFloatLabeledTextView.m; path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextView.m; sourceTree = "<group>"; };
-		8F1ECB31084044F4C7C747F325DDBCA3 /* CardIOCreditCardInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOCreditCardInfo.h; path = PayPalMobile/CardIOCreditCardInfo.h; sourceTree = "<group>"; };
-		914EE5C617B0BE279D454F5BFC22387C /* Pods-Refugees.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Refugees.release.xcconfig"; sourceTree = "<group>"; };
-		922E275321F9AC7C1277493331422A69 /* PayPalProfileSharingViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalProfileSharingViewController.h; path = PayPalMobile/PayPalProfileSharingViewController.h; sourceTree = "<group>"; };
-		9B457F1ACE99C49CE73406478A3DF4EC /* Pods-Refugees-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Refugees-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B1FC1DEB3FDC2CD97E761B9F4DD3602E /* CardIOPaymentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOPaymentViewController.h; path = PayPalMobile/CardIOPaymentViewController.h; sourceTree = "<group>"; };
-		B2EAFFFDC717181A045F0F72A027FDAC /* JVFloatLabeledTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JVFloatLabeledTextField.m; path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextField.m; sourceTree = "<group>"; };
+		01E28560BE9CB42A2D8B1E61244A7F12 /* JVFloatLabeledTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVFloatLabeledTextField-prefix.pch"; sourceTree = "<group>"; };
+		15FA6AAD82B226CD48695E90114FCB01 /* Pods-Refugees-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Refugees-dummy.m"; sourceTree = "<group>"; };
+		1EAF33B0B66A43A8232A129F5AD505E2 /* CardIOViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOViewDelegate.h; path = PayPalMobile/CardIOViewDelegate.h; sourceTree = "<group>"; };
+		23946A132C747DCBB793A478DCD528FD /* UICountingLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICountingLabel-prefix.pch"; sourceTree = "<group>"; };
+		23A971D6C9C29F74158579B7D5E613D5 /* UICountingLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UICountingLabel.xcconfig; sourceTree = "<group>"; };
+		28CCBECC3D496B5EFCCE8C4839BAC8B1 /* NSString+TextDirectionality.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+TextDirectionality.h"; path = "JVFloatLabeledTextField/JVFloatLabeledTextField/NSString+TextDirectionality.h"; sourceTree = "<group>"; };
+		2CC20B4864D3B81FD030F5F53618058F /* CardIOCreditCardInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOCreditCardInfo.h; path = PayPalMobile/CardIOCreditCardInfo.h; sourceTree = "<group>"; };
+		2CFB2BBAF4D5E44EC6007FB1BBA1C7AB /* UICountingLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UICountingLabel.h; sourceTree = "<group>"; };
+		32D3346228118F2EF7294E7134621DEF /* JVFloatLabeledTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JVFloatLabeledTextField.h; path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextField.h; sourceTree = "<group>"; };
+		348D2A0D713375AD763CABC8CC9CD974 /* PayPalProfileSharingViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalProfileSharingViewController.h; path = PayPalMobile/PayPalProfileSharingViewController.h; sourceTree = "<group>"; };
+		42225DD26D52B455BA39B43E71A912D2 /* Pods-Refugees-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Refugees-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5C3C9FB31B2F39C0913215B87C4C1A68 /* JVFloatLabeledTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JVFloatLabeledTextField-dummy.m"; sourceTree = "<group>"; };
+		6A84D0C2FCFE908CC519FBA47E112A8E /* Pods-Refugees.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Refugees.debug.xcconfig"; sourceTree = "<group>"; };
+		6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		706C83C1A04B55C2AB62D745E1533748 /* Pods-Refugees-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Refugees-frameworks.sh"; sourceTree = "<group>"; };
+		76F51A64EC0EB0D365BC3329D6F8C539 /* Pods-Refugees-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Refugees-resources.sh"; sourceTree = "<group>"; };
+		88E33B12C7A169F6492ED0205249E13E /* JVFloatLabeledTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JVFloatLabeledTextView.m; path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextView.m; sourceTree = "<group>"; };
+		8A4CA9620FB13784B5597C0C6F3AF4A7 /* CardIOPaymentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOPaymentViewController.h; path = PayPalMobile/CardIOPaymentViewController.h; sourceTree = "<group>"; };
+		8EB0212171B73E5EF93FE4CAB6354255 /* JVFloatLabeledTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JVFloatLabeledTextView.h; path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextView.h; sourceTree = "<group>"; };
+		925D148BB35F7C7B18D22332DF205BE2 /* PayPalConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalConfiguration.h; path = PayPalMobile/PayPalConfiguration.h; sourceTree = "<group>"; };
+		929B564EB078C0FB9C71F8925DC64DB2 /* JVFloatLabeledTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JVFloatLabeledTextField.xcconfig; sourceTree = "<group>"; };
+		931C086BF1C303F73ABDAC485B218B5C /* PayPalMobile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalMobile.h; path = PayPalMobile/PayPalMobile.h; sourceTree = "<group>"; };
+		B53A383E8ED11C00CBA30D5E4A644073 /* UICountingLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UICountingLabel-dummy.m"; sourceTree = "<group>"; };
+		B798A2102C4E18124DF894D9EA345FD2 /* libUICountingLabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUICountingLabel.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C5A774EB1BB0300700D1C080 /* Pods-Refugees-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Pods-Refugees-dummy.m"; path = "Target Support Files/Pods-Refugees/Pods-Refugees-dummy.m"; sourceTree = "<group>"; };
-		C5AC00156B6C4606F6FC1D60667AEE81 /* PayPalOAuthScopes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalOAuthScopes.h; path = PayPalMobile/PayPalOAuthScopes.h; sourceTree = "<group>"; };
-		C6F465235636D7441E64BD6D9B003D35 /* PayPalMobile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalMobile.h; path = PayPalMobile/PayPalMobile.h; sourceTree = "<group>"; };
-		C9F4B710E96FE582750DEA3D81F37396 /* JVFloatLabeledTextField-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "JVFloatLabeledTextField-Private.xcconfig"; sourceTree = "<group>"; };
-		DA42D0B7A71283CF90052430F5B51D71 /* Pods-Refugees.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Refugees.debug.xcconfig"; sourceTree = "<group>"; };
-		E12420CE219C6CAF8405ECBCF5839EE5 /* NSString+TextDirectionality.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+TextDirectionality.h"; path = "JVFloatLabeledTextField/JVFloatLabeledTextField/NSString+TextDirectionality.h"; sourceTree = "<group>"; };
-		E1903889E45FF93AB1B9B90EDB3A5B93 /* JVFloatLabeledTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JVFloatLabeledTextField.xcconfig; sourceTree = "<group>"; };
-		ED10B94F6D63B35695F1E9CA677FBAFC /* libPods-Refugees.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Refugees.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4BD4E5B556DA8B916815DF70559C0FA /* NSString+TextDirectionality.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+TextDirectionality.m"; path = "JVFloatLabeledTextField/JVFloatLabeledTextField/NSString+TextDirectionality.m"; sourceTree = "<group>"; };
+		BC1E9EDDAAF160A22629DD203F23F91D /* JVFloatLabeledTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JVFloatLabeledTextField.m; path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextField.m; sourceTree = "<group>"; };
+		C286286554EC80E1A256D0CC5D33D2E5 /* PayPalOAuthScopes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalOAuthScopes.h; path = PayPalMobile/PayPalOAuthScopes.h; sourceTree = "<group>"; };
+		C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		C4DFEF6F911E268A2AE4AF280E9C4C50 /* CardIOUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOUtilities.h; path = PayPalMobile/CardIOUtilities.h; sourceTree = "<group>"; };
+		C70ED781500587C2F6221FB3F0F579E6 /* PayPalPaymentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalPaymentViewController.h; path = PayPalMobile/PayPalPaymentViewController.h; sourceTree = "<group>"; };
+		C78F1CDE390ABA1CB2DE7ECA7218A19F /* CardIOPaymentViewControllerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOPaymentViewControllerDelegate.h; path = PayPalMobile/CardIOPaymentViewControllerDelegate.h; sourceTree = "<group>"; };
+		C7CD9821E7E33FE90BCBE3722F80B5C0 /* PayPalPayment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalPayment.h; path = PayPalMobile/PayPalPayment.h; sourceTree = "<group>"; };
+		C8635F605AFFEE2D3CB48048773329F7 /* NSString+TextDirectionality.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+TextDirectionality.m"; path = "JVFloatLabeledTextField/JVFloatLabeledTextField/NSString+TextDirectionality.m"; sourceTree = "<group>"; };
+		D18C852650857795AD9270830EDEA43F /* UICountingLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UICountingLabel.m; sourceTree = "<group>"; };
+		DBE41C6CE30B445D4AA67DA463367B41 /* libJVFloatLabeledTextField.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJVFloatLabeledTextField.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E48E4C99C5F2890CD4847C848DE65988 /* Pods-Refugees-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Refugees-acknowledgements.plist"; sourceTree = "<group>"; };
+		E527749ADE74B41C2F772A7A05E96E94 /* Pods-Refugees.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Refugees.release.xcconfig"; sourceTree = "<group>"; };
+		ECEBBBA0160A759886F03321F7ABD125 /* CardIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIO.h; path = PayPalMobile/CardIO.h; sourceTree = "<group>"; };
+		F2897D918F18BAB345A352488885D732 /* CardIODetectionMode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIODetectionMode.h; path = PayPalMobile/CardIODetectionMode.h; sourceTree = "<group>"; };
+		F4851B4D2F591DF0944C4585D7C81B0E /* PayPalFuturePaymentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalFuturePaymentViewController.h; path = PayPalMobile/PayPalFuturePaymentViewController.h; sourceTree = "<group>"; };
+		F7313C52FD81A522D578FF383EAA201F /* CardIOView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOView.h; path = PayPalMobile/CardIOView.h; sourceTree = "<group>"; };
+		FCE44F3FFC6A3227BE5E3F23FDAAE5BE /* libPods-Refugees.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Refugees.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		52354440D7350A5EFC87E08023F10647 /* Frameworks */ = {
+		0C8B9A2CE12B2EE2B693E1B0493EFFB9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3540136643828AE7DA00C11A2C2B861C /* Foundation.framework in Frameworks */,
-				276841631433F9DD1596424AF3810BCD /* UIKit.framework in Frameworks */,
+				953DEF7878B9066A90A135C922EB7344 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		77448002F82956E6643F2D0EB1DC6825 /* Frameworks */ = {
+		31CE78DD3B245E3704D3A804FD60DB67 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D494D75DD53DA5F019F7FC0B8D66359A /* Foundation.framework in Frameworks */,
+				06FB32BA96BD4938A0974DF373D7E61B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C3B643E4451C0CA25C73FCE3CA5D090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40AA06B89210999356E0D2E03478E584 /* Foundation.framework in Frameworks */,
+				994C714EFB8B3AD6518C9EA43A276402 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		191B3F7D72BA3B581D0FB913020D9A1E /* Pods */ = {
+		06E888EF301B27E212DBAF85EFBB4816 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				83014953A3590CF8287E72A77156B8BB /* JVFloatLabeledTextField */,
-				A0CB649DA6E5F4775B6372D91713ECE4 /* PayPal-iOS-SDK */,
+				23A971D6C9C29F74158579B7D5E613D5 /* UICountingLabel.xcconfig */,
+				B53A383E8ED11C00CBA30D5E4A644073 /* UICountingLabel-dummy.m */,
+				23946A132C747DCBB793A478DCD528FD /* UICountingLabel-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UICountingLabel";
+			sourceTree = "<group>";
+		};
+		18340F12838DEE43507667CC74401EB1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */,
+				C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		1C1A642E53A5647B870B29FD14B30D62 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF82345F57E39C3EBBBAAF40A41B312C /* JVFloatLabeledTextField */,
+				C07661331D11B886674B903CA914767B /* PayPal-iOS-SDK */,
+				E55DA2C17C52D503B3F4C4F74DDA1B96 /* UICountingLabel */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		321CFF3A93B3894C1FCC4BDB65E1988E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7662107216918EA2FDFAF138BBDF83D3 /* Pods-Refugees */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D0FB9306D21AF23A056944AE037CBFFF /* iOS */,
+				18340F12838DEE43507667CC74401EB1 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6D73A453F9CE10E20E0EC5BED6DDB769 /* Targets Support Files */ = {
+		5C47390A95DFCC5465293036CDB73ECD /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D7550FA1DE553451E5B227816617898D /* Pods-Refugees */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		7DB346D0F39D3F0E887471402A8071AB = {
-			isa = PBXGroup;
-			children = (
-				C5A774EB1BB0300700D1C080 /* Pods-Refugees-dummy.m */,
-				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				191B3F7D72BA3B581D0FB913020D9A1E /* Pods */,
-				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
-				6D73A453F9CE10E20E0EC5BED6DDB769 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		83014953A3590CF8287E72A77156B8BB /* JVFloatLabeledTextField */ = {
-			isa = PBXGroup;
-			children = (
-				1138578CBCF0CC057513A6EDFB180BFE /* JVFloatLabeledTextField.h */,
-				B2EAFFFDC717181A045F0F72A027FDAC /* JVFloatLabeledTextField.m */,
-				4EEF7E10B285E7597A6409CB379FBAA8 /* JVFloatLabeledTextView.h */,
-				8EFE6189EE0048EDB197E2C077324D0B /* JVFloatLabeledTextView.m */,
-				E12420CE219C6CAF8405ECBCF5839EE5 /* NSString+TextDirectionality.h */,
-				F4BD4E5B556DA8B916815DF70559C0FA /* NSString+TextDirectionality.m */,
-				86A6F4DCD552B8EE22AA3D4D0B010775 /* Support Files */,
-			);
-			path = JVFloatLabeledTextField;
-			sourceTree = "<group>";
-		};
-		86A6F4DCD552B8EE22AA3D4D0B010775 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E1903889E45FF93AB1B9B90EDB3A5B93 /* JVFloatLabeledTextField.xcconfig */,
-				C9F4B710E96FE582750DEA3D81F37396 /* JVFloatLabeledTextField-Private.xcconfig */,
-				0FA008177833687D53581AADF3EBCD27 /* JVFloatLabeledTextField-dummy.m */,
-				441E6B442C3006F94DB1F329B3CD58A1 /* JVFloatLabeledTextField-prefix.pch */,
+				929B564EB078C0FB9C71F8925DC64DB2 /* JVFloatLabeledTextField.xcconfig */,
+				5C3C9FB31B2F39C0913215B87C4C1A68 /* JVFloatLabeledTextField-dummy.m */,
+				01E28560BE9CB42A2D8B1E61244A7F12 /* JVFloatLabeledTextField-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/JVFloatLabeledTextField";
 			sourceTree = "<group>";
 		};
-		A0CB649DA6E5F4775B6372D91713ECE4 /* PayPal-iOS-SDK */ = {
+		708F03BEB1A71A3D05AD45AAABDC645C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				755B24EAE36416B5C5347B810347EE49 /* CardIO.h */,
-				8F1ECB31084044F4C7C747F325DDBCA3 /* CardIOCreditCardInfo.h */,
-				7BA04B68D40249086873910440FEE41B /* CardIODetectionMode.h */,
-				B1FC1DEB3FDC2CD97E761B9F4DD3602E /* CardIOPaymentViewController.h */,
-				8596E6C477736945C43A11954E40F874 /* CardIOPaymentViewControllerDelegate.h */,
-				4C3B602AF218A62C981AE0DF8FC79505 /* CardIOUtilities.h */,
-				270AD9B418CE1B866B51408B3F54D600 /* CardIOView.h */,
-				4D7EAACC08519DE304FE80F695D22BE7 /* CardIOViewDelegate.h */,
-				72B1A55DA6EDE3992D4780D95EB1FC6B /* PayPalConfiguration.h */,
-				08D8CE9BE8098CF630F06A1BA870193B /* PayPalFuturePaymentViewController.h */,
-				C6F465235636D7441E64BD6D9B003D35 /* PayPalMobile.h */,
-				C5AC00156B6C4606F6FC1D60667AEE81 /* PayPalOAuthScopes.h */,
-				6A6B6EC2353A1798C0FA0AA9918051CE /* PayPalPayment.h */,
-				7772C363BB5DF7E0ED7F0DE8D526381D /* PayPalPaymentViewController.h */,
-				922E275321F9AC7C1277493331422A69 /* PayPalProfileSharingViewController.h */,
-			);
-			path = "PayPal-iOS-SDK";
-			sourceTree = "<group>";
-		};
-		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2919B08DDA880DE2F1454AF6A31FB027 /* libJVFloatLabeledTextField.a */,
-				ED10B94F6D63B35695F1E9CA677FBAFC /* libPods-Refugees.a */,
+				DBE41C6CE30B445D4AA67DA463367B41 /* libJVFloatLabeledTextField.a */,
+				FCE44F3FFC6A3227BE5E3F23FDAAE5BE /* libPods-Refugees.a */,
+				B798A2102C4E18124DF894D9EA345FD2 /* libUICountingLabel.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D0FB9306D21AF23A056944AE037CBFFF /* iOS */ = {
+		7662107216918EA2FDFAF138BBDF83D3 /* Pods-Refugees */ = {
 			isa = PBXGroup;
 			children = (
-				663363602CE8F9C24EE814C92D9D99A0 /* Foundation.framework */,
-				1D9537C44E1916A6EF4422BC95108555 /* UIKit.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		D7550FA1DE553451E5B227816617898D /* Pods-Refugees */ = {
-			isa = PBXGroup;
-			children = (
-				9B457F1ACE99C49CE73406478A3DF4EC /* Pods-Refugees-acknowledgements.markdown */,
-				6A02FF3FF598CAB81F09946ED5D83C9B /* Pods-Refugees-acknowledgements.plist */,
-				6872BDFDB5A3FD59817C1B5DD719F11D /* Pods-Refugees-dummy.m */,
-				62EDD231E55E54B95E32033EBBC067EF /* Pods-Refugees-resources.sh */,
-				DA42D0B7A71283CF90052430F5B51D71 /* Pods-Refugees.debug.xcconfig */,
-				914EE5C617B0BE279D454F5BFC22387C /* Pods-Refugees.release.xcconfig */,
+				42225DD26D52B455BA39B43E71A912D2 /* Pods-Refugees-acknowledgements.markdown */,
+				E48E4C99C5F2890CD4847C848DE65988 /* Pods-Refugees-acknowledgements.plist */,
+				15FA6AAD82B226CD48695E90114FCB01 /* Pods-Refugees-dummy.m */,
+				706C83C1A04B55C2AB62D745E1533748 /* Pods-Refugees-frameworks.sh */,
+				76F51A64EC0EB0D365BC3329D6F8C539 /* Pods-Refugees-resources.sh */,
+				6A84D0C2FCFE908CC519FBA47E112A8E /* Pods-Refugees.debug.xcconfig */,
+				E527749ADE74B41C2F772A7A05E96E94 /* Pods-Refugees.release.xcconfig */,
 			);
 			name = "Pods-Refugees";
 			path = "Target Support Files/Pods-Refugees";
 			sourceTree = "<group>";
 		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				1C1A642E53A5647B870B29FD14B30D62 /* Pods */,
+				708F03BEB1A71A3D05AD45AAABDC645C /* Products */,
+				321CFF3A93B3894C1FCC4BDB65E1988E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BF82345F57E39C3EBBBAAF40A41B312C /* JVFloatLabeledTextField */ = {
+			isa = PBXGroup;
+			children = (
+				32D3346228118F2EF7294E7134621DEF /* JVFloatLabeledTextField.h */,
+				BC1E9EDDAAF160A22629DD203F23F91D /* JVFloatLabeledTextField.m */,
+				8EB0212171B73E5EF93FE4CAB6354255 /* JVFloatLabeledTextView.h */,
+				88E33B12C7A169F6492ED0205249E13E /* JVFloatLabeledTextView.m */,
+				28CCBECC3D496B5EFCCE8C4839BAC8B1 /* NSString+TextDirectionality.h */,
+				C8635F605AFFEE2D3CB48048773329F7 /* NSString+TextDirectionality.m */,
+				5C47390A95DFCC5465293036CDB73ECD /* Support Files */,
+			);
+			path = JVFloatLabeledTextField;
+			sourceTree = "<group>";
+		};
+		C07661331D11B886674B903CA914767B /* PayPal-iOS-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				ECEBBBA0160A759886F03321F7ABD125 /* CardIO.h */,
+				2CC20B4864D3B81FD030F5F53618058F /* CardIOCreditCardInfo.h */,
+				F2897D918F18BAB345A352488885D732 /* CardIODetectionMode.h */,
+				8A4CA9620FB13784B5597C0C6F3AF4A7 /* CardIOPaymentViewController.h */,
+				C78F1CDE390ABA1CB2DE7ECA7218A19F /* CardIOPaymentViewControllerDelegate.h */,
+				C4DFEF6F911E268A2AE4AF280E9C4C50 /* CardIOUtilities.h */,
+				F7313C52FD81A522D578FF383EAA201F /* CardIOView.h */,
+				1EAF33B0B66A43A8232A129F5AD505E2 /* CardIOViewDelegate.h */,
+				925D148BB35F7C7B18D22332DF205BE2 /* PayPalConfiguration.h */,
+				F4851B4D2F591DF0944C4585D7C81B0E /* PayPalFuturePaymentViewController.h */,
+				931C086BF1C303F73ABDAC485B218B5C /* PayPalMobile.h */,
+				C286286554EC80E1A256D0CC5D33D2E5 /* PayPalOAuthScopes.h */,
+				C7CD9821E7E33FE90BCBE3722F80B5C0 /* PayPalPayment.h */,
+				C70ED781500587C2F6221FB3F0F579E6 /* PayPalPaymentViewController.h */,
+				348D2A0D713375AD763CABC8CC9CD974 /* PayPalProfileSharingViewController.h */,
+			);
+			path = "PayPal-iOS-SDK";
+			sourceTree = "<group>";
+		};
+		E55DA2C17C52D503B3F4C4F74DDA1B96 /* UICountingLabel */ = {
+			isa = PBXGroup;
+			children = (
+				2CFB2BBAF4D5E44EC6007FB1BBA1C7AB /* UICountingLabel.h */,
+				D18C852650857795AD9270830EDEA43F /* UICountingLabel.m */,
+				06E888EF301B27E212DBAF85EFBB4816 /* Support Files */,
+			);
+			path = UICountingLabel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		A37DDBF4EA0F520C7401C7C021AD56F4 /* Headers */ = {
+		095B7C3849AA4D9F6B9C76B16A0D74F0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33774790690C4E22A2D020FB0E224217 /* JVFloatLabeledTextField.h in Headers */,
-				71033C18ECFE6AB6F69967A778B5E491 /* JVFloatLabeledTextView.h in Headers */,
-				BD56705A15294B1136B565B9669BEF16 /* NSString+TextDirectionality.h in Headers */,
+				951A36971C2EC0D36A1F0A75DB4E812B /* UICountingLabel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AB03CCA1077C149FD6671EFCD64C3AB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFF5177687FB45610BF82F645C636DFA /* JVFloatLabeledTextField.h in Headers */,
+				8C3C27FFD4B270EC7E8AF5E7C4051A09 /* JVFloatLabeledTextView.h in Headers */,
+				499E5A5E8F45A0E6FC10DBAB17BBB66E /* NSString+TextDirectionality.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		31A5928C6BDE1CB74E26163E6BAE0556 /* JVFloatLabeledTextField */ = {
+		266E27D897FD7FD68078059CF4D7455F /* JVFloatLabeledTextField */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F5BB376B049DC5976BB51C225508DC19 /* Build configuration list for PBXNativeTarget "JVFloatLabeledTextField" */;
+			buildConfigurationList = F17BDC6FC1B950393098EDD292C09ECF /* Build configuration list for PBXNativeTarget "JVFloatLabeledTextField" */;
 			buildPhases = (
-				F2E4FD7C1EB5CC7E5DD288056BC9A1B8 /* Sources */,
-				52354440D7350A5EFC87E08023F10647 /* Frameworks */,
-				A37DDBF4EA0F520C7401C7C021AD56F4 /* Headers */,
+				313DB931CE985F1211597D142EEB3C8B /* Sources */,
+				8C3B643E4451C0CA25C73FCE3CA5D090 /* Frameworks */,
+				2AB03CCA1077C149FD6671EFCD64C3AB /* Headers */,
 			);
 			buildRules = (
 			);
@@ -239,24 +292,42 @@
 			);
 			name = JVFloatLabeledTextField;
 			productName = JVFloatLabeledTextField;
-			productReference = 2919B08DDA880DE2F1454AF6A31FB027 /* libJVFloatLabeledTextField.a */;
+			productReference = DBE41C6CE30B445D4AA67DA463367B41 /* libJVFloatLabeledTextField.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		B1D3581B58D28B53EB44BF1E0A20F510 /* Pods-Refugees */ = {
+		C463208E1658065D3ED61CA627DCCA14 /* UICountingLabel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FCEDA0FD92A9C3E21FA7EA091D7B16D1 /* Build configuration list for PBXNativeTarget "Pods-Refugees" */;
+			buildConfigurationList = A9E4A4E00726A96776FB6D6150FB8D71 /* Build configuration list for PBXNativeTarget "UICountingLabel" */;
 			buildPhases = (
-				366871295FF0712A6F5CEA599C059CF0 /* Sources */,
-				77448002F82956E6643F2D0EB1DC6825 /* Frameworks */,
+				4B573EF9F0168A4BE9EBDEAAF6F201F6 /* Sources */,
+				31CE78DD3B245E3704D3A804FD60DB67 /* Frameworks */,
+				095B7C3849AA4D9F6B9C76B16A0D74F0 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				96F2B14EFD3F708FFB35787521C79171 /* PBXTargetDependency */,
+			);
+			name = UICountingLabel;
+			productName = UICountingLabel;
+			productReference = B798A2102C4E18124DF894D9EA345FD2 /* libUICountingLabel.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CB24A4D64C04A1D8F3378A87E80FA525 /* Pods-Refugees */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE931E3FEC2E720D65E9B42F2D1C988E /* Build configuration list for PBXNativeTarget "Pods-Refugees" */;
+			buildPhases = (
+				E747BD9211956F5B4D231E710B89CE3F /* Sources */,
+				0C8B9A2CE12B2EE2B693E1B0493EFFB9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42D62F1E79BA6C912FC810B7AEAC0B01 /* PBXTargetDependency */,
+				781AD88064FC7AF5191F09A8CD90ECF5 /* PBXTargetDependency */,
 			);
 			name = "Pods-Refugees";
 			productName = "Pods-Refugees";
-			productReference = ED10B94F6D63B35695F1E9CA677FBAFC /* libPods-Refugees.a */;
+			productReference = FCE44F3FFC6A3227BE5E3F23FDAAE5BE /* libPods-Refugees.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -276,50 +347,170 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			productRefGroup = 708F03BEB1A71A3D05AD45AAABDC645C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				31A5928C6BDE1CB74E26163E6BAE0556 /* JVFloatLabeledTextField */,
-				B1D3581B58D28B53EB44BF1E0A20F510 /* Pods-Refugees */,
+				266E27D897FD7FD68078059CF4D7455F /* JVFloatLabeledTextField */,
+				CB24A4D64C04A1D8F3378A87E80FA525 /* Pods-Refugees */,
+				C463208E1658065D3ED61CA627DCCA14 /* UICountingLabel */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		366871295FF0712A6F5CEA599C059CF0 /* Sources */ = {
+		313DB931CE985F1211597D142EEB3C8B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5A774EC1BB0300700D1C080 /* Pods-Refugees-dummy.m in Sources */,
-				F931C6C2E9FDED6F11AC90ED5588DEE1 /* Pods-Refugees-dummy.m in Sources */,
+				740275241245444929B51C5C824BC87F /* JVFloatLabeledTextField-dummy.m in Sources */,
+				0F5B6AC14F58EABEB001C30A452D5268 /* JVFloatLabeledTextField.m in Sources */,
+				1E04E83623789E01EB3D44E0864941E5 /* JVFloatLabeledTextView.m in Sources */,
+				75B9287485714913A1A259FEA70BE606 /* NSString+TextDirectionality.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F2E4FD7C1EB5CC7E5DD288056BC9A1B8 /* Sources */ = {
+		4B573EF9F0168A4BE9EBDEAAF6F201F6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0E64C8D3E8B0ED220C0A7264693AC71 /* JVFloatLabeledTextField-dummy.m in Sources */,
-				72F7EEAEF1ACBCAABF6725E871FA7A25 /* JVFloatLabeledTextField.m in Sources */,
-				F4EDBBE51BA424ED8AA519816DA580E2 /* JVFloatLabeledTextView.m in Sources */,
-				4465AE0A048827A84CE6C26493D6C818 /* NSString+TextDirectionality.m in Sources */,
+				42A562A69AE541B3C2B771F3CE055896 /* UICountingLabel-dummy.m in Sources */,
+				BF2E0794A794AB54B15AE9EC282A20B4 /* UICountingLabel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E747BD9211956F5B4D231E710B89CE3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3240585A825E5CC9D3A12B4FAA6D7DA /* Pods-Refugees-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		96F2B14EFD3F708FFB35787521C79171 /* PBXTargetDependency */ = {
+		42D62F1E79BA6C912FC810B7AEAC0B01 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JVFloatLabeledTextField;
-			target = 31A5928C6BDE1CB74E26163E6BAE0556 /* JVFloatLabeledTextField */;
-			targetProxy = E4A4B06D1657608426DEB2A9E8D83813 /* PBXContainerItemProxy */;
+			target = 266E27D897FD7FD68078059CF4D7455F /* JVFloatLabeledTextField */;
+			targetProxy = EF9C001FFC3CF29B74870E7F86AF3E10 /* PBXContainerItemProxy */;
+		};
+		781AD88064FC7AF5191F09A8CD90ECF5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UICountingLabel;
+			target = C463208E1658065D3ED61CA627DCCA14 /* UICountingLabel */;
+			targetProxy = 8E41FB76A7F5A3C4E706E7D5E9678E84 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		6569F07DC21AD8B72752685013E3D9D8 /* Debug */ = {
+		052A17875CB827423D627183396CEB60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0D48A0C29CFB8547F8015FC03D38A53D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A84D0C2FCFE908CC519FBA47E112A8E /* Pods-Refugees.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		189C2BC2AF7195AC9AF92F41FC54E6C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23A971D6C9C29F74158579B7D5E613D5 /* UICountingLabel.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UICountingLabel/UICountingLabel-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2E0D188BD94600C183DFDD5921970EC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 929B564EB078C0FB9C71F8925DC64DB2 /* JVFloatLabeledTextField.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JVFloatLabeledTextField/JVFloatLabeledTextField-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		993CFE394C81355F71AD66484E812ABE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23A971D6C9C29F74158579B7D5E613D5 /* UICountingLabel.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UICountingLabel/UICountingLabel-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		B37F0F91F85060E28F1DAAB522DC7EC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -351,105 +542,42 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		A14E2444F162A20E3776820E0ADFFB52 /* Release */ = {
+		B49DEC88C1293B84498F26811E25DF6F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		B7A434BFDBE34C6D1FDC6861BD2D4E1E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 914EE5C617B0BE279D454F5BFC22387C /* Pods-Refugees.release.xcconfig */;
+			baseConfigurationReference = 929B564EB078C0FB9C71F8925DC64DB2 /* JVFloatLabeledTextField.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		E1D666892DD8C5959681ECD2D08993E1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA42D0B7A71283CF90052430F5B51D71 /* Pods-Refugees.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				GCC_PREFIX_HEADER = "Target Support Files/JVFloatLabeledTextField/JVFloatLabeledTextField-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		EA8F9C21B95A8DC330981802387F0DCB /* Debug */ = {
+		FE68427FF8E4472CE839F55558B4F508 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9F4B710E96FE582750DEA3D81F37396 /* JVFloatLabeledTextField-Private.xcconfig */;
+			baseConfigurationReference = E527749ADE74B41C2F772A7A05E96E94 /* Pods-Refugees.release.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/JVFloatLabeledTextField/JVFloatLabeledTextField-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		F65513661046A5FD1CF3A88F67A12863 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9F4B710E96FE582750DEA3D81F37396 /* JVFloatLabeledTextField-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/JVFloatLabeledTextField/JVFloatLabeledTextField-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -462,26 +590,35 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6569F07DC21AD8B72752685013E3D9D8 /* Debug */,
-				A14E2444F162A20E3776820E0ADFFB52 /* Release */,
+				B37F0F91F85060E28F1DAAB522DC7EC1 /* Debug */,
+				052A17875CB827423D627183396CEB60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F5BB376B049DC5976BB51C225508DC19 /* Build configuration list for PBXNativeTarget "JVFloatLabeledTextField" */ = {
+		A9E4A4E00726A96776FB6D6150FB8D71 /* Build configuration list for PBXNativeTarget "UICountingLabel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EA8F9C21B95A8DC330981802387F0DCB /* Debug */,
-				F65513661046A5FD1CF3A88F67A12863 /* Release */,
+				189C2BC2AF7195AC9AF92F41FC54E6C7 /* Debug */,
+				993CFE394C81355F71AD66484E812ABE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FCEDA0FD92A9C3E21FA7EA091D7B16D1 /* Build configuration list for PBXNativeTarget "Pods-Refugees" */ = {
+		EE931E3FEC2E720D65E9B42F2D1C988E /* Build configuration list for PBXNativeTarget "Pods-Refugees" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E1D666892DD8C5959681ECD2D08993E1 /* Debug */,
-				B7A434BFDBE34C6D1FDC6861BD2D4E1E /* Release */,
+				0D48A0C29CFB8547F8015FC03D38A53D /* Debug */,
+				FE68427FF8E4472CE839F55558B4F508 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F17BDC6FC1B950393098EDD292C09ECF /* Build configuration list for PBXNativeTarget "JVFloatLabeledTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B49DEC88C1293B84498F26811E25DF6F /* Debug */,
+				2E0D188BD94600C183DFDD5921970EC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

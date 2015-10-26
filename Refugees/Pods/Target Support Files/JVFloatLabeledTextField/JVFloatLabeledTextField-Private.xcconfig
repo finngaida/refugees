@@ -1,6 +1,0 @@
-#include "JVFloatLabeledTextField.xcconfig"
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/JVFloatLabeledTextField" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/JVFloatLabeledTextField" "${PODS_ROOT}/Headers/Public/PayPal-iOS-SDK"
-OTHER_LDFLAGS = ${JVFLOATLABELEDTEXTFIELD_OTHER_LDFLAGS}
-PODS_ROOT = ${SRCROOT}
-SKIP_INSTALL = YES
