@@ -29,7 +29,7 @@
 		4F6DC4941BAE1DA300931D85 /* Nexa Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F6DC4931BAE1D5900931D85 /* Nexa Light.otf */; };
 		4F6DC4951BAE1DA600931D85 /* Nexa Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F6DC4921BAE1D5900931D85 /* Nexa Bold.otf */; };
 		4FA3152D1BDE65720068F9F0 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA3152C1BDE65720068F9F0 /* GameViewController.m */; };
-		4FC99E1B1BDE9B3D0041AED5 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC99E1A1BDE9B3D0041AED5 /* GuideViewController.m */; settings = {ASSET_TAGS = (); }; };
+		4FC99E1B1BDE9B3D0041AED5 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC99E1A1BDE9B3D0041AED5 /* GuideViewController.m */; };
 		4FDDD52D1BDDDDFC005B3DA0 /* newsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDDD52C1BDDDDFC005B3DA0 /* newsTableViewCell.xib */; };
 		4FDDD5301BDDE082005B3DA0 /* newsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDDD52F1BDDE082005B3DA0 /* newsTableViewCell.m */; };
 		4FDDD5341BDE0280005B3DA0 /* StoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDDD5331BDE0280005B3DA0 /* StoryViewController.m */; };
@@ -354,7 +354,7 @@
 				TargetAttributes = {
 					C5E23FED1BACABAF000BA16B = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 5N7RH4RS44;
+						DevelopmentTeam = RF278284CD;
 					};
 				};
 			};
@@ -557,6 +557,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Noah Raissi (46CPFZVQYR)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -579,8 +580,8 @@
 			baseConfigurationReference = 5167FB05AD76B6979119BF98 /* Pods-Refugees.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Noah Raissi (46CPFZVQYR)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Noah Raissi (46CPFZVQYR)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -588,7 +589,7 @@
 				INFOPLIST_FILE = Refugees/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.noahraissi.refugees;
+				PRODUCT_BUNDLE_IDENTIFIER = de.finngaida.Refugees;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -599,8 +600,8 @@
 			baseConfigurationReference = F6EC0B8CBFB7C081D4BCBC36 /* Pods-Refugees.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Noah Raissi (46CPFZVQYR)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Noah Raissi (46CPFZVQYR)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -608,7 +609,7 @@
 				INFOPLIST_FILE = Refugees/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.noahraissi.refugees;
+				PRODUCT_BUNDLE_IDENTIFIER = de.finngaida.Refugees;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

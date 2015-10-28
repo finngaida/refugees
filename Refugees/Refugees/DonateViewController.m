@@ -21,6 +21,13 @@
     _config = [PayPalConfiguration new];
     _config.merchantName = @"Refugees welcome";
     _config.payPalShippingAddressOption = PayPalShippingAddressOptionNone;
+    
+    // beta release
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"Beta Version" message:@"The donation feature will be enabled in a future build." preferredStyle:UIAlertControllerStyleAlert];
+    [controller addAction:[UIAlertAction actionWithTitle:@"Got it" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }]];
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
