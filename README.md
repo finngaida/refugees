@@ -1,6 +1,7 @@
 # Moin Refugees
 ## TL;DR
-An app created for refugees and helpers in Hamburg for Jugend Hackt Nord 2015
+An app created for refugees and helpers in Hamburg for Jugend Hackt Nord 2015   
+If you want to beta test, send your TestFlight email to [f@fga.pw](mailto:f@fga.pw)!
 
 ## Description
 An app to help both refugees and helpers in the region of Hamburg (for now) to reduce the chaos, with features like:
