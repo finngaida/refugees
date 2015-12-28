@@ -312,9 +312,8 @@
 
 
 BOOL annotationsSet;
-
+BOOL mapopened;
 -(void)openMap {
-    
         [mapOverlay setHidden:YES];
         self.locationManager = [[CLLocationManager alloc] init];
         [self.locationManager requestWhenInUseAuthorization];
@@ -358,6 +357,8 @@ BOOL annotationsSet;
 
     }completion:^(BOOL finished){
         [mapView setUserInteractionEnabled:YES];
+        cautionBtn.userInteractionEnabled = NO;
+        mapopened = YES;
 
         if (!annotationsSet) {
             [self addAnnotations];
@@ -460,7 +461,11 @@ BOOL annotationsSet;
         
         [self locateUser];
         
-    }completion:nil];
+    }completion:^(BOOL finished){
+        cautionBtn.userInteractionEnabled = YES;
+        mapopened = NO;
+
+    }];
 
     
 }
@@ -682,7 +687,15 @@ BOOL alertIsVisible;
                                          }else {
                                              if (!alertIsVisible) {
                                                  [UIView animateWithDuration:1 animations:^{
-                                                     cautionView.frame = CGRectMake(78, 135, 219, 120);
+                                                     
+                                                     if (!mapopened) {
+                                                         cautionView.frame = CGRectMake(78, 135, 219, 120);
+
+                                                     }else {
+                                                         cautionView.frame = CGRectMake(78, 135-self.view.bounds.size.height/2, 219, 120);
+
+                                                     }
+                                                     
                                                      cautionView.alpha = 1;
                                                  }completion:NULL];
                                                  [self alertAppeard];
