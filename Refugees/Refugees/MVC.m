@@ -590,7 +590,7 @@ BOOL annotationsSet;
             case 5:seg = @"showEmergency";break;
             case 6:seg = @"showDonate";break;
             case 7:seg = @"showLocations";break;
-            default:break;
+            default:seg = @"showStats";break;
     }
 
     [self performSegueWithIdentifier:seg sender:nil];

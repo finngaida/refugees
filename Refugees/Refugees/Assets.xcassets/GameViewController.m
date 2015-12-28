@@ -38,15 +38,14 @@
     
     titleLabel = [[UILabel alloc]init];
     titleLabel.frame = CGRectMake(20,28+45,self.view.bounds.size.width-40,55);
-    titleLabel.text = [NSString stringWithFormat:@"Choose a Game"];
+    titleLabel.text = [NSString stringWithFormat:@"Games will be supported in a later update."];
     titleLabel.font = [UIFont fontWithName:@"Nexa Bold" size:40];
     titleLabel.numberOfLines = 1;
     titleLabel.textColor = [UIColor blackColor];
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.layer.borderWidth =0;
     [self.view addSubview:titleLabel];
-
-    // Do any additional setup after loading the view.
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -80,13 +79,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
