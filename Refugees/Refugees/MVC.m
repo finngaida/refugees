@@ -28,7 +28,7 @@
         donateView.alpha = 1;
         donateView.frame = CGRectMake(78, 404, 219, 120);
         donateBtn.frame = CGRectMake(78, 404, 219, 120);
-
+        
         
     }completion:NULL];
 }
@@ -161,7 +161,7 @@
         [emergencyBtn addTarget:self action:@selector(createDetail:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:emergencyBtn];
         
-
+        
     }
     
     fbBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -201,19 +201,19 @@
     [cautionBtn setHidden:YES];
     [self.view addSubview:cautionBtn];
     [self.view bringSubviewToFront:donateBtn];
-
+    
     [self checkForAlert];
     [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(checkForAlert) userInfo:nil repeats:YES];
-
+    
     
 }
 
 -(void)cautionAction:(id)sender {
-
+    
     NSLog(@"shit");
     
-        [cautionBtn removeTarget:self action:@selector(cautionAction:) forControlEvents:UIControlEventTouchUpInside];
-                        [mapOverlay removeTarget:self action:@selector(openMap) forControlEvents:UIControlEventTouchUpInside];
+    [cautionBtn removeTarget:self action:@selector(cautionAction:) forControlEvents:UIControlEventTouchUpInside];
+    [mapOverlay removeTarget:self action:@selector(openMap) forControlEvents:UIControlEventTouchUpInside];
     closeAlterBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     closeAlterBtn.frame = CGRectMake(self.view.bounds.size.width/2-30, 200, 60, 60);
     [closeAlterBtn addTarget:self action:@selector(closeOpenAlert) forControlEvents:UIControlEventTouchUpInside];
@@ -238,37 +238,37 @@
     alertLabel.layer.borderWidth =0;
     alertLabel.alpha = 0;
     [cautionView addSubview:alertLabel];
-                       
-           PFQuery *query = [PFQuery queryWithClassName:@"mainClass"];
-           [query getObjectInBackgroundWithId:@"aXpNBp34vP"
-                                        block:^(PFObject *objects, NSError *error) {
-                                            if (!error) {
-                                                NSString *string = [objects objectForKey:@"alertMsg"];
-                                                alertLabel.text = string;
-                                                
-                                                    
-                                                }else {
-                                                    
-                                                }}];
-
     
-
+    PFQuery *query = [PFQuery queryWithClassName:@"mainClass"];
+    [query getObjectInBackgroundWithId:@"aXpNBp34vP"
+                                 block:^(PFObject *objects, NSError *error) {
+                                     if (!error) {
+                                         NSString *string = [objects objectForKey:@"alertMsg"];
+                                         alertLabel.text = string;
+                                         
+                                         
+                                     }else {
+                                         
+                                     }}];
+    
+    
+    
     [UIView animateWithDuration:0.2 delay:0.5 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         //cautionView.transform = CGAffineTransformMakeTranslation(0, -120);
         closeAlterBtn.alpha =1;
         alertLabel.alpha = 1;
     }completion:^(BOOL finished){
-
+        
     }];
     cautionView.backgroundColor = [UIColor colorWithRed:0.984f green:0.329f blue:0.329f alpha:1.0f];
-
+    
     [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         cautionView.frame = CGRectMake(43, 190, self.view.bounds.size.width-86, self.view.bounds.size.width-86);
         cautionView.layer.cornerRadius = (self.view.bounds.size.width-86)/2;
         caution.frame = CGRectMake(cautionView.bounds.size.width/2-110, 0, 219, 120);
         caution.alpha = 0;
-
-
+        
+        
     }completion:^(BOOL finished){
         [self.view bringSubviewToFront:closeAlterBtn];
     }];
@@ -280,7 +280,7 @@
     [UIView animateWithDuration:0.2 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         closeAlterBtn.alpha =0;
         alertLabel.alpha = 0;
-
+        
     }completion:^(BOOL finished){
         [closeAlterBtn removeFromSuperview];
     }];
@@ -294,31 +294,31 @@
     
     [UIView animateWithDuration:0.5 delay:0.2 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         cautionView.backgroundColor = [UIColor clearColor];
-
+        
         cautionView.frame = CGRectMake(78, 135, 219, 120);
         caution.frame = CGRectMake(0, 0, 219, 120);
         
         
     }completion:^(BOOL finished){
-                [cautionBtn addTarget:self action:@selector(cautionAction:) forControlEvents:UIControlEventTouchUpInside];
-                            [mapOverlay addTarget:self action:@selector(openMap) forControlEvents:UIControlEventTouchUpInside];
+        [cautionBtn addTarget:self action:@selector(cautionAction:) forControlEvents:UIControlEventTouchUpInside];
+        [mapOverlay addTarget:self action:@selector(openMap) forControlEvents:UIControlEventTouchUpInside];
         cautionView.layer.cornerRadius = 0;
-
+        
     }];
-
     
-
+    
+    
 }
 
 
 BOOL annotationsSet;
 BOOL mapopened;
 -(void)openMap {
-        [mapOverlay setHidden:YES];
-        self.locationManager = [[CLLocationManager alloc] init];
-        [self.locationManager requestWhenInUseAuthorization];
+    [mapOverlay setHidden:YES];
+    self.locationManager = [[CLLocationManager alloc] init];
+    [self.locationManager requestWhenInUseAuthorization];
     
-
+    
     
     [UIView animateWithDuration:0.2 animations:^{
         coverView.alpha = 0;
@@ -337,14 +337,14 @@ BOOL mapopened;
         midOverlay.transform = CGAffineTransformMakeTranslation(0, +self.view.bounds.size.height/2);
         
         cautionView.transform = CGAffineTransformMakeTranslation(0, -self.view.bounds.size.height/2);
-
+        
         
         if (!hamburger) {
             guideBtn.transform = CGAffineTransformMakeTranslation(0, +self.view.bounds.size.height/2);
             gameBtn.transform = CGAffineTransformMakeTranslation(0, +self.view.bounds.size.height/2);
             emergencyBtn.transform = CGAffineTransformMakeTranslation(0, +self.view.bounds.size.height/2);
-
-
+            
+            
         }else {
             storysBtn.transform = CGAffineTransformMakeTranslation(0, +self.view.bounds.size.height/2);
             newsBtn.transform = CGAffineTransformMakeTranslation(0, +self.view.bounds.size.height/2);
@@ -352,19 +352,19 @@ BOOL mapopened;
             donateView.frame = CGRectMake(78, 404+self.view.bounds.size.height/2, 219, 120);
             donateBtn.frame = CGRectMake(78, 404+self.view.bounds.size.height/2, 219, 120);
         }
-
-
-
+        
+        
+        
     }completion:^(BOOL finished){
         [mapView setUserInteractionEnabled:YES];
         cautionBtn.userInteractionEnabled = NO;
         mapopened = YES;
-
+        
         if (!annotationsSet) {
             [self addAnnotations];
         }
     }];
-
+    
 }
 
 -(void)addAnnotations {
@@ -424,12 +424,12 @@ BOOL mapopened;
 
 
 -(void)closeMap {
-
+    
     [UIView animateWithDuration:0.2 delay:0.9 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         coverView.alpha = 1;
         coverView2.alpha = 1;
     }completion:^(BOOL finished){
-     [mapOverlay setHidden:NO];
+        [mapOverlay setHidden:NO];
         [mapView setUserInteractionEnabled:NO];
     }];
     
@@ -445,7 +445,7 @@ BOOL mapopened;
         midOverlay.transform = CGAffineTransformMakeTranslation(0, 0);
         
         cautionView.transform = CGAffineTransformMakeTranslation(0, 0);
-
+        
         if (!hamburger) {
             guideBtn.transform = CGAffineTransformMakeTranslation(0, 0);
             gameBtn.transform = CGAffineTransformMakeTranslation(0, 0);
@@ -464,9 +464,9 @@ BOOL mapopened;
     }completion:^(BOOL finished){
         cautionBtn.userInteractionEnabled = YES;
         mapopened = NO;
-
+        
     }];
-
+    
     
 }
 
@@ -477,12 +477,12 @@ BOOL mapopened;
         heartImg_high.alpha = 1;
         topOverlay.layer.shadowColor = [UIColor redColor].CGColor;
         botOverlay.layer.shadowColor = [UIColor redColor].CGColor;
-
+        
     }completion:^(BOOL finished){
     }];
     
     alertTimer = [NSTimer scheduledTimerWithTimeInterval:0.8 target:self selector:@selector(animateHeart) userInfo:nil repeats:YES];
-
+    
 }
 
 -(void)alertDisappeard {
@@ -498,11 +498,11 @@ BOOL mapopened;
         
     }completion:^(BOOL finished){
     }];
-
+    
 }
 
 -(void)animateHeart {
-
+    
     [UIView animateWithDuration:0.2 delay:0.0 usingSpringWithDamping:0.3 initialSpringVelocity:16 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         heartImg_high.transform = CGAffineTransformMakeScale(1.2, 1.2);
         heartImg_high.alpha = 1;
@@ -512,7 +512,7 @@ BOOL mapopened;
         anim.toValue = [NSNumber numberWithFloat:0.8];
         [topOverlay.layer addAnimation:anim forKey:@"shadowOpacity"];
         [botOverlay.layer addAnimation:anim forKey:@"shadowOpacity"];
-
+        
     }completion:nil];
     [UIView animateWithDuration:0.3 delay:0.5 usingSpringWithDamping:0.8 initialSpringVelocity:12 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         heartImg_high.transform = CGAffineTransformMakeScale(1, 1);
@@ -523,7 +523,7 @@ BOOL mapopened;
         anim.toValue = [NSNumber numberWithFloat:0.3];
         [topOverlay.layer addAnimation:anim forKey:@"shadowOpacity"];
         [botOverlay.layer addAnimation:anim forKey:@"shadowOpacity"];
-
+        
     }completion:^(BOOL finished){
     }];
     
@@ -538,11 +538,11 @@ BOOL mapopened;
         NSString __unused *fbURLS = @"https://www.facebook.com/jugendhackt";
         BOOL __unused canOpenURL = [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:fbURL]];
         
-//        if(canOpenURL) {
-//            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:fbURL]];
-//        } else {
-//            [[UIApplication sharedApplication]openURL:[NSURL URLWithString:fbURLS]];
-//        }
+        //        if(canOpenURL) {
+        //            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:fbURL]];
+        //        } else {
+        //            [[UIApplication sharedApplication]openURL:[NSURL URLWithString:fbURLS]];
+        //        }
         
         if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
             SLComposeViewController *post = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
@@ -557,11 +557,11 @@ BOOL mapopened;
         NSString __unused *fbURLS = @"https://twitter.com/jhacktnord";
         BOOL __unused canOpenURL = [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:fbURL]];
         
-//        if(canOpenURL) {
-//            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:fbURL]];
-//        } else {
-//            [[UIApplication sharedApplication]openURL:[NSURL URLWithString:fbURLS]];
-//        }
+        //        if(canOpenURL) {
+        //            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:fbURL]];
+        //        } else {
+        //            [[UIApplication sharedApplication]openURL:[NSURL URLWithString:fbURLS]];
+        //        }
         
         if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
             SLComposeViewController *post = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
@@ -569,7 +569,7 @@ BOOL mapopened;
             [post addURL:[NSURL URLWithString:@"https://hackdash.org/projects/55fd2a6474d6ac1d2145177e"]];
             [self presentViewController:post animated:YES completion:nil];
         }
-
+        
     }
 }
 
@@ -587,25 +587,25 @@ BOOL mapopened;
     
     NSString *seg;
     switch (senderBtn.tag) {
-            case 0:seg = @"showNews";break;
-            case 1:seg = @"showStats";break;
-            case 2:seg = @"showStory";break;
-            case 3:seg = @"showGuides";break;
-            case 4:seg = @"showGames";break;
-            case 5:seg = @"showEmergency";break;
-            case 6:seg = @"showDonate";break;
-            case 7:seg = @"showLocations";break;
-            default:seg = @"showStats";break;
+        case 0:seg = @"showNews";break;
+        case 1:seg = @"showStats";break;
+        case 2:seg = @"showStory";break;
+        case 3:seg = @"showGuides";break;
+        case 4:seg = @"showGames";break;
+        case 5:seg = @"showEmergency";break;
+        case 6:seg = @"showDonate";break;
+        case 7:seg = @"showLocations";break;
+        default:seg = @"showStats";break;
     }
-
+    
     [self performSegueWithIdentifier:seg sender:nil];
     
 }
 
 - (void)goBack {
-
-[self dismissViewControllerAnimated:YES completion:nil];
-
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -617,9 +617,9 @@ BOOL mapopened;
     self.locationManager = [[CLLocationManager alloc]init];
     self.locationManager.delegate = self;
     [self.locationManager startUpdatingLocation];
-
+    
     // Use one or the other, not both. Depending on what you put in info.plist
-
+    
     mapView = [[MKMapView alloc]init];
     mapView.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
     mapView.delegate = self;
@@ -682,7 +682,7 @@ BOOL alertIsVisible;
                                              [self alertDisappeard];
                                              alertIsVisible = NO;
                                              [cautionBtn setHidden:YES];
-
+                                             
                                              
                                          }else {
                                              if (!alertIsVisible) {
@@ -690,31 +690,31 @@ BOOL alertIsVisible;
                                                      
                                                      if (!mapopened) {
                                                          cautionView.frame = CGRectMake(78, 135, 219, 120);
-
+                                                         
                                                      }else {
                                                          cautionView.frame = CGRectMake(78, 135-self.view.bounds.size.height/2, 219, 120);
-
+                                                         
                                                      }
                                                      
                                                      cautionView.alpha = 1;
                                                  }completion:NULL];
                                                  [self alertAppeard];
-
+                                                 
                                              }
                                              NSLog(@"String has content - Display string");
-                                            alertIsVisible = YES;
+                                             alertIsVisible = YES;
                                              [cautionBtn setHidden:NO];
-
-
+                                             
+                                             
                                          }
-
+                                         
                                          
                                          
                                      } else {
                                          
                                      }
                                  }];
-
+    
 }
 
 
@@ -762,7 +762,7 @@ BOOL alertIsVisible;
     
     NSLog(@"Button Action");
     NSString *message = [NSString stringWithFormat:@"\nAsylanten:\n%@",anzahl];
-
+    
     UIAlertController * alert=   [UIAlertController
                                   alertControllerWithTitle:pin.annotation.title
                                   message:message
@@ -777,13 +777,13 @@ BOOL alertIsVisible;
                          }];
     [alert addAction:ok];
     [self presentViewController:alert animated:YES completion:nil];
-
+    
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
     NSLog(@"didFailWithError: %@", error);
-
+    
     UIAlertController * alert=   [UIAlertController
                                   alertControllerWithTitle:@"Ortungsdienste deaktiviert"
                                   message:@"Bitte aktiviere in den Einstellungen die Ortungsdienste, um deine Position anzeigen zu lassen."
@@ -797,20 +797,20 @@ BOOL alertIsVisible;
                              
                          }];
     [alert addAction:ok];
-
+    
     [self presentViewController:alert animated:YES completion:nil];
 }
 
 
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
