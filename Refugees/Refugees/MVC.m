@@ -211,7 +211,7 @@
 -(void)cautionAction:(id)sender {
 
     NSLog(@"shit");
-    
+    mapOverlay.userInteractionEnabled = NO;
         [cautionBtn removeTarget:self action:@selector(cautionAction:) forControlEvents:UIControlEventTouchUpInside];
                         [mapOverlay removeTarget:self action:@selector(openMap) forControlEvents:UIControlEventTouchUpInside];
     closeAlterBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -300,6 +300,8 @@
         
         
     }completion:^(BOOL finished){
+        mapOverlay.userInteractionEnabled = YES;
+
                 [cautionBtn addTarget:self action:@selector(cautionAction:) forControlEvents:UIControlEventTouchUpInside];
                             [mapOverlay addTarget:self action:@selector(openMap) forControlEvents:UIControlEventTouchUpInside];
         cautionView.layer.cornerRadius = 0;
@@ -312,8 +314,10 @@
 
 
 BOOL annotationsSet;
+BOOL mapopened;
 
 -(void)openMap {
+    
     
         [mapOverlay setHidden:YES];
         self.locationManager = [[CLLocationManager alloc] init];
@@ -358,7 +362,7 @@ BOOL annotationsSet;
 
     }completion:^(BOOL finished){
         [mapView setUserInteractionEnabled:YES];
-
+        mapopened =YES;
         if (!annotationsSet) {
             [self addAnnotations];
         }
@@ -460,7 +464,10 @@ BOOL annotationsSet;
         
         [self locateUser];
         
-    }completion:nil];
+    }completion:^(BOOL finished){
+        mapopened =NO;
+
+    }];
 
     
 }
@@ -682,7 +689,13 @@ BOOL alertIsVisible;
                                          }else {
                                              if (!alertIsVisible) {
                                                  [UIView animateWithDuration:1 animations:^{
-                                                     cautionView.frame = CGRectMake(78, 135, 219, 120);
+                                                     
+                                                     if (!mapopened) {
+                                                         cautionView.frame = CGRectMake(78, 135, 219, 120);
+                                                     }else{
+                                                          cautionView.frame = CGRectMake(78, 135-self.view.bounds.size.height/2, 219, 120);
+                                                     }
+                                                     
                                                      cautionView.alpha = 1;
                                                  }completion:NULL];
                                                  [self alertAppeard];
@@ -730,11 +743,15 @@ BOOL alertIsVisible;
     MyPin.highlighted = NO;
     MyPin.animatesDrop = YES;
     MyPin.canShowCallout = YES;
+   
     
     if([annotation isKindOfClass:[MKUserLocation class]]) {
         return nil;
     }
+
     
+
+
     return MyPin;
     
 }
